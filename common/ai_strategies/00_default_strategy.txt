@@ -182,13 +182,6 @@ ai_strategy_default = {
 	bravery = { 
 		value = 1
 		
-		if = {###NFM Added
-			limit = {
-  				ruler = {has_ideology = ideology_pacifist}
-			}
-			add = -0.5
-		}
-
 		if = { ##Bravery Variable NFM
 			limit = {
 					has_variable = add_bravery_variable
@@ -302,14 +295,6 @@ ai_strategy_default = {
 	}
 	
 	aggression = {
-		if = { #NFM ADDED
-			limit = {
-  				ruler = {has_ideology = ideology_pacifist}
-			}
-			add = -100
-		}
-
-
 		value = 0
 
 		# Higher aggression against pariah countries
@@ -694,12 +679,6 @@ ai_strategy_default = {
 				}
 				add = 200
 			}		
-			if = {
-				limit = {
-					has_variable = monroe_doctrine	
-				}
-				add = -300
-			}
 		}
 		region_north_africa = {
 			if = {
@@ -713,13 +692,7 @@ ai_strategy_default = {
 					}		
 				}
 				add = 200
-			}	
-			if = {
-				limit = {
-					has_variable = monroe_doctrine	
-				}
-				add = -300
-			}	
+			}		
 		}
 		region_senegal = {
 			if = {
@@ -734,12 +707,6 @@ ai_strategy_default = {
 				}
 				add = 200
 			}		
-			if = {
-				limit = {
-					has_variable = monroe_doctrine	
-				}
-				add = -300
-			}
 		}
 		region_niger = {
 			if = {
@@ -754,12 +721,6 @@ ai_strategy_default = {
 				}
 				add = 200
 			}		
-			if = {
-				limit = {
-					has_variable = monroe_doctrine	
-				}
-				add = -300
-			}
 		}
 		region_congo = {
 			if = {
@@ -773,13 +734,7 @@ ai_strategy_default = {
 					}		
 				}
 				add = 200
-			}	
-			if = {
-				limit = {
-					has_variable = monroe_doctrine	
-				}
-				add = -300
-			}	
+			}		
 		}
 		region_southern_africa = {
 			if = {
@@ -794,12 +749,6 @@ ai_strategy_default = {
 				}
 				add = 200
 			}		
-			if = {
-				limit = {
-					has_variable = monroe_doctrine	
-				}
-				add = -300
-			}
 		}
 		region_zanj = {
 			if = {
@@ -814,12 +763,6 @@ ai_strategy_default = {
 				}
 				add = 200
 			}		
-			if = {
-				limit = {
-					has_variable = monroe_doctrine	
-				}
-				add = -300
-			}
 		}
 		region_north_germany = {
 			if = {
@@ -835,12 +778,6 @@ ai_strategy_default = {
 				}
 				add = 1000
 			}			
-			if = {
-				limit = {
-					has_variable = monroe_doctrine	
-				}
-				add = -300
-			}
 		}
 		region_south_germany = {
 			if = {
@@ -855,13 +792,7 @@ ai_strategy_default = {
 					has_journal_entry = je_german_unification
 				}
 				add = 1000
-			}		
-			if = {
-				limit = {
-					has_variable = monroe_doctrine	
-				}
-				add = -300
-			}		
+			}				
 		}		
 		region_italy = {
 			if = {
@@ -870,12 +801,6 @@ ai_strategy_default = {
 					country_rank >= rank_value:great_power
 				}
 				add = 100
-			}
-			if = {
-				limit = {
-					has_variable = monroe_doctrine	
-				}
-				add = -300
 			}
 		}
 		region_balkans = {
@@ -886,12 +811,6 @@ ai_strategy_default = {
 				}
 				add = 50
 			}
-			if = {
-				limit = {
-					has_variable = monroe_doctrine	
-				}
-				add = -300
-			}
 		}
 		region_england = {
 			if = {
@@ -900,12 +819,6 @@ ai_strategy_default = {
 					country_rank >= rank_value:great_power
 				}
 				add = 50
-			}
-			if = {
-				limit = {
-					has_variable = monroe_doctrine	
-				}
-				add = -300
 			}
 		}	
 		region_iberia = {
@@ -916,12 +829,6 @@ ai_strategy_default = {
 				}
 				add = 50
 			}
-			if = {
-				limit = {
-					has_variable = monroe_doctrine	
-				}
-				add = -300
-			}
 		}
 		region_rhine = {
 			if = {
@@ -930,12 +837,6 @@ ai_strategy_default = {
 					country_rank >= rank_value:great_power
 				}
 				add = 50
-			}
-			if = { #NFM ADDED
-				limit = {
-					has_variable = monroe_doctrine	
-				}
-				add = -300
 			}
 		}			
 		region_south_china = {

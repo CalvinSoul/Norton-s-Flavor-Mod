@@ -39,9 +39,8 @@ on_half_yearly_pulse_country = {
 }
 
 on_election_campaign_start = {
-	events = {
+	effect = {
 		nfm_misc.5
-		nfm_misc.7
 	}
 }
 

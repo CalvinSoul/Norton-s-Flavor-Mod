@@ -1,5 +1,10 @@
 ﻿CHARACTERS = {
 	c:USA = {
+		
+
+
+
+
 		create_character = {
 			
 			first_name = Andrew
@@ -12,9 +17,7 @@
 			birth_date = 1767.3.15
 			dna = dna_andrew_jackson
 			traits = {
-				#bigoted this shouldn't make you less popular
-				direct 
-				previous_president_trait
+				bigoted
 			}
 			on_created = {
 				set_variable = {

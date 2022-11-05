@@ -1,55 +1,615 @@
 ﻿namespace = nfm_misc
 
-
-
+# REmove bravery
 nfm_misc.1 = {
 	type = country_event
 	placement = ROOT
 
-	title = mexican_american.1.t
-	desc = mexican_american.1.d
-	flavor = mexican_american.1.f
+	title = mexican_nfm.1.t
+	desc = mexican_nfm.1.d
+	flavor = mexican_nfm.1.f
 
-	duration = 3
+	duration = 1
 
-	event_image = {
-		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	hidden = no
+
+	trigger = {
+		has_variable = add_bravery_variable
+		is_diplomatic_play_committed_participant = no
+ 		is_at_war = no
 	}
 
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/unspecific/signed_contract"
+	immediate = {
+	remove_variable = add_bravery_variable
+ }
 
-	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+}
+nfm_misc.3 = {
+	type = country_event
+	placement = ROOT
+
+	title = mexican_nfm.1.t
+	desc = mexican_nfm.1.d
+	flavor = mexican_nfm.1.f
+
+	duration = 1
+
+	hidden = yes
+
+	trigger = {
+		ROOT = { owns_entire_state_region = STATE_LAZIO }
+		has_global_variable = garibaldi_busy_var
+		OR ={
+			any_country = {
+				has_variable = hired_garibaldi_var
+				is_at_war = no
+			}
+			NOT = { any_country = {
+				has_variable = hired_garibaldi_var}}
+		}
+	}
+
+	immediate = {
+ 		remove_global_variable = garibaldi_busy_var
+
+	random_country = { limit = {has_variable = hired_garibaldi_var}
+	remove_variable = hired_garibaldi_var
+	random_scope_character = {
+			limit = {
+				has_variable = garibaldi_var
+			}
+			kill_character = yes
+		}
+	}
+
+ }
+}
+
+nfm_misc.2 = {
+	type = country_event
+	placement = ROOT
+
+	title = nfm_misc.2.t
+	desc = nfm_misc.2.d
+	flavor = nfm_misc.2.f
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/before_the_battle"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	gui_window = event_window_1char_tabloid
+    left_icon = scope:garibaldi_char_scope
+
+	duration = 1
+
+	hidden = no
 
 	trigger = {
 	}
 
 	immediate = {
-		c:MEX = {
-			save_scope_as = mexico_scope
+		set_global_variable = garibaldi_busy_var
+		set_variable = hired_garibaldi_var
+		save_scope_as = garibaldi_hire_scope
+
+		create_character = {
+			first_name = Giuseppe
+			last_name = Garibaldi
+			is_general = yes
+			interest_group = ig_armed_forces
+			female = no
+			birth_date = 1807.7.4
+			dna = dna_giuseppe_garibaldi
+			ideology = ideology_republican_leader
+			culture = cu:north_italian
+			traits = {
+				celebrity_commander
+				experienced_defensive_strategist
+				expert_offensive_planner 
+				resupply_commander
+
+				charismatic
+   			    brave
+
+			}
+			on_created = {
+   				set_variable = garibaldi_var
+   			}
+   			    save_scope_as = garibaldi_char_scope
 		}
+ }
+
+ 	option = {
+ 		name =  nfm_misc.2.a
+ 	}
+}
+
+nfm_misc.5 = { #election momentum events based on clout
+	type = country_event
+	placement = root
+	title =nfm_misc.5.t
+	desc = nfm_misc.5.d
+	flavor = nfm_misc.5.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_election.bk2"
 	}
 
-	option = {
-		name = mexican_american.1.a
-		ai_chance = {
-			base = 1
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/election"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		in_election_campaign = yes
+		NOT = { has_variable = election_momentum_clout_cooldown }
+	}
+
+	immediate = {
+		set_variable = {
+			name = election_momentum_clout_cooldown
+			months = 12
 		}
-		custom_tooltip = mexican_american.1.tt1 # 3 million over a year
-		c:MEX = {
-			trigger_event = {
-				id = mexican_american.2 
-				days = 0
-				popup = yes
+		ig:ig_armed_forces  = {
+				party = {
+						save_scope_as = armed_forces_party
+			}
+		}
+		scope:armed_forces_party= {
+			if ={ 
+				limit = { ROOT.ig:ig_armed_forces = {ig_clout >= 0.9 }}
+				add_momentum = 1
+			}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_armed_forces = {ig_clout >= 0.75 }}
+				add_momentum = 0.75
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_armed_forces = {ig_clout >= 0.5 }}
+				add_momentum = 0.5
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_armed_forces = {ig_clout >= 0.4 }}
+				add_momentum = 0.4
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_armed_forces = {ig_clout >= 0.3 }}
+				add_momentum = 0.3
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_armed_forces = {ig_clout >= 0.2 }}
+				add_momentum = 0.2
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_armed_forces = {ig_clout >= 0.1 }}
+				add_momentum = 0.1
+		}
+			}
+			}
+			}
+			}
+			}
+			}
+		}
+		ig:ig_devout  = {
+				party = {
+						save_scope_as = devout_party
+			}
+		}
+		scope:devout_party = {
+			if ={ 
+				limit = { ROOT.ig:ig_devout = {ig_clout >= 0.9 }	}
+				add_momentum = 1
+			}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_devout = {ig_clout >= 0.75 }}
+				add_momentum = 0.75
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_devout = {ig_clout >= 0.5 }}
+				add_momentum = 0.5
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_devout = {ig_clout >= 0.4 }}
+				add_momentum = 0.4
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_devout = {ig_clout >= 0.3 }}
+				add_momentum = 0.3
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_devout = {ig_clout >= 0.2 }}
+				add_momentum = 0.2
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_devout = {ig_clout >= 0.1 }}
+				add_momentum = 0.1
+		}
+			}
+			}
+			}
+			}
+			}
+			}
+		}
+		ig:ig_industrialists  = {
+				party = {
+						save_scope_as = industrial_party
+			}
+		}
+		scope:industrial_party = {
+			if ={ 
+				limit = { ROOT.ig:ig_industrialists = {ig_clout >= 0.9 }	}
+				add_momentum = 1
+			}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_industrialists = {ig_clout >= 0.75 }}
+				add_momentum = 0.75
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_industrialists = {ig_clout >= 0.5 }}
+				add_momentum = 0.5
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_industrialists = {ig_clout >= 0.4 }}
+				add_momentum = 0.4
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_industrialists = {ig_clout >= 0.3 }}
+				add_momentum = 0.3
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_industrialists = {ig_clout >= 0.2 }}
+				add_momentum = 0.2
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_industrialists = {ig_clout >= 0.1 }}
+				add_momentum = 0.1
+		}
+			}
+			}
+			}
+			}
+			}
+			}
+		}
+		ig:ig_intelligentsia  = {
+				party = {
+						save_scope_as = intelligentsia_party
+			}
+		}
+		scope:intelligentsia_party = {
+			if ={ 
+				limit = { ROOT.ig:ig_intelligentsia = {ig_clout >= 0.9 }}
+				add_momentum = 1
+			}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_intelligentsia = {ig_clout >= 0.75 }}
+				add_momentum = 0.75
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_intelligentsia = {ig_clout >= 0.5 }}
+				add_momentum = 0.5
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_intelligentsia = {ig_clout >= 0.4 }}
+				add_momentum = 0.4
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_intelligentsia = {ig_clout >= 0.3 }}
+				add_momentum = 0.3
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_intelligentsia = {ig_clout >= 0.2 }}
+				add_momentum = 0.2
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_intelligentsia = {ig_clout >= 0.1 }}
+				add_momentum = 0.1
+		}
+			}
+			}
+			}
+			}
+			}
+			}
+		}
+		ig:ig_landowners  = {
+				party = {
+						save_scope_as = landowner_party
+			}
+		}
+		scope:landowner_party = {
+			if ={ 
+				limit = { ROOT.ig:ig_landowners = {ig_clout >= 0.9 }}
+				add_momentum = 1
+			}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_landowners = {ig_clout >= 0.75 }}
+				add_momentum = 0.75
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_landowners = {ig_clout >= 0.5 }}
+				add_momentum = 0.5
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_landowners = {ig_clout >= 0.4 }}
+				add_momentum = 0.4
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_landowners = {ig_clout >= 0.3 }}
+				add_momentum = 0.3
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_landowners = {ig_clout >= 0.2 }}
+				add_momentum = 0.2
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_landowners = {ig_clout >= 0.1 }}
+				add_momentum = 0.1
+		}
+			}
+			}
+			}
+			}
+			}
+			}
+		}
+		ig:ig_petty_bourgeoisie  = {
+				party = {
+						save_scope_as = petty_bourgeoisie_party
+			}
+		}
+		scope:petty_bourgeoisie_party = {
+			if ={ 
+				limit = { ROOT.ig:ig_petty_bourgeoisie = {ig_clout >= 0.9 }	}
+				add_momentum = 1
+			}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_petty_bourgeoisie = {ig_clout >= 0.75 }}
+				add_momentum = 0.75
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_petty_bourgeoisie = {ig_clout >= 0.5 }}
+				add_momentum = 0.5
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_petty_bourgeoisie = {ig_clout >= 0.4 }}
+				add_momentum = 0.4
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_petty_bourgeoisie = {ig_clout >= 0.3 }}
+				add_momentum = 0.3
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_petty_bourgeoisie = {ig_clout >= 0.2 }}
+				add_momentum = 0.2
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_petty_bourgeoisie = {ig_clout >= 0.1 }}
+				add_momentum = 0.1
+		}
+			}
+			}
+			}
+			}
+			}
+			}
+		}
+	ig:ig_rural_folk  = {
+				party = {
+						save_scope_as = rural_folk_party
+			}
+		}
+		scope:rural_folk_party = {
+			if ={ 
+				limit = { ROOT.ig:ig_rural_folk = {ig_clout >= 0.9 }	}
+				add_momentum = 1
+			}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_rural_folk = {ig_clout >= 0.75 }}
+				add_momentum = 0.75
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_rural_folk = {ig_clout >= 0.5 }}
+				add_momentum = 0.5
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_rural_folk = {ig_clout >= 0.4 }}
+				add_momentum = 0.4
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_rural_folk = {ig_clout >= 0.3 }}
+				add_momentum = 0.3
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_rural_folk = {ig_clout >= 0.2 }}
+				add_momentum = 0.2
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_rural_folk = {ig_clout >= 0.1 }}
+				add_momentum = 0.1
+		}
+			}
+			}
+			}
+			}
+			}
+			}
+		}
+	ig:ig_trade_unions  = {
+				party = {
+						save_scope_as = trade_unions_party
+			}
+		}
+		scope:trade_unions_party = {
+			if ={ 
+				limit = { ROOT.ig:ig_trade_unions = {ig_clout >= 0.9 }	}
+				add_momentum = 1
+			}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_trade_unions = {ig_clout >= 0.75 }}
+				add_momentum = 0.75
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_trade_unions = {ig_clout >= 0.5 }}
+				add_momentum = 0.5
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_trade_unions = {ig_clout >= 0.4 }}
+				add_momentum = 0.4
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_trade_unions = {ig_clout >= 0.3 }}
+				add_momentum = 0.3
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_trade_unions = {ig_clout >= 0.2 }}
+				add_momentum = 0.2
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_trade_unions = {ig_clout >= 0.1 }}
+				add_momentum = 0.1
+		}
+			}
+			}
+			}
+			}
+			}
 			}
 		}
 	}
-	option = { # perhaps another time
-		name = mexican_american.1.c
-		default_option = yes
-		ai_chance = {
-			base = 0
-		}
-		remove_variable = usa_western_purchase_var
+	cancellation_trigger = {
+		in_election_campaign = no
 	}
+
+	option = {
+			name =  nfm_misc.5.a
+	}
+}
+
+nfm_misc.6 = {
+	type = country_event
+	placement = ROOT
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_capitalists_meeting.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/capitalists_meeting"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	title = nfm_misc.6.t
+	desc = nfm_misc.6.d
+	flavor = nfm_misc.6.f
+
+	duration = 1
+
+	hidden = no
+
+	trigger = {
+		
+	}
+
+	immediate = {
+		 every_scope_state = { limit = {is_incorporated = yes}
+				save_scope_as = state_clout_adjust_scope
+				remove_modifier = 9_enormous_state_clout_adjustment
+				remove_modifier = 8_huge_state_clout_adjustment
+				remove_modifier = 7_very_large_state_clout_adjustment
+				remove_modifier = 6_large_state_clout_adjustment
+				remove_modifier = 5_modest_state_clout_adjustment
+				remove_modifier = 4_small_state_clout_adjustment
+				remove_modifier = 3_very_small_state_clout_adjustment
+				remove_modifier = 2_tiny_state_clout_adjustment
+				remove_modifier = 1_miniscule_state_clout_adjustment
+			if = {
+				limit = { scope:state_clout_adjust_scope.state_population >= 5000000 }
+				scope:state_clout_adjust_scope = { add_modifier = 9_enormous_state_clout_adjustment }
+			} else ={
+				if = {
+				limit = { scope:state_clout_adjust_scope.state_population >= 2500000 }
+				scope:state_clout_adjust_scope = { add_modifier = 8_huge_state_clout_adjustment }
+			} else ={
+				if = {
+				limit = { scope:state_clout_adjust_scope.state_population >= 1000000 }
+				scope:state_clout_adjust_scope = { add_modifier = 7_very_large_state_clout_adjustment }
+			} else ={
+				if = {
+				limit = { scope:state_clout_adjust_scope.state_population >= 500000 }
+				scope:state_clout_adjust_scope = { add_modifier = 6_large_state_clout_adjustment }
+			} else ={
+				if = {
+				limit = { scope:state_clout_adjust_scope.state_population >= 300000 }
+				scope:state_clout_adjust_scope = { add_modifier = 5_modest_state_clout_adjustment }
+			} else ={
+				if = {
+				limit = { scope:state_clout_adjust_scope.state_population >= 200000 }
+				scope:state_clout_adjust_scope = { add_modifier = 4_small_state_clout_adjustment }
+			} else ={
+				if = {
+				limit = { scope:state_clout_adjust_scope.state_population >= 100000 }
+				scope:state_clout_adjust_scope = { add_modifier = 3_very_small_state_clout_adjustment }
+			} else ={
+				if = {
+				limit = { scope:state_clout_adjust_scope.state_population >= 50000 }
+				scope:state_clout_adjust_scope = { add_modifier = 2_tiny_state_clout_adjustment }
+			} else ={
+				scope:state_clout_adjust_scope = { add_modifier = 1_miniscule_state_clout_adjustment }
+			}	
+			}	
+			}	
+			}	
+			}			
+			}	
+			}
+			}
+		}
+ 	}
+ 	option = {
+ 		name =  nfm_misc.6.a
+
+ 	}
+}
+
+nfm_misc.4 = {#Garibaldi Death
+	type = country_event
+	placement = ROOT
+
+	title = nfm_misc.2.t
+	desc = nfm_misc.2.d
+	flavor = nfm_misc.2.f
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/before_the_battle"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	gui_window = event_window_1char_tabloid
+    left_icon = scope:garibaldi_char_scope
+
+	duration = 1
+
+	hidden = yes
+
+	trigger = {
+		ROOT = { owns_entire_state_region = STATE_LAZIO }
+		year >=1870
+	}
+
+	immediate = {
+		set_global_variable = garibaldi_busy_var
+		set_variable = hired_garibaldi_var
+		trigger_event  = {nfm_misc.2} 
+ }
+
+ 	option = {
+ 		name =  nfm_misc.2.a
+ 	}
 }

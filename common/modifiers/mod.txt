@@ -207,11 +207,3 @@ icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
 		state_pop_pol_str_mult = 1
 }
 
-president_one_term_already_mod = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
-}
-
-president_two_terms_already_mod = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
-	character_popularity_add = 10
-}
