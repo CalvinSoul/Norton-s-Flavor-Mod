@@ -1,0 +1,23 @@
+﻿### Conditions
+
+previous_president_trait = {
+	type = condition
+	texture = "gfx/interface/icons/character_trait_icons/persistent.dds"
+	
+	character_modifier = {
+		character_popularity_add = 10
+	}
+
+	interest_group_modifier = {
+	}
+	
+	possible = {
+	}
+	
+	weight = {
+		value = -1
+	}
+	
+	replace = {																
+	}
+}

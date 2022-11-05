@@ -1,0 +1,55 @@
+﻿namespace = nfm_misc
+
+
+
+nfm_misc.1 = {
+	type = country_event
+	placement = ROOT
+
+	title = mexican_american.1.t
+	desc = mexican_american.1.d
+	flavor = mexican_american.1.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/signed_contract"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	trigger = {
+	}
+
+	immediate = {
+		c:MEX = {
+			save_scope_as = mexico_scope
+		}
+	}
+
+	option = {
+		name = mexican_american.1.a
+		ai_chance = {
+			base = 1
+		}
+		custom_tooltip = mexican_american.1.tt1 # 3 million over a year
+		c:MEX = {
+			trigger_event = {
+				id = mexican_american.2 
+				days = 0
+				popup = yes
+			}
+		}
+	}
+	option = { # perhaps another time
+		name = mexican_american.1.c
+		default_option = yes
+		ai_chance = {
+			base = 0
+		}
+		remove_variable = usa_western_purchase_var
+	}
+}

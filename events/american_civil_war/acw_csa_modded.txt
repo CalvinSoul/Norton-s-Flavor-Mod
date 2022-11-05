@@ -1,0 +1,76 @@
+﻿namespace = acw_csa_modded
+
+# ACW startup
+acw_csa_modded.1 = {
+	type = country_event
+
+	hidden = yes
+
+
+	duration = 0
+
+	trigger = {
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				is_slave_state = yes
+			}
+				save_scope_as = slave_state_scope
+				scope:slave_state_scope = {
+					set_state_owner = c:CSA
+				}
+				c:USA = {trigger_event = acw_csa_modded.1}
+			}
+		}
+}
+
+acw_csa_modded.2 = {
+	type = country_event
+
+	hidden = yes
+
+
+	duration = 0
+
+	trigger = {
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				is_slave_state = no
+			}
+				save_scope_as = free_state_scope
+				scope:free_state_scope = {
+					set_state_owner = c:USA
+				}
+				c:CSA = {trigger_event = acw_csa_modded.2}
+			}
+		}
+}
+
+acw_csa_modded.10 = {
+	type = country_event
+
+	hidden = yes
+
+
+	duration = 0
+
+	trigger = {
+		exists = c:USA
+		c:USA = ROOT
+		NOT = { has_law = law_type:law_slavery_banned }
+	#	ig:ig_landowners = {
+	#		is_marginal = no
+	#		ig_approval < -19
+	#	}
+	}
+
+	immediate = {
+				c:USA = {trigger_event = acw_je_events.1}
+		}
+		
+}
