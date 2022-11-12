@@ -93,14 +93,14 @@ acw_events.1 = { ###Edited to change when it fires
 				months = short_modifier_time
 				is_decaying = yes
 			}
-		c:USA = {add_radicals = {
-			value = 0.03
-			culture = cu:yankee
-		}}
-		c:USA = {add_radicals = {
-			value = 0.03
-			culture = cu:dixie
-		}}
+	#	c:USA = {add_radicals = {
+	#		value = 0.01
+	#		culture = cu:yankee
+	#	}}
+	#	c:USA = {add_radicals = {
+	#		value = 0.01
+	#		culture = cu:dixie
+	#	}}
 	}
 
 	option = {
@@ -126,14 +126,14 @@ acw_events.1 = { ###Edited to change when it fires
 				months = short_modifier_time
 				is_decaying = yes
 			}
-        c:USA = {add_radicals = {
-			value = 0.03
-			culture = cu:yankee
-		}}
-		c:USA = {add_radicals = {
-			value = 0.03
-			culture = cu:dixie
-		}}
+    #    c:USA = {add_radicals = {
+	#		value = 0.01
+	#		culture = cu:yankee
+	#	}}
+	#	c:USA = {add_radicals = {
+	#		value = 0.01
+	#		culture = cu:dixie
+	#	}}
 	}
 	}
 
@@ -308,10 +308,10 @@ acw_events.2 = {###Edited to change when it fires
 				is_decaying = yes
 			}
 		}
-		c:USA = {add_radicals = {
-			value = 0.03
-			culture = cu:yankee
-		}}
+	#	c:USA = {add_radicals = {
+	#		value = 0.01
+	#		culture = cu:yankee
+	#	}}
 	}
 	option = {
 		name = acw_events.2.b
@@ -344,10 +344,10 @@ acw_events.2 = {###Edited to change when it fires
 				is_decaying = yes
 			}
 		}
-		c:USA = {add_radicals = {
-			value = 0.03
-			culture = cu:dixie
-		}}
+	#	c:USA = {add_radicals = {
+	#		value = 0.01
+	#		culture = cu:dixie
+	#	}}
 	}
 }
 
@@ -373,11 +373,14 @@ acw_events.5 = {
 
 	duration = 3
 
+	is_popup = yes
+
 	trigger = {
 		exists = c:USA
 		c:USA = ROOT
 		NOT = { has_law = law_type:law_slavery_banned }
 		NOT = { has_variable = bleeding_kansas_happened }
+		NOT = { has_modifier = missouri_compromise}
 		any_scope_state = {
 			is_slave_state = no
 			is_incorporated = no
@@ -403,8 +406,15 @@ acw_events.5 = {
 				wrathful
 				pious
 			}
-
-			save_scope_as = character_to_display_john_brown
+			on_created = {
+                set_variable = {
+                    name = is_john_brown #give the character a variable
+                }
+            }
+        }
+        random_scope_character = {
+            limit = { has_variable = is_john_brown } #use the variable to scope to that specific character
+            save_scope_as = character_to_display_john_brown #save the scope here
 		}
 		set_variable = {
 			name = bleeding_kansas_happened

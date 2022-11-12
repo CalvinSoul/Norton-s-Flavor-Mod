@@ -23,7 +23,7 @@ mexican_nfm.1 = {
 	trigger = {
 		c:MEX = { has_war_with = c:USA }
 		NOT = {has_variable = bear_flag_revolt_var}
-		owns_entire_state_region = STATE_CALIFORNIA
+		c:MEX = { owns_entire_state_region = STATE_CALIFORNIA}
 	}
 
 	immediate = {
@@ -90,7 +90,7 @@ mexican_nfm.1 = {
 		activate_law = law_free_trade
 		}
 
-
+		c:MEX = {
 		create_diplomatic_play = {
 			name = bear_flag_revolt_warname
 		
@@ -103,7 +103,12 @@ mexican_nfm.1 = {
 				type = conquer_state
 				target_state = s:STATE_CALIFORNIA.region_state:MEX
 			}
-	}
+			add_war_goal = {
+				holder = c:CAL
+				type = conquer_state
+				target_state = s:STATE_NEVADA.region_state:MEX
+			}
+	}}
 }
 	option = { # perhaps another time
 		name = mexican_nfm.1.a
@@ -138,15 +143,7 @@ mexican_nfm.2 = {
 		exists = c:MEX
 		c:MEX = ROOT
 		year >= 1839
-		OR = {
-			exists = c:TEX
-			s:STATE_TEXAS = {
-			any_scope_state = {
-					owner = {
-							c:USA = THIS
-					}
-				}
-			}
+		exists = c:TEX
 		}
 		NOT = {
 				OR = {

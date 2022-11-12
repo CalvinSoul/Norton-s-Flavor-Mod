@@ -35,6 +35,26 @@ POPS = {
 				}
 			}
 		}
+		s:STATE_KANSAS = {
+		region_state:USA = {
+			create_pop = {
+				culture = siouan
+				size = 12000
+			}
+		}
+		region_state:PWN = {
+			create_pop = {
+				culture = caddoan
+				size = 8000
+			}
+		}
+		region_state:MEX = {
+			create_pop = {
+				culture = siouan
+				size = 4000
+			}
+		}
+	}
 	s:STATE_BRITISH_COLUMBIA = {
 		region_state:ORG = {
 			create_pop = {
@@ -150,4 +170,29 @@ POPS = {
 					size = 4000
 				}
 			}
+	}
+
+
+s:STATE_FLORIDA = {
+		region_state:USA = {
+			create_pop = {
+				culture = dixie
+				size = 47996
+			}
+			create_pop = {
+				culture = afro_american
+				size = 817 # unknown free population in 1830, 817 free in 1840
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = afro_american
+				size = 31183
+			}	
+		}
+		region_state:SEM = {
+			create_pop = {
+				culture = muskogean
+				size = 8000
+			}
+		}
 	}

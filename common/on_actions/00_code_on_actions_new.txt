@@ -7,6 +7,29 @@ on_monthly_pulse_country = {
 		mexican_nfm.3
 		nfm_misc.3
 		mexican_nfm.1
+		nfm_misc.8
+		nfm_misc.10
+
+		nfm_american_elections.1
+		nfm_american_elections.2
+		nfm_american_elections.3
+		nfm_american_elections.4
+		nfm_american_elections.5
+		nfm_american_elections.6
+		nfm_american_elections.7
+		nfm_american_elections.8
+		nfm_american_elections.9
+
+		nfm_american_elections_result.1
+		nfm_american_elections_result.2
+		nfm_american_elections_result.3
+		nfm_american_elections_result.4
+		nfm_american_elections_result.5
+		nfm_american_elections_result.6
+		nfm_american_elections_result.7
+		nfm_american_elections_result.8
+		nfm_american_elections_result.9
+		nfm_american_elections_result.10
 	}
 	random_events = {
 		
@@ -39,12 +62,28 @@ on_half_yearly_pulse_country = {
 }
 
 on_election_campaign_start = {
-	effect = {
+	events = {
 		nfm_misc.5
+		nfm_misc.7
+		nfm_misc.9
+
+
+	}
+}
+on_election_campaign_end = { 
+	events = {
+		nfm_misc.6
+		nfm_misc.8
 	}
 }
 
 on_five_year_pulse_country = {
+	events = {
+		nfm_misc.6
+	}
+}
+
+on_state_incorporation = {
 	effect = {
 		nfm_misc.6
 	}

@@ -20,11 +20,13 @@ acw_modded.1 = {
 
 	duration = 3
 
+	is_popup = yes
+
 	trigger = {
 		exists = c:USA
 		c:USA = ROOT
 		NOT = { c:USA = {has_law = law_type:law_slavery_banned }}
-		year >= 1859
+		year >= 1858
 		NOT = { c:USA = {has_variable = harpers_raid_happened_var}}
 	}
 
@@ -36,7 +38,7 @@ acw_modded.1 = {
 			interest_group = ig_rural_folk
 			ideology = ideology_abolitionist
 			birth_date = 1800.5.9
-			dna = dna_john_brown
+			dna = dna_john_brown_beard
 			traits = {
 				brave
 				charismatic
@@ -44,7 +46,40 @@ acw_modded.1 = {
 				pious
 			}
 
-			save_scope_as = character_to_display_john_brown
+			on_created = {
+                set_variable = {
+                    name = is_john_brown #give the character a variable
+                }
+            }
+        }
+        create_character = { #BASEDMAN
+			first_name = Harriet
+			last_name = Tubman
+			culture = cu:afro_american
+			female = yes
+			interest_group = ig_devout
+			ideology = ideology_abolitionist
+			birth_date = 1822.3.10
+			dna = dna_harriet_tubman
+			traits = {
+				brave
+				pious
+				meticulous
+				persistent 
+			}
+			on_created = {
+                set_variable = {
+                    name = is_harriet_tubman #give the character a variable
+                }
+            }
+        }
+         random_scope_character = {
+            limit = { has_variable = is_john_brown } #use the variable to scope to that specific character
+            save_scope_as = character_to_display_john_brown #save the scope here
+		}
+        random_scope_character = {
+            limit = { has_variable = is_harriet_tubman } #use the variable to scope to that specific character
+            save_scope_as = character_to_display_is_harriet_tubman #save the scope here
 		}
 		set_variable = {
 			name = harpers_raid_happened_var
@@ -115,6 +150,8 @@ acw_modded.2 = { #Failed raid on Harper's Ferry, capture
 
 	duration = 3
 
+	is_popup = yes
+
 	trigger = {
 		exists = c:USA
 		c:USA = ROOT
@@ -131,7 +168,7 @@ acw_modded.2 = { #Failed raid on Harper's Ferry, capture
 			interest_group = ig_rural_folk
 			ideology = ideology_abolitionist
 			birth_date = 1800.5.9
-			dna = dna_john_brown
+			dna = dna_john_brown_beard
 			traits = {
 				brave
 				charismatic
@@ -139,7 +176,16 @@ acw_modded.2 = { #Failed raid on Harper's Ferry, capture
 				pious
 			}
 
-			save_scope_as = character_to_display_john_brown
+			on_created = {
+                set_variable = {
+                    name = is_john_brown #give the character a variable
+                }
+            }
+        }
+        random_scope_character = {
+            limit = { has_variable = is_john_brown } #use the variable to scope to that specific character
+            save_scope_as = character_to_display_john_brown #save the scope here
+        
 		}
 		set_variable = {
 			name = harpers_raid_happened_var
@@ -184,6 +230,8 @@ acw_modded.3 = { #Failed raid on Harper's Ferry, catastrophic
 
 	duration = 3
 
+	is_popup = yes
+
 	trigger = {
 		exists = c:USA
 		c:USA = ROOT
@@ -200,15 +248,22 @@ acw_modded.3 = { #Failed raid on Harper's Ferry, catastrophic
 			interest_group = ig_rural_folk
 			ideology = ideology_abolitionist
 			birth_date = 1800.5.9
-			dna = dna_john_brown
+			dna = dna_john_brown_beard
 			traits = {
 				brave
 				charismatic
 				wrathful
 				pious
 			}
-
-			save_scope_as = character_to_display_john_brown
+			on_created = {
+                set_variable = {
+                    name = is_john_brown #give the character a variable
+                }
+            }
+        }
+        random_scope_character = {
+            limit = { has_variable = is_john_brown } #use the variable to scope to that specific character
+            save_scope_as = character_to_display_john_brown #save the scope here
 		}
 		set_variable = {
 			name = harpers_raid_happened_var

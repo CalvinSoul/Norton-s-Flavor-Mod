@@ -2,10 +2,19 @@
 	icon = "gfx/interface/icons/event_icons/event_military.dds"
 	# note that if you change this, also update the decision
 	complete = {
-		owns_entire_state_region = STATE_CALIFORNIA
-		owns_entire_state_region = STATE_NEVADA
-		owns_entire_state_region = STATE_UTAH
-		owns_entire_state_region = STATE_TEXAS
+		OR = {
+			AND = {
+				owns_entire_state_region = STATE_CALIFORNIA
+				owns_entire_state_region = STATE_NEVADA
+				owns_entire_state_region = STATE_UTAH
+				owns_entire_state_region = STATE_TEXAS
+				owns_entire_state_region = STATE_ARIZONA
+				owns_entire_state_region = STATE_NEW_MEXICO
+			}
+			has_variable = manifest_destiny_we_did_it_folks
+			NOT = {has_variable = manifest_destiny_we_did_it_folks_cooldown}
+		}
+		
 	}
 
 	on_complete = {

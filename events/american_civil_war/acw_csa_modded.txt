@@ -13,16 +13,31 @@ acw_csa_modded.1 = {
 	}
 
 	immediate = {
-		random_scope_state = {
-			limit = {
-				is_slave_state = yes
-			}
-				save_scope_as = slave_state_scope
-				scope:slave_state_scope = {
-					set_state_owner = c:CSA
+		c:USA = {
+			every_scope_state = {	
+				if = { 
+					limit = { has_modifier = deep_south_state_mod } 
+				set_state_owner = c:CSA	}
 				}
-				c:USA = {trigger_event = acw_csa_modded.1}
 			}
+		c:CSA = { 
+			every_scope_state = { 
+				if = {
+					limit = { NOT = { has_modifier = deep_south_state_mod } }
+				set_state_owner = c:USA
+				}
+			}
+		}
+		if = { 
+			limit = { 
+				c:USA = { ig:ig_rural_folk = {
+					ig_approval < 10
+				}}
+			}
+			c:USA = {
+				trigger_event = acw_csa_modded.2
+			}
+		}
 		}
 }
 
@@ -38,17 +53,47 @@ acw_csa_modded.2 = {
 	}
 
 	immediate = {
-		random_scope_state = {
-			limit = {
-				is_slave_state = no
-			}
-				save_scope_as = free_state_scope
-				scope:free_state_scope = {
-					set_state_owner = c:USA
+		c:USA = {
+			every_scope_state = {	
+				if = { 
+					limit = { has_modifier = south_state_mod } 
+				set_state_owner = c:CSA	}
 				}
-				c:CSA = {trigger_event = acw_csa_modded.2}
+			}
+		if = { 
+			limit = { 
+				c:USA = { ig:ig_rural_folk = {
+					ig_approval <= -10
+				}}
+			}
+			c:USA = {
+				trigger_event = acw_csa_modded.3
 			}
 		}
+		}
+}
+
+acw_csa_modded.3 = {
+	type = country_event
+
+	hidden = yes
+
+
+	duration = 0
+
+	trigger = {
+	}
+
+	immediate = {
+		c:USA = {
+			every_scope_state = {	
+				if = { 
+					limit = { has_modifier = border_state_mod } 
+				set_state_owner = c:CSA	}
+				}
+			}
+		}
+	
 }
 
 acw_csa_modded.10 = {

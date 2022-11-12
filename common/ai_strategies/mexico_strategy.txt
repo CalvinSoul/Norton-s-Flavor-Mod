@@ -63,6 +63,7 @@ ai_strategy_mexico_defend_the_north = {
 	}	
 		
 	possible = {
+		has_modifier = dummy_mod_lol_get_fucked
 		OR = { AND = {
 			exists = c:MEX
 			this = c:MEX

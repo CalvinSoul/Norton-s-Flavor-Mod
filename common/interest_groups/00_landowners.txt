@@ -83,7 +83,7 @@
 					}
 						state = {state_region = { is_homeland = cu:dixie }}	
 				} }
-				value = 800
+				value = 100
 			}
 		}					
 		
@@ -100,7 +100,7 @@
 					state = { state_region = { is_homeland = cu:yankee }}	
 				} 
 			}
-				value = -500
+				value = -100
 			}
 		}					
 		

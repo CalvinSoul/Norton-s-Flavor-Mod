@@ -15,20 +15,64 @@ manifest_destiny.1 = {
 	icon = "gfx/interface/icons/event_icons/event_military.dds"
 	
 	title = manifest_destiny.1.t
-	desc = manifest_destiny.1.d
+	desc = manifest_destiny.1.de
 	flavor = manifest_destiny.1.f
 	
 	duration = 3
 	
 	trigger = {
-		set_variable = manifest_destiny_mexico_success_var
+		
 	}
+
+	immediate = {
+		set_variable = great_triumverate_work_done
+		random_scope_character = {
+			limit = {
+				has_variable = henry_clay_var
+			}
+			save_scope_as = henry_clay_scope
+			remove_trait = { great_triumverate_trait }
+			scope:henry_clay_scope = {
+				remove_trait = great_triumverate_trait 
+				add_trait = work_done_trait
+			}
+		}
+		random_scope_character = {
+			limit = {
+				has_variable = john_calhoun_var
+			}
+			save_scope_as = john_calhoun_scope
+			remove_trait = { great_triumverate_trait }
+			scope:john_calhoun_scope = {
+				add_trait = work_done_trait
+				remove_trait = great_triumverate_trait 
+			}
+		}
+		random_scope_character = {
+			limit = {
+				has_variable = daniel_webster_var
+			}
+			save_scope_as = daniel_webster_scope
+			remove_trait = { great_triumverate_trait }
+			scope:daniel_webster_scope = {
+				remove_trait = great_triumverate_trait 
+				add_trait = work_done_trait}
+		}
+		s:STATE_TEXAS.region_state:USA  = { 
+			remove_modifier = south_state_mod
+			add_modifier = south_state_mod
+		}
+	}
+
 	option = { #Wilmot Proviso
 		name = manifest_destiny.1.a
 		default_option = no
 		if = { limit = {NOT = { has_variable = csa_will_spawn_var}}
 		s:STATE_CALIFORNIA= { 
 			add_homeland = yankee 
+		}
+		s:STATE_CALIFORNIA.region_state:USA  = { 
+			set_variable = american_state_variable
 		}
 		s:STATE_NEVADA = { 
 			add_homeland = yankee
@@ -40,9 +84,15 @@ manifest_destiny.1 = {
 			add_homeland = yankee
 			add_homeland = dixie
 		}
+		s:STATE_ARIZONA.region_state:USA  = { 
+			set_variable = american_state_variable
+		}
 		s:STATE_NEW_MEXICO = { 
 			add_homeland = yankee
 			add_homeland = dixie
+		}
+		s:STATE_NEW_MEXICO.region_state:USA  = { 
+			set_variable = american_state_variable
 		}
 		s:STATE_CALIFORNIA.region_state:USA = { 
 			liberate_slaves = yes
@@ -89,13 +139,14 @@ manifest_destiny.1 = {
 				add_homeland = dixie
 			}
 			s:STATE_RIO_GRANDE.region_state:USA = {
+				add_modifier = border_state_mod
 				liberate_slaves = yes
 			}
 		}
 		remove_modifier = missouri_compromise 
 		add_modifier = mexican_cession_proviso
 		c:USA = {add_radicals = {
-			value = 0.10
+			value = 0.05
 			culture = cu:dixie
 		}}
 	}
@@ -111,10 +162,15 @@ manifest_destiny.1 = {
 		}
 	}
 
+	
+
 	option = { #Compromise of 1850
 		name = manifest_destiny.1.b
 		default_option = yes
 		if = { limit = {NOT = { has_variable = csa_will_spawn_var}} 
+		s:STATE_CALIFORNIA.region_state:USA  = { 
+			set_variable = american_state_variable
+		}
 		s:STATE_CALIFORNIA = { 
 			add_homeland = yankee
 		}
@@ -133,6 +189,21 @@ manifest_destiny.1 = {
 		s:STATE_UTAH.region_state:USA  = { 
 			liberate_slaves = yes
 		}
+		s:STATE_ARIZONA.region_state:USA = { 
+			add_modifier = {
+			name = state_popular_soveriengty_rush
+			months = 40
+			is_decaying = yes
+		}
+		}
+		s:STATE_NEW_MEXICO.region_state:USA = { 
+			add_modifier = {
+			name = state_popular_soveriengty_rush
+			months = 40
+			is_decaying = yes
+		}
+			add_modifier = border_state_mod
+		}
 		s:STATE_ARIZONA = { 
 			add_homeland = dixie
 			add_homeland = yankee
@@ -140,19 +211,17 @@ manifest_destiny.1 = {
 		s:STATE_NEW_MEXICO = { 
 			add_homeland = dixie
 		}
-		s:STATE_NEW_MEXICO.region_state:USA = {
-			create_pop = {
-				pop_type = slaves
-				culture = afro_american
-				size = 5000
-			}
-		}
 		if = { limit = { owns_entire_state_region = STATE_BAJA_CALIFORNIA }
 			s:STATE_BAJA_CALIFORNIA = {
 				add_homeland = yankee
 			}
 			s:STATE_BAJA_CALIFORNIA.region_state:USA = {
 				liberate_slaves = yes
+				add_modifier = {
+			name = state_popular_soveriengty_rush
+			months = 40
+			is_decaying = yes
+		}
 			}
 		}
 		if = { limit = { owns_entire_state_region = STATE_SONORA }
@@ -161,6 +230,11 @@ manifest_destiny.1 = {
 			}
 			s:STATE_SONORA.region_state:USA = {
 				liberate_slaves = yes
+				add_modifier = {
+			name = state_popular_soveriengty_rush
+			months = 40
+			is_decaying = yes
+		}
 			}
 		}
 		if = { limit = { owns_entire_state_region = STATE_CHIHUAHUA }
@@ -168,11 +242,12 @@ manifest_destiny.1 = {
 				add_homeland = dixie
 			}
 			s:STATE_CHIHUAHUA.region_state:USA = {
-				create_pop = {
-				pop_type = slaves
-				culture = afro_american
-				size = 5000
-				}
+				add_modifier = {
+			name = state_popular_soveriengty_rush
+			months = 40
+			is_decaying = yes
+		}
+			add_modifier = border_state_mod
 			}
 		}
 		if = { limit = { owns_entire_state_region = STATE_RIO_GRANDE }
@@ -180,7 +255,13 @@ manifest_destiny.1 = {
 				add_homeland = dixie
 			}
 			s:STATE_RIO_GRANDE.region_state:USA = {
-				create_pop = {
+				add_modifier = {
+			name = state_popular_soveriengty_rush
+			months = 40
+			is_decaying = yes
+			}
+			add_modifier = south_state_mod
+			create_pop = {
 				pop_type = slaves
 				culture = afro_american
 				size = 5000
@@ -190,12 +271,12 @@ manifest_destiny.1 = {
 		remove_modifier = missouri_compromise 
 		add_modifier = mexican_cession_compromise
 		c:USA = {add_radicals = {
-			value = 0.03
+			value = 0.01
 			culture = cu:yankee
 		}}
 		c:USA = {add_radicals = {
-			value = 0.03
-			culture = cu:yankee
+			value = 0.01
+			culture = cu:dixie
 		}}
 	}
 	else = {
@@ -230,24 +311,43 @@ manifest_destiny.1 = {
 			add_homeland = dixie
 		}
 		s:STATE_CALIFORNIA.region_state:USA = { 
-		 	add_modifier = state_popular_soveriengty_rush
+		 	add_modifier = {
+			name = state_popular_soveriengty_rush
+			months = 40
+			is_decaying = yes
+		}
 			
 		}
 		s:STATE_NEVADA.region_state:USA = { 
-			
-			add_modifier = state_popular_soveriengty_rush
+
+			add_modifier = {
+			name = state_popular_soveriengty_rush
+			months = 40
+			is_decaying = yes
+		}
 		}
 		s:STATE_UTAH.region_state:USA= { 
-			
-			add_modifier = state_popular_soveriengty_rush
+			add_modifier = {
+			name = state_popular_soveriengty_rush
+			months = 40
+			is_decaying = yes
+		}
 		}
 		s:STATE_ARIZONA.region_state:USA = { 
-		
-			add_modifier = state_popular_soveriengty_rush
+			add_modifier = border_state_mod
+			add_modifier = {
+			name = state_popular_soveriengty_rush
+			months = 40
+			is_decaying = yes
+		}
 		}
 		s:STATE_NEW_MEXICO.region_state:USA = { 
-			
-			add_modifier = state_popular_soveriengty_rush
+			add_modifier = border_state_mod
+			add_modifier = {
+			name = state_popular_soveriengty_rush
+			months = 40
+			is_decaying = yes
+		}
 		}
 
 		if = { limit = { owns_entire_state_region = STATE_BAJA_CALIFORNIA }
@@ -255,7 +355,12 @@ manifest_destiny.1 = {
 				add_homeland = yankee
 			}
 			s:STATE_BAJA_CALIFORNIA.region_state:USA = {
-				add_modifier = state_popular_soveriengty_rush
+				add_modifier = {
+			name = state_popular_soveriengty_rush
+			months = 40
+			is_decaying = yes
+		}
+			add_modifier = border_state_mod
 			}
 		}
 		if = { limit = { owns_entire_state_region = STATE_SONORA }
@@ -264,7 +369,12 @@ manifest_destiny.1 = {
 				add_homeland = dixie
 			}
 			s:STATE_SONORA.region_state:USA = {
-				add_modifier = state_popular_soveriengty_rush
+				add_modifier = {
+			name = state_popular_soveriengty_rush
+			months = 40
+			is_decaying = yes
+		}
+			add_modifier = border_state_mod
 			}
 		}
 		if = { limit = { owns_entire_state_region = STATE_CHIHUAHUA }
@@ -273,7 +383,12 @@ manifest_destiny.1 = {
 				add_homeland = dixie
 			}
 			s:STATE_CHIHUAHUA.region_state:USA = {
-				add_modifier = state_popular_soveriengty_rush
+				add_modifier = {
+			name = state_popular_soveriengty_rush
+			months = 40
+			is_decaying = yes
+		}
+			add_modifier = border_state_mod
 			}
 		}
 		if = { limit = { owns_entire_state_region = STATE_RIO_GRANDE }
@@ -281,18 +396,24 @@ manifest_destiny.1 = {
 				add_homeland = dixie
 			}
 			s:STATE_RIO_GRANDE.region_state:USA = {
-				add_modifier = state_popular_soveriengty_rush
+				add_modifier = {
+			name = state_popular_soveriengty_rush
+			months = 40
+			is_decaying = yes
+		}
+			add_modifier = south_state_mod
+				create_pop = {
+				pop_type = slaves
+				culture = afro_american
+				size = 5000
+				}
 			}
 		}
 		remove_modifier = missouri_compromise 
 		add_modifier = mexican_cession_pop_sov 
 		c:USA = {add_radicals = {
-			value = 0.01
+			value = 0.05
 			culture = cu:yankee
-		}}
-		c:USA = {add_radicals = {
-			value = 0.01
-			culture = cu:dixie
 		}}
 	}
 	else = {
@@ -334,13 +455,13 @@ manifest_destiny.2 = {
 	option = {
 		name = manifest_destiny.1.a
 		default_option = yes
-		if = {
-			limit = {
-				exists = c:SEQ
-				c:SEQ = { is_subject_of = ROOT }
-			}
-			annex = c:SEQ
-		}
+	#	if = {
+	#		limit = {
+	#			exists = c:SEQ
+	#			c:SEQ = { is_subject_of = ROOT }
+	#		}
+	#		annex = c:SEQ
+	#	}
 		s:STATE_OKLAHOMA = { 
 			add_homeland = dixie
 		}
@@ -573,8 +694,8 @@ manifest_destiny.4 = {
 			limit = {
 				has_modifier = state_popular_soveriengty_rush
 				}
-			remove_modifier = state_popular_soveriengty_rush
-			save_scope_as = state_popular_soveriengty
+				save_scope_as = state_popular_soveriengty
+				remove_modifier = state_popular_soveriengty_rush
 		}
 	}
 
@@ -656,8 +777,14 @@ manifest_destiny.5 = {
 			name = mexican_american_war_warname
 		
 			target_country = c:MEX
-			war = no
+			war = yes
 			type = dp_make_dominion
+
+			add_war_goal = {
+    				holder = c:USA
+    				type = conquer_state
+   					target_state = s:STATE_TEXAS.region_state:MEX
+   			}
 		}
 		c:USA = {
 			set_variable = mexican_american_war_started
@@ -730,6 +857,20 @@ manifest_destiny.6 = {
 				set_state_owner = c:USA
 			}
 		}
+		s:STATE_MINNESOTA = {
+			random_scope_state = {
+				limit = {
+					exists = c:GBR
+					owner = {
+						OR = {
+							c:GBR = THIS
+							is_subject_of = c:GBR
+						}
+					}
+				}
+				set_state_owner = c:USA
+			}
+		}
 	}
 
 	option = { 
@@ -773,36 +914,14 @@ manifest_destiny.7 = {
 		ai_chance = {
 			base = 100
 		}
-		s:STATE_ARIZONA = {
-			random_scope_state = {
-				limit = {
-					exists = c:MEX
-					owner = {
-							c:MEX = THIS
-						}
-					}
-				}
+		s:STATE_ARIZONA.region_state:MEX = {
 				set_state_owner = c:USA
 			}
-		s:STATE_NEW_MEXICO = {
-			random_scope_state = {
-				limit = {
-					exists = c:MEX
-					owner = {
-							c:MEX = THIS
-						}
-					}
-				}
+		s:STATE_NEW_MEXICO.region_state:MEX = {
 				set_state_owner = c:USA
 			}	
 		}
 
-	option = { 
-		name = manifest_destiny.7.a
-		ai_chance = {
-			base = 0
-		}
-	}
 }
 
 

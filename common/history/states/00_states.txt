@@ -451,15 +451,9 @@ STATES = {
 				}
 			}
 			create_state = {
-				country = c:COM
-				owned_provinces = {
-					xEB0DEB xD3D517
-				}
-			}
-			create_state = {
 				country = c:MEX
 				owned_provinces = {
-					x405BB7 x17C2F0 xAF6622 x231FA5
+					x405BB7 x17C2F0 xAF6622 x231FA5 xEB0DEB xD3D517
 				}
 				state_type = unincorporated
 			}
@@ -623,13 +617,17 @@ STATES = {
 	s:STATE_FLORIDA = {
 		create_state = {
 			country = c:USA
-			owned_provinces = { x7FA347 x4407A0 xF41CC0 x5B1199 xED77FB x3CDD1A xE58A3D x5CD014 x7BCB55 xE740E5 xC60D66 x4070C0 x3556E5 xAAF2AF xF0B481 x9088D5 xFE627B x65ECBE xC000F0 x2E5E47 x3126CA x88BDEA x552AD8 x31C481 xB06E20 xDAE3CC x0C1D7F x1714EE xA03000 xD0761D x23B4D0 x8C16F9 x6E31DE x976584 xE3533E }
+			owned_provinces = {  x4407A0 xF41CC0 x5B1199 xED77FB  xE58A3D x5CD014 x7BCB55  xC60D66 x4070C0 x3556E5 xAAF2AF xF0B481 x9088D5 xFE627B x65ECBE xC000F0 x2E5E47 x3126CA x88BDEA  x31C481 xB06E20 xDAE3CC x0C1D7F x1714EE xA03000 xD0761D x23B4D0 x8C16F9 x6E31DE x976584 xE3533E }
 			state_type = unincorporated
 		}
-		
+		create_state = {
+			country = c:SEM
+			owned_provinces = { x552AD8 x3CDD1A xE740E5 x7FA347}
+		}
 		add_homeland = dixie
 		add_homeland = afro_american	
 		add_homeland = caddoan
+		add_homeland = muskogean
 	}
 	s:STATE_GEORGIA = {
 		create_state = {
@@ -1715,14 +1713,14 @@ STATES = {
 			create_state = {
 				country = c:MEX
 				owned_provinces = { 
-					x256AEE xDF1965 x810C1A x3385DD x74C317 x1B611D x0B1E97 
+					x256AEE xDF1965 x810C1A x3385DD x74C317 x1B611D  
 					x23E585 x00E2A7 xB6EC9A xA84AFD xA156C7 x940839 xC03080 x851687 
 					xB566BA x3CC82C x0DAC3E x46C455 x67B298 x79844B x90EA7D x5DA018 xB0BB90 
 					x99C48C x9660D3 xB636E0 xE27DFB x40B080 xD3611A x0E8A94 
 					x8C6FA5 x418B71 xA858F4 x92D597 x2EE19C xCAEC7A xB7D6F2 xAE76ED x8A526A 
 					xFD2B9D xF9F60A 
-					xD78928 xDBA81D x5967A1 x5E769A x50DED9 x504080 xC32AF4 xE9C718 x0957D1 x7EA360 xC50565 x4BBEE7 
-					xF59F44 x3CD2D7 x59E5C4 x7D2451 x7C809B x38BB61 xAE2568 xEED52D
+					 xDBA81D   x50DED9  xC32AF4  x0957D1  xC50565  
+					 x3CD2D7   x7C809B x38BB61 xAE2568 xEED52D
 				}
 				state_type = unincorporated
 			}
@@ -1736,6 +1734,7 @@ STATES = {
 				country = c:COM
 				owned_provinces = {
 					x810C1A x256AEE x74C317 x92D597 x2EE19C xB7D6F2 xE27DFB x418B71 x9660D3 x40B080 xF9F60A xC03297
+					x0B1E97	xD78928 x5967A1 x5E769A	x504080 xE9C718	x7EA360	x4BBEE7	xF59F44 x59E5C4	x7D2451
 					}
 			}
 			create_state = {

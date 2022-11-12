@@ -248,7 +248,7 @@ mexican_american.3 = {
 		c:USA = {
 			trigger_event = { id = mexican_american.5 days = 0 popup = no }
 		}
-		
+		set_variable = gasden_purchase_var
 	}
 }
 
@@ -348,21 +348,26 @@ mexican_american.6 = { #Treaty of G H
     			}
     	}
     	c:USA = {
-    	if = { limit = { exists = c:COM }
-    		annex = c:COM
-    	}
-    	if = { limit = { exists = c:APC }
-    		annex = c:APC
-    	}
-    	if = { limit = { exists = c:NVJ }
-    		annex = c:NVJ
-    	}
-    	if = { limit = { exists = c:UTE }
-    		annex = c:UTE
-    	}
-    	if = { limit = { exists = c:ARP }
-    		annex = c:ARP
-    	}
+    		set_variable = manifest_destiny_we_did_it_folks
+    		set_variable = {
+   				name = manifest_destiny_we_did_it_folks_cooldown
+  			months = 1
+   		}
+    	#if = { limit = { exists = c:COM }
+    	#	annex = c:COM
+    	#}
+    	#if = { limit = { exists = c:APC }
+    #		annex = c:APC
+   # 	}
+    #	if = { limit = { exists = c:NVJ }
+    #		annex = c:NVJ
+    #	}
+    #	if = { limit = { exists = c:UTE }
+    #		annex = c:UTE
+    #	}
+    #	if = { limit = { exists = c:ARP }
+    #		annex = c:ARP
+    #	}
     	if = { limit = { 
     		c:TEX = {
     		is_player = no
@@ -422,7 +427,6 @@ mexican_american.6 = { #Treaty of G H
 		s:STATE_WYOMING.region_state:MEX = {
 			set_state_owner = c:USA
 		}
-		change_infamy = 30
 		c:USA = {
 			trigger_event = { id = mexican_american.7 days = 0 popup = yes }
 		}
@@ -496,7 +500,7 @@ mexican_american.6 = { #Treaty of G H
     	}
     		annex = c:RIO
     	}
-		change_infamy = 60
+		change_infamy = 40
 		c:USA = {
 			trigger_event = { id = mexican_american.7 days = 0 popup = yes }
 		}
@@ -509,6 +513,7 @@ mexican_american.6 = { #Treaty of G H
    		ai_chance = {
     			base = 5
    		}
+   		set_variable = gasden_purchase_var
 	}
 	option = {
 		name = mexican_american.6.c
@@ -555,13 +560,14 @@ mexican_american.6 = { #Treaty of G H
 		s:STATE_WYOMING.region_state:MEX = {
 			set_state_owner = c:USA
 		}
-		change_infamy = 100
+		change_infamy = 80
 		c:USA = {
 			trigger_event = { id = mexican_american.7 days = 0 popup = yes }
 		}
 		ai_chance = {
     			base = 1
    		}
+   		set_variable = gasden_purchase_var
 	}
 }
 mexican_american.7 = { #Mexican Settlement
@@ -616,7 +622,7 @@ mexican_american.7 = { #Mexican Settlement
 				country = c:MEX
 				value = 50
 			}
-			change_infamy = -40
+			change_infamy = -60
 			add_modifier = {
 				name = small_mexican_ces_settlement_pay
 				months = 125
@@ -638,7 +644,7 @@ mexican_american.7 = { #Mexican Settlement
 				country = c:MEX
 				value = 100
 			}
-			change_infamy = -80
+			change_infamy = -100
 			add_modifier = {
 				name = huge_mexican_ces_settlement_pay
 				months = 125

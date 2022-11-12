@@ -4,7 +4,7 @@
 		exists = c:USA
 		root = c:USA
 		NOT = { has_variable = manifested_destiny }
-	}
+	}  
 
 	possible = {
 		has_technology_researched = nationalism
@@ -28,7 +28,7 @@
 					has_variable = mexican_american_war_treaty
 				}
 			}
-			trigger_event = { id = manifest_destiny.1 }
+		#	trigger_event = { id = manifest_destiny.1 }
 		}
 		else = {
 			add_journal_entry = {
@@ -108,6 +108,10 @@ manifest_destiny_war = {
 		NOT = {
 			c:USA = { has_variable = mexican_american_war_started }
 		}
+		OR = {
+			is_player = no
+			has_technology_researched = logistics
+		}	
 	}
 
 	when_taken = {
@@ -115,7 +119,9 @@ manifest_destiny_war = {
 			set_variable = mexican_american_war_started
 		}
 		c:USA = { trigger_event = { id = manifest_destiny.5 } }
-
+			hidden_effect  = {
+				c:USA = { change_infamy = -50 }
+			}
 		}
 
 	ai_chance = {
@@ -208,6 +214,10 @@ manifest_destiny_conquest = { ##victory
 	when_taken = {
 		c:USA = { set_variable = mexican_american_war_treaty }
 		c:USA = { trigger_event = { id = mexican_american.6 } }
+		set_variable = {
+				name = gasden_purchase_var
+				months = 36
+			}	
 		}
 
 	ai_chance = {
@@ -257,10 +267,10 @@ manifest_destiny_rebuked = { ##victory
     		annex = c:CAL
     	}
 		c:USA = { set_variable = mexican_american_war_treaty }
-		c:MEX = { add_modifier = 
+		c:MEX = { add_modifier = {
 			name = manifest_destiny_rebuked_mod
 			months = 250
-			is_decaying = yes }
+			is_decaying = yes }}
 		}
 
 	ai_chance = {
@@ -303,20 +313,49 @@ gasden_purchase_decis = { ##victory
 	is_shown = {
 		exists = c:USA
 		root = c:USA
-		has_variable = manifest_destiny_mexico_success_var
+		has_variable = mexican_american_war_treaty
 		NOT = {has_variable = gasden_purchase_var}
 	}
 
 	possible = {
 		exists = c:USA
 		root = c:USA
-		has_variable = manifest_destiny_mexico_success_var
+		has_variable = mexican_american_war_treaty
 		NOT = {has_variable = gasden_purchase_var}
 	}
 
 	when_taken = {
-			c:MEX = { trigger_event = { id = manifest_destiny.6 } }
+			c:MEX = { trigger_event = { id = manifest_destiny.7 } }
 			set_variable = gasden_purchase_var
+		}
+
+	ai_chance = {
+		base = 100
+	}
+}
+
+homestead_act_decis = { ##victory
+	is_shown = {
+		exists = c:USA
+		root = c:USA
+	}
+
+	possible = {
+		exists = c:USA
+		root = c:USA
+		has_technology_researched = civilizing_mission
+		ig:ig_landowners = {
+   				ig_clout <= 0.1
+    		} 
+		NOT = {has_variable = homestead_act_var}
+	}
+
+	when_taken = {
+			set_variable = homestead_act_var
+			add_modifier = {
+				name = homestead_act_mod
+				months = 1219
+				is_decaying = yes 
 		}
 
 	ai_chance = {
