@@ -6,6 +6,25 @@ religious_party = {
 	name = {
 		first_valid = {
 
+			##NFM
+			triggered_desc = {
+				desc = party_know_nothing
+				trigger = {
+					exists = c:USA
+					THIS = c:USA
+					NOT = { has_global_variable = american_civil_war }
+				}
+			}
+
+			triggered_desc = {
+				desc = party_nativist
+				trigger = {
+					exists = c:USA
+					THIS = c:USA
+					 has_global_variable = american_civil_war 
+				}
+			}
+
 			triggered_desc = {
 				desc = party_catholic_peoples_party
 				trigger = {
@@ -295,6 +314,17 @@ religious_party = {
 			add = {
 				value = -10
 				desc = "Politically Neutral"
+			}
+		}
+
+		if = { #NFM
+			limit = {
+				owner = { has_variable = end_of_two_party_system_var }
+				NOT = { has_global_variable = american_civil_war }
+			}
+			add = {
+				value = 10
+				desc = "Realignment"
 			}
 		}
 	}

@@ -3,8 +3,7 @@ missouri_compromise = {
 	interest_group_ig_landowners_pol_str_mult = 0.10
 	country_legitimacy_base_add = -10
 	country_opposition_ig_approval_add = -3
-	interest_group_ig_intelligensia_pop_attraction_mult = 0.10
-	interest_group_ig_industrialists_pop_attraction_mult = 0.10
+	interest_group_ig_intelligentsia_pop_attraction_mult = 0.25
 }
 second_great_awakening_mod = {
 	icon = gfx/interface/icons/timed_modifier_icons/devout_positive.dds
@@ -60,21 +59,21 @@ mexican_cession_compromise = {
 	icon = gfx/interface/icons/timed_modifier_icons/maintain_power_balance_negative.dds
 	interest_group_ig_landowners_pol_str_mult = 0.10
 	country_legitimacy_base_add = -20
-	interest_group_ig_intelligentsia_approval_add = -3
-	interest_group_ig_landowners_approval_add = -3
+	interest_group_ig_intelligentsia_approval_add = -5
+	interest_group_ig_landowners_approval_add = -5
 	country_opposition_ig_approval_add = -3
-    interest_group_ig_landowners_pop_attraction_mult = 0.20
-	interest_group_ig_intelligentsia_pop_attraction_mult = 0.20
+    interest_group_ig_landowners_pop_attraction_mult = 0.1
+	interest_group_ig_intelligentsia_pop_attraction_mult = 0.3
 }
 
 mexican_cession_proviso = {
 	icon = gfx/interface/icons/timed_modifier_icons/slavery_banned_negative.dds
 	country_legitimacy_base_add = -30
-	interest_group_ig_intelligentsia_approval_add = 5
+	interest_group_ig_intelligentsia_approval_add = 3
 	interest_group_ig_landowners_approval_add = -10
 	country_opposition_ig_approval_add = -3
-	interest_group_ig_landowners_pop_attraction_mult = 0.20
-	interest_group_ig_intelligentsia_pop_attraction_mult = 0.20
+	interest_group_ig_landowners_pop_attraction_mult = 0.1
+	interest_group_ig_intelligentsia_pop_attraction_mult = 0.3
 }
 
 mexican_cession_pop_sov = {
@@ -82,10 +81,10 @@ mexican_cession_pop_sov = {
 	interest_group_ig_landowners_pol_str_mult = 0.20
 	country_legitimacy_base_add = -10
 	interest_group_ig_intelligentsia_approval_add = -10
-	interest_group_ig_landowners_approval_add = 5
-	country_opposition_ig_approval_add = -5
-	interest_group_ig_landowners_pop_attraction_mult = 0.20
-	interest_group_ig_intelligentsia_pop_attraction_mult = 0.20
+	interest_group_ig_landowners_approval_add = 3
+	country_opposition_ig_approval_add = -3
+	interest_group_ig_landowners_pop_attraction_mult = 0.1
+	interest_group_ig_intelligentsia_pop_attraction_mult = 0.3
 }
 
 ig_abolitionists_martyr = {
@@ -124,6 +123,7 @@ dred_scott_for_scot_mod = {
 	interest_group_ig_landowners_pol_str_mult = -0.10
 	interest_group_ig_intelligentsia_approval_add = 3
 	interest_group_ig_landowners_approval_add = -6
+	interest_group_ig_landowners_pop_attraction_mult = 0.25
 }
 
 dred_scott_for_sand_mod = {
@@ -131,6 +131,7 @@ dred_scott_for_sand_mod = {
 	interest_group_ig_landowners_pol_str_mult = 0.10
 	interest_group_ig_intelligentsia_approval_add = -6
 	interest_group_ig_landowners_approval_add = 3
+	interest_group_ig_intelligentsia_pop_attraction_mult = 0.25
 }
 
 harpers_ferry_success_mod = {
@@ -259,6 +260,7 @@ unreconstructed_state = { #Override vanilla
 	state_radicals_from_sol_change_mult = 0.2
 	state_pop_pol_str_mult = -0.8
 	interest_group_ig_intelligentsia_pol_str_mult = 1
+	state_political_strength_from_discrimination_mult = 0.5
 }
 
 modifier_texas_war_of_independence = { #Override vanilla
@@ -273,6 +275,21 @@ age_of_caudillos_modifier = { #Vanilla override
 	icon = gfx/interface/icons/timed_modifier_icons/autocracy_neutral.dds
 	interest_group_ig_armed_forces_pop_attraction_mult = 0.1
 	interest_group_ig_armed_forces_pol_str_mult = 0.5
+}
+
+southern_election_panic_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/slavery_banned_negative.dds
+	interest_group_ig_intelligentsia_approval_add = 3
+	interest_group_ig_landowners_approval_add = -10
+	interest_group_ig_landowners_pop_attraction_mult = 0.25
+	interest_group_ig_intelligentsia_pop_attraction_mult = 0.25
+}
+
+reconstruction_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/slavery_banned_positive.dds
+	interest_group_ig_landowners_pol_str_mult = -0.80
+	interest_group_ig_intelligentsia_pol_str_mult = 0.50
+	country_law_enactment_time_mult = -0.6
 }
 
 ##ALL VANILLA OVERRIDES FOR ICONS

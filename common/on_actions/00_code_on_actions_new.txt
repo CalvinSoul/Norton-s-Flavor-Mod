@@ -30,6 +30,8 @@ on_monthly_pulse_country = {
 		nfm_american_elections_result.8
 		nfm_american_elections_result.9
 		nfm_american_elections_result.10
+
+		acw_modded.4
 	}
 	random_events = {
 		

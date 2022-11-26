@@ -273,6 +273,19 @@ manifest_destiny_rebuked = { ##victory
 			name = manifest_destiny_rebuked_mod
 			months = 250
 			is_decaying = yes }}
+
+		s:STATE_CALIFORNIA = { 
+			add_homeland = mexican
+		}
+		s:STATE_NEVADA = { 
+			add_homeland = mexican
+		}
+		s:STATE_UTAH = { 
+			add_homeland = mexican
+		}
+		s:STATE_ARIZONA = { 
+			add_homeland = mexican
+		}
 		}
 
 	ai_chance = {
@@ -316,7 +329,7 @@ gasden_purchase_decis = { ##victory
 		exists = c:USA
 		root = c:USA
 		has_variable = mexican_american_war_treaty
-		NOT = {has_variable = gasden_purchase_var}
+		NOT = {has_variable = gasden_purchase_var_2}
 	}
 
 	possible = {
@@ -329,6 +342,7 @@ gasden_purchase_decis = { ##victory
 	when_taken = {
 			c:MEX = { trigger_event = { id = manifest_destiny.7 } }
 			set_variable = gasden_purchase_var
+			set_variable = gasden_purchase_var_2
 		}
 
 	ai_chance = {

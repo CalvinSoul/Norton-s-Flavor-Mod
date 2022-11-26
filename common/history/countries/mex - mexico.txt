@@ -33,7 +33,7 @@
 		ig:ig_devout = {
 			set_interest_group_name = ig_catholic_church
 			remove_ideology = ideology_moralist
-			add_ideology = ideology_catholic_moralist
+			add_ideology = ideology_nfm_catholic_moralist
 		}
 
 		ig:ig_rural_folk = {

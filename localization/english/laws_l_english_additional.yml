@@ -2,8 +2,17 @@
   
   # Interest Group Ideologies
 
- ideology_catholic_moralist:0 "Catholic Moralism"
- ideology_catholic_moralist_desc:0 "#lore Catholic moralism promotes both clericalism and the protection of cultural minorities.#!"
+ ideology_nfm_catholic_moralist:0 "Catholic Moralism"
+ ideology_nfm_catholic_moralist_desc:0 "#lore Catholic moralism promotes both clericalism and the protection of cultural minorities.#!"
+
+ ideology_nfm_american_liberalism:0 "American Liberalism"
+ ideology_nfm_american_liberalism_desc:0 "#lore American Liberalism promotes a larger degree of multiculturalist and integrationist thought than its continental brothers, while approving of a coopertative federalist government.#!"
+  
+ ideology_nfm_federalist:0 "Federalist"
+ ideology_nfm_federalist_desc:0 "#lore Federalists support a strong but federal government.#!"
+
+ ideology_nfm_xenophobic:0 "Xenophobic"
+ ideology_nfm_xenophobic_desc:0 "#lore Xenophobes hate and fear those different from themselves, wishes for a country composed only of their percieved kin.#!"
   
   
  ig_southern_planters:0 "Planter Aristocracy"
@@ -434,3 +443,19 @@ SEM_ADJ:0 "Seminole"
 seminole_war_mod:0 "Seminole War"
 
 american_civil_war_name:0 "The American Civil War"
+
+party_radical_republicans:0 "Radical Republican Party"
+party_free_soil:0 "Free Soil Party"
+party_know_nothing:0 "Know Nothing Party"
+party_farmer_labor:0 "Farmer-Labor Party"
+party_northern_democrats:0 "Northern Democratic Party"
+party_know_nativist:0 "Nativist Party"
+party_liberty:0 "Liberty Party"
+
+reconstruction_mod:0 "Reconstruction"
+
+
+acw_modded.4.t:0 "Southern Panic"
+acw_modded.4.d:0 "The recent election of President [ROOT.GetCountry.GetRuler.GetFullName] has caused mass panic throughout the South, as fears of abolition and the restriction of slavery throughout the United States and her territories are abound."
+acw_modded.4.f:0 "A house divided cannot stand.-Abraham Lincoln"
+acw_modded.4.a:0 "God damn them!"

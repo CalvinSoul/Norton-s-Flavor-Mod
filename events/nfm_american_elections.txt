@@ -739,6 +739,12 @@ nfm_american_elections.7 = { #1848 Nomination
 			}
 				kill_character = yes
 		}
+		random_scope_character = {
+			limit = {
+				has_variable = john_q_adams_var
+			}
+				kill_character = yes
+		}
     }
 
      option = {

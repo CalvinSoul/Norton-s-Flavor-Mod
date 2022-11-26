@@ -77,6 +77,7 @@ usa_roosevelt_character_template = {
         celebrity_commander
         explorer
         brave
+        ambitious
     }   
     interest_group_leader_usage = {
         country_trigger = {

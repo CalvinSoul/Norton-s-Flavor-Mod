@@ -165,31 +165,31 @@ nfm_misc.5 = { #election momentum events based on clout
 		scope:armed_forces_party= {
 			if ={ 
 				limit = { ROOT.ig:ig_armed_forces = {ig_clout >= 0.9 }}
-				add_momentum = 1
+				add_momentum = 0.5
 			}
 		else ={ 
 			if ={ limit = {ROOT.ig:ig_armed_forces = {ig_clout >= 0.75 }}
-				add_momentum = 0.75
+				add_momentum = 0.35
 		}
 		else ={ 
 			if ={ limit = {ROOT.ig:ig_armed_forces = {ig_clout >= 0.5 }}
-				add_momentum = 0.5
+				add_momentum = 0.25
 		}
 		else ={ 
 			if ={ limit = {ROOT.ig:ig_armed_forces = {ig_clout >= 0.4 }}
-				add_momentum = 0.4
-		}
-		else ={ 
-			if ={ limit = {ROOT.ig:ig_armed_forces = {ig_clout >= 0.3 }}
-				add_momentum = 0.3
-		}
-		else ={ 
-			if ={ limit = {ROOT.ig:ig_armed_forces = {ig_clout >= 0.2 }}
 				add_momentum = 0.2
 		}
 		else ={ 
-			if ={ limit = {ROOT.ig:ig_armed_forces = {ig_clout >= 0.1 }}
+			if ={ limit = {ROOT.ig:ig_armed_forces = {ig_clout >= 0.3 }}
+				add_momentum = 0.15
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_armed_forces = {ig_clout >= 0.2 }}
 				add_momentum = 0.1
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_armed_forces = {ig_clout >= 0.1 }}
+				add_momentum = 0.05
 		}
 			}
 			}
@@ -206,31 +206,31 @@ nfm_misc.5 = { #election momentum events based on clout
 		scope:devout_party = {
 			if ={ 
 				limit = { ROOT.ig:ig_devout = {ig_clout >= 0.9 }	}
-				add_momentum = 1
+				add_momentum = 0.5
 			}
 		else ={ 
 			if ={ limit = {ROOT.ig:ig_devout = {ig_clout >= 0.75 }}
-				add_momentum = 0.75
+				add_momentum = 0.35
 		}
 		else ={ 
 			if ={ limit = {ROOT.ig:ig_devout = {ig_clout >= 0.5 }}
-				add_momentum = 0.5
+				add_momentum = 0.25
 		}
 		else ={ 
 			if ={ limit = {ROOT.ig:ig_devout = {ig_clout >= 0.4 }}
-				add_momentum = 0.4
-		}
-		else ={ 
-			if ={ limit = {ROOT.ig:ig_devout = {ig_clout >= 0.3 }}
-				add_momentum = 0.3
-		}
-		else ={ 
-			if ={ limit = {ROOT.ig:ig_devout = {ig_clout >= 0.2 }}
 				add_momentum = 0.2
 		}
 		else ={ 
-			if ={ limit = {ROOT.ig:ig_devout = {ig_clout >= 0.1 }}
+			if ={ limit = {ROOT.ig:ig_devout = {ig_clout >= 0.3 }}
+				add_momentum = 0.15
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_devout = {ig_clout >= 0.2 }}
 				add_momentum = 0.1
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_devout = {ig_clout >= 0.1 }}
+				add_momentum = 0.05
 		}
 			}
 			}
@@ -247,31 +247,31 @@ nfm_misc.5 = { #election momentum events based on clout
 		scope:industrial_party = {
 			if ={ 
 				limit = { ROOT.ig:ig_industrialists = {ig_clout >= 0.9 }	}
-				add_momentum = 1
+				add_momentum = 0.5
 			}
 		else ={ 
 			if ={ limit = {ROOT.ig:ig_industrialists = {ig_clout >= 0.75 }}
-				add_momentum = 0.75
+				add_momentum = 0.35
 		}
 		else ={ 
 			if ={ limit = {ROOT.ig:ig_industrialists = {ig_clout >= 0.5 }}
-				add_momentum = 0.5
+				add_momentum = 0.25
 		}
 		else ={ 
 			if ={ limit = {ROOT.ig:ig_industrialists = {ig_clout >= 0.4 }}
-				add_momentum = 0.4
-		}
-		else ={ 
-			if ={ limit = {ROOT.ig:ig_industrialists = {ig_clout >= 0.3 }}
-				add_momentum = 0.3
-		}
-		else ={ 
-			if ={ limit = {ROOT.ig:ig_industrialists = {ig_clout >= 0.2 }}
 				add_momentum = 0.2
 		}
 		else ={ 
-			if ={ limit = {ROOT.ig:ig_industrialists = {ig_clout >= 0.1 }}
+			if ={ limit = {ROOT.ig:ig_industrialists = {ig_clout >= 0.3 }}
+				add_momentum = 0.15
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_industrialists = {ig_clout >= 0.2 }}
 				add_momentum = 0.1
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_industrialists = {ig_clout >= 0.1 }}
+				add_momentum = 0.05
 		}
 			}
 			}
@@ -288,31 +288,31 @@ nfm_misc.5 = { #election momentum events based on clout
 		scope:intelligentsia_party = {
 			if ={ 
 				limit = { ROOT.ig:ig_intelligentsia = {ig_clout >= 0.9 }}
-				add_momentum = 1
+				add_momentum = 0.5
 			}
 		else ={ 
 			if ={ limit = {ROOT.ig:ig_intelligentsia = {ig_clout >= 0.75 }}
-				add_momentum = 0.75
+				add_momentum = 0.35
 		}
 		else ={ 
 			if ={ limit = {ROOT.ig:ig_intelligentsia = {ig_clout >= 0.5 }}
-				add_momentum = 0.5
+				add_momentum = 0.25
 		}
 		else ={ 
 			if ={ limit = {ROOT.ig:ig_intelligentsia = {ig_clout >= 0.4 }}
-				add_momentum = 0.4
-		}
-		else ={ 
-			if ={ limit = {ROOT.ig:ig_intelligentsia = {ig_clout >= 0.3 }}
-				add_momentum = 0.3
-		}
-		else ={ 
-			if ={ limit = {ROOT.ig:ig_intelligentsia = {ig_clout >= 0.2 }}
 				add_momentum = 0.2
 		}
 		else ={ 
-			if ={ limit = {ROOT.ig:ig_intelligentsia = {ig_clout >= 0.1 }}
+			if ={ limit = {ROOT.ig:ig_intelligentsia = {ig_clout >= 0.3 }}
+				add_momentum = 0.15
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_intelligentsia = {ig_clout >= 0.2 }}
 				add_momentum = 0.1
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_intelligentsia = {ig_clout >= 0.1 }}
+				add_momentum = 0.05
 		}
 			}
 			}
@@ -329,31 +329,31 @@ nfm_misc.5 = { #election momentum events based on clout
 		scope:landowner_party = {
 			if ={ 
 				limit = { ROOT.ig:ig_landowners = {ig_clout >= 0.9 }}
-				add_momentum = 1
+				add_momentum = 0.5
 			}
 		else ={ 
 			if ={ limit = {ROOT.ig:ig_landowners = {ig_clout >= 0.75 }}
-				add_momentum = 0.75
+				add_momentum = 0.35
 		}
 		else ={ 
 			if ={ limit = {ROOT.ig:ig_landowners = {ig_clout >= 0.5 }}
-				add_momentum = 0.5
+				add_momentum = 0.25
 		}
 		else ={ 
 			if ={ limit = {ROOT.ig:ig_landowners = {ig_clout >= 0.4 }}
-				add_momentum = 0.4
-		}
-		else ={ 
-			if ={ limit = {ROOT.ig:ig_landowners = {ig_clout >= 0.3 }}
-				add_momentum = 0.3
-		}
-		else ={ 
-			if ={ limit = {ROOT.ig:ig_landowners = {ig_clout >= 0.2 }}
 				add_momentum = 0.2
 		}
 		else ={ 
-			if ={ limit = {ROOT.ig:ig_landowners = {ig_clout >= 0.1 }}
+			if ={ limit = {ROOT.ig:ig_landowners = {ig_clout >= 0.3 }}
+				add_momentum = 0.15
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_landowners = {ig_clout >= 0.2 }}
 				add_momentum = 0.1
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_landowners = {ig_clout >= 0.1 }}
+				add_momentum = 0.05
 		}
 			}
 			}
@@ -370,31 +370,31 @@ nfm_misc.5 = { #election momentum events based on clout
 		scope:petty_bourgeoisie_party = {
 			if ={ 
 				limit = { ROOT.ig:ig_petty_bourgeoisie = {ig_clout >= 0.9 }	}
-				add_momentum = 1
+				add_momentum = 0.5
 			}
 		else ={ 
 			if ={ limit = {ROOT.ig:ig_petty_bourgeoisie = {ig_clout >= 0.75 }}
-				add_momentum = 0.75
+				add_momentum = 0.35
 		}
 		else ={ 
 			if ={ limit = {ROOT.ig:ig_petty_bourgeoisie = {ig_clout >= 0.5 }}
-				add_momentum = 0.5
+				add_momentum = 0.25
 		}
 		else ={ 
 			if ={ limit = {ROOT.ig:ig_petty_bourgeoisie = {ig_clout >= 0.4 }}
-				add_momentum = 0.4
-		}
-		else ={ 
-			if ={ limit = {ROOT.ig:ig_petty_bourgeoisie = {ig_clout >= 0.3 }}
-				add_momentum = 0.3
-		}
-		else ={ 
-			if ={ limit = {ROOT.ig:ig_petty_bourgeoisie = {ig_clout >= 0.2 }}
 				add_momentum = 0.2
 		}
 		else ={ 
-			if ={ limit = {ROOT.ig:ig_petty_bourgeoisie = {ig_clout >= 0.1 }}
+			if ={ limit = {ROOT.ig:ig_petty_bourgeoisie = {ig_clout >= 0.3 }}
+				add_momentum = 0.15
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_petty_bourgeoisie = {ig_clout >= 0.2 }}
 				add_momentum = 0.1
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_petty_bourgeoisie = {ig_clout >= 0.1 }}
+				add_momentum = 0.05
 		}
 			}
 			}
@@ -411,31 +411,31 @@ nfm_misc.5 = { #election momentum events based on clout
 		scope:rural_folk_party = {
 			if ={ 
 				limit = { ROOT.ig:ig_rural_folk = {ig_clout >= 0.9 }	}
-				add_momentum = 1
+				add_momentum = 0.5
 			}
 		else ={ 
 			if ={ limit = {ROOT.ig:ig_rural_folk = {ig_clout >= 0.75 }}
-				add_momentum = 0.75
+				add_momentum = 0.35
 		}
 		else ={ 
 			if ={ limit = {ROOT.ig:ig_rural_folk = {ig_clout >= 0.5 }}
-				add_momentum = 0.5
+				add_momentum = 0.25
 		}
 		else ={ 
 			if ={ limit = {ROOT.ig:ig_rural_folk = {ig_clout >= 0.4 }}
-				add_momentum = 0.4
-		}
-		else ={ 
-			if ={ limit = {ROOT.ig:ig_rural_folk = {ig_clout >= 0.3 }}
-				add_momentum = 0.3
-		}
-		else ={ 
-			if ={ limit = {ROOT.ig:ig_rural_folk = {ig_clout >= 0.2 }}
 				add_momentum = 0.2
 		}
 		else ={ 
-			if ={ limit = {ROOT.ig:ig_rural_folk = {ig_clout >= 0.1 }}
+			if ={ limit = {ROOT.ig:ig_rural_folk = {ig_clout >= 0.3 }}
+				add_momentum = 0.15
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_rural_folk = {ig_clout >= 0.2 }}
 				add_momentum = 0.1
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_rural_folk = {ig_clout >= 0.1 }}
+				add_momentum = 0.05
 		}
 			}
 			}
@@ -452,31 +452,31 @@ nfm_misc.5 = { #election momentum events based on clout
 		scope:trade_unions_party = {
 			if ={ 
 				limit = { ROOT.ig:ig_trade_unions = {ig_clout >= 0.9 }	}
-				add_momentum = 1
+				add_momentum = 0.5
 			}
 		else ={ 
 			if ={ limit = {ROOT.ig:ig_trade_unions = {ig_clout >= 0.75 }}
-				add_momentum = 0.75
+				add_momentum = 0.35
 		}
 		else ={ 
 			if ={ limit = {ROOT.ig:ig_trade_unions = {ig_clout >= 0.5 }}
-				add_momentum = 0.5
+				add_momentum = 0.25
 		}
 		else ={ 
 			if ={ limit = {ROOT.ig:ig_trade_unions = {ig_clout >= 0.4 }}
-				add_momentum = 0.4
-		}
-		else ={ 
-			if ={ limit = {ROOT.ig:ig_trade_unions = {ig_clout >= 0.3 }}
-				add_momentum = 0.3
-		}
-		else ={ 
-			if ={ limit = {ROOT.ig:ig_trade_unions = {ig_clout >= 0.2 }}
 				add_momentum = 0.2
 		}
 		else ={ 
-			if ={ limit = {ROOT.ig:ig_trade_unions = {ig_clout >= 0.1 }}
+			if ={ limit = {ROOT.ig:ig_trade_unions = {ig_clout >= 0.3 }}
+				add_momentum = 0.15
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_trade_unions = {ig_clout >= 0.2 }}
 				add_momentum = 0.1
+		}
+		else ={ 
+			if ={ limit = {ROOT.ig:ig_trade_unions = {ig_clout >= 0.1 }}
+				add_momentum = 0.05
 		}
 			}
 			}
@@ -625,6 +625,12 @@ nfm_misc.7 = {#Politician Retire
 			ruler = {
 				has_variable = is_andrew_jackson
 			}
+			ruler = {
+				AND = {
+					has_trait = ambitious
+					has_trait = demagogue
+				}
+			}
 		}
 		ROOT = c:USA
 		exists = C:USA
@@ -697,12 +703,17 @@ nfm_misc.8 = {#Politician Wins
 		NOT = {
 			ruler = {
 				OR = {
-					has_variable = is_andrew_jackson
 					has_variable = second_party_system_democrat_var
 					has_variable = second_party_system_whig_var
 				}
-				
 			}
+			AND = {
+				year <= 1840
+				ruler = {
+					has_variable = is_andrew_jackson
+				}
+			}
+
 		}
 	}
 

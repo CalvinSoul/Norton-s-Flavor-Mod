@@ -63,6 +63,16 @@
 			set_interest_group_name = ig_middle_class
 			remove_ideology = ideology_reactionary
 			add_ideology = ideology_republican
+			add_ideology = ideology_nfm_xenophobic
+		}
+
+		ig:ig_intelligentsia = {
+			remove_ideology = ideology_liberal
+			add_ideology = ideology_nfm_american_liberalism
+		}
+
+		ig:ig_industrialists = {
+			add_ideology = ideology_nfm_federalist
 		}
 
 		add_journal_entry = { type = je_texas_usa }

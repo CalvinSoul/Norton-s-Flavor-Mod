@@ -149,6 +149,11 @@ je_acw_war = {
 				set_variable = abraham_lincoln
 			}
 		}
+		add_modifier = {
+			name = reconstruction_mod
+			months = 120
+			is_decaying = yes 
+		}
 	}
 
 	on_monthly_pulse = {
@@ -178,6 +183,24 @@ je_acw_reconstruction = {
 			every_scope_state = {
 				limit = { has_modifier = unreconstructed_state }
 				remove_modifier = unreconstructed_state
+			}
+		}
+		hidden_effect = { # NFM
+			every_scope_state = {
+				limit = { has_modifier = border_state_mod }
+				remove_modifier = border_state_mod
+			}
+		}
+		hidden_effect = { # NFM
+			every_scope_state = {
+				limit = { has_modifier = south_state_mod }
+				remove_modifier = south_state_mod
+			}
+		}
+		hidden_effect = { # NFM
+			every_scope_state = {
+				limit = { has_modifier = deep_south_state_mod }
+				remove_modifier = deep_south_state_mod
 			}
 		}
 	}

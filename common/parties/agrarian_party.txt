@@ -1,4 +1,4 @@
-﻿# Fallback party for Rural Folk
+# Fallback party for Rural Folk
 # Occasionally used for an anti-serfdom alliance
 # More popular in Nordic countries
 
@@ -6,6 +6,34 @@ agrarian_party = {
 	color = { 64 173 59 }
 	name = {
 		first_valid = {
+			triggered_desc = {
+				desc = party_farmer_labor
+				trigger = {
+					exists = c:USA
+					THIS = c:USA
+					has_global_variable = american_civil_war
+				}
+			}
+
+			triggered_desc = {
+				desc = party_northern_democrats
+				trigger = {
+					exists = c:USA
+					THIS = c:USA
+					has_variable = end_of_two_party_system_var
+					NOT = {	has_global_variable = american_civil_war }
+				}
+			}
+
+			triggered_desc = {
+				desc = party_free_soil
+				trigger = {
+					exists = c:USA
+					THIS = c:USA
+					NOT = { has_variable = end_of_two_party_system_var }
+					NOT = {	has_global_variable = american_civil_war }
+				}
+			}
 
 			triggered_desc = {
 				desc = party_irish_national_land_league
@@ -384,5 +412,17 @@ agrarian_party = {
 				desc = "Politically Neutral"
 			}
 		}
-	}
+		if = { #NFM
+			limit = {
+				is_interest_group_type = ig_rural_folk
+				leader = {
+					has_variable = stephen_douglas_var
+				}
+			}
+			add = {
+				value = 10
+				desc = "Unionist"
+			}
+		}
+	} 
 }

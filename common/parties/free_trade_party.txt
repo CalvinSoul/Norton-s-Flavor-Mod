@@ -5,6 +5,13 @@ free_trade_party = {
 	color = { 150 20 20 }
 	name = {
 		first_valid = {
+			triggered_desc = { #NFM
+				desc = party_liberty
+				trigger = {
+					exists = c:USA
+					THIS = c:USA
+				}
+			}
 			triggered_desc = {
 				desc = party_orleanists
 				trigger = {

@@ -1,4 +1,4 @@
-﻿ideology_republican_paternalistic = {
+﻿ideology_republican_paternalistic = { #NFM replaces
 	icon = "gfx/interface/icons/ideology_icons/republican_paternalistic.dds"
 	
 	lawgroup_governance_principles = {		
@@ -10,8 +10,8 @@
 	
 	lawgroup_distribution_of_power = {
 		law_landed_voting = strongly_approve
-		law_oligarchy = strongly_approve
-		law_autocracy = approve
+		law_oligarchy = approve
+		law_autocracy = disapprove
 		law_wealth_voting = neutral
 		law_census_voting = disapprove
 		law_universal_suffrage = strongly_disapprove
@@ -41,7 +41,7 @@
 	lawgroup_centralization= { #NFM Centralization
 #		law_totalitarian = strongly_disapprove
 		law_unitary = disapprove
-		law_cooperative_federalism = neutral
+		law_cooperative_federalism = disapprove
 		law_dual_federalism = approve
 		law_regionalism = neutral
 	}

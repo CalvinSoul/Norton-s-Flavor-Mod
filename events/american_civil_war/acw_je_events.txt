@@ -76,6 +76,7 @@ acw_je_events.1 = {
 					remove_modifier = harpers_ferry_success_mod
 					remove_modifier = harpers_ferry_failure_mod
 					remove_modifier = harpers_ferry_disaster_mod
+					remove_modifier = southern_election_panic_mod
 		if = {
 			limit = {
 				has_variable = csa_will_spawn_var

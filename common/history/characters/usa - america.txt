@@ -14,7 +14,9 @@
 			traits = {
 				#bigoted this shouldn't make you less popular
 				direct 
+				demagogue
 				second_term_trait
+				work_done_trait
 			}
 			on_created = {
 				set_variable = {
@@ -109,6 +111,7 @@
     			meticulous 
     			experienced_political_operator
     			first_term_trait
+    			work_done_trait
     			 }   
     		on_created = {
 				set_variable = {
@@ -147,6 +150,7 @@
 				stalwart_defender
 				popular_commander
 				basic_political_operator
+				work_done_trait
 			}
 			on_created = {
 			#	set_variable = {
@@ -306,7 +310,7 @@
 			first_name = Elie_Augustus_Frederick
 			last_name = Lavallette
 			culture = cu:dixie
-			interest_group = ig_landowners
+			interest_group = ig_armed_forces
 			ideology = ideology_moderate
 			birth_date = 1776.2.9
 			hq = region_dixie
