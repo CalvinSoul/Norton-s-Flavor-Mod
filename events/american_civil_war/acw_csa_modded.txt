@@ -35,6 +35,9 @@ acw_csa_modded.1 = {
 				}}
 			}
 			c:USA = {
+				set_variable = south_state_rebels_var
+			}
+			c:USA = {
 				trigger_event = acw_csa_modded.2
 			}
 		}
@@ -65,6 +68,9 @@ acw_csa_modded.2 = {
 				c:USA = { ig:ig_rural_folk = {
 					ig_approval <= -10
 				}}
+			}
+			c:USA = {
+				set_variable = border_state_rebels_var
 			}
 			c:USA = {
 				trigger_event = acw_csa_modded.3

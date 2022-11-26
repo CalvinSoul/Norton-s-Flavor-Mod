@@ -234,6 +234,7 @@ manifest_destiny_rebuked = { ##victory
 		c:USA = {
 			has_variable = mexican_american_war_started
 			NOT = { has_variable = mexican_american_war_treaty }
+			NOT = { has_variable = mexican_american_war_treaty_loss }
 		}
 	}
 
@@ -245,6 +246,7 @@ manifest_destiny_rebuked = { ##victory
 		c:USA = {
 			has_variable = mexican_american_war_started
 			NOT = { has_variable = mexican_american_war_treaty }
+			NOT = { has_variable = mexican_american_war_treaty_loss }
 		}
 	NOT = {	c:USA = {
 			has_diplomatic_pact = {
@@ -266,7 +268,7 @@ manifest_destiny_rebuked = { ##victory
     	}
     		annex = c:CAL
     	}
-		c:USA = { set_variable = mexican_american_war_treaty }
+		c:USA = { set_variable = mexican_american_war_treaty_loss }
 		c:MEX = { add_modifier = {
 			name = manifest_destiny_rebuked_mod
 			months = 250

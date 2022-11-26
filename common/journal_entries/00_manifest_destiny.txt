@@ -12,9 +12,8 @@
 				owns_entire_state_region = STATE_NEW_MEXICO
 			}
 			has_variable = manifest_destiny_we_did_it_folks
-			NOT = {has_variable = manifest_destiny_we_did_it_folks_cooldown}
 		}
-		
+			NOT = {has_variable = manifest_destiny_we_did_it_folks_cooldown}
 	}
 
 	on_complete = {
