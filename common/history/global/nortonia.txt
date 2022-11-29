@@ -68,4 +68,127 @@ GLOBAL = {
 			popup = yes
 		}
 	}
+
+	every_country = {
+	   limit = { 
+	   		NOT ={
+	   			this = c:USA
+	   			this = c:PRU
+	   		} 
+	   }
+	   activate_law = law_type:law_unitary
+	   activate_law = law_type:law_purchased_officers
+	}
+
+	every_country = {
+	   limit = { 
+	   		has_law = law_type:law_chiefdom
+	   	 }
+	   activate_law = law_type:law_regionalism
+	}
+
+	every_country = {
+	   limit = { 
+	   		OR = {
+	   			has_law = law_type:law_chiefdom
+	   			has_law = law_type:law_monarchy
+	   			has_law = law_type:law_theocracy
+	   		}
+	   		NOT = {
+	   			this = c:GBR
+	   			this = c:PRU
+	   		}
+	   	 }
+	   activate_law = law_type:law_noble_officers
+	}
+
+	every_country = {
+	   limit = { 
+	   		OR = {
+	   			this = c:PRU
+	   		}
+	   	 }
+	   activate_law = law_type:law_professional_officers
+	}
+
+	every_country = {
+	   limit = { 
+	   		OR = {
+	   			this = c:BIC
+	   			this = c:UCA
+	   			this = c:BRZ
+	   		}
+	   	 }
+	   activate_law = law_type:law_cooperative_federalism
+	}
+
+	every_country = {
+	   limit = { 
+	   		OR = {
+	   			this = c:USA
+	   			this = c:SIC
+	   		}
+	   	 }
+	   activate_law = law_type:law_dual_federalism
+	}
+
+	every_country = {
+	   limit = { 
+	   		OR = {
+	   			this = c:JAP
+	   			this = c:ARG
+	   			this = c:SWI
+	   		}
+	   	 }
+	   activate_law = law_type:law_regionalism
+	}
+
+	every_country = {
+	   limit = { 
+	   		OR = {
+	   			this = c:MEX
+	   			this = c:CUB
+	   			this = c:UCA
+	   			this = c:CLM
+	   			this = c:VNZ
+	   			this = c:ECU
+	   			this = c:PEU
+	   			this = c:BOL
+	   			this = c:CHL
+	   			this = c:ARG
+	   			this = c:PRG
+	   			this = c:URU
+	   		}
+	   	 }
+	   ig:ig_landowners = {
+ 			set_interest_group_name = ig_hispanic_landowners
+   		}
+	}
+
+	c:JAP = {
+		annex = c:AIN
+		set_capital = STATE_KANTO
+		s:STATE_KYUSHU.region_state:JAP = {
+			add_modifier = satsuma_domain
+		}
+		s:STATE_CHUGOKU.region_state:JAP = {
+			add_modifier = chosu_domain
+		}
+		s:STATE_SHIKOKU.region_state:JAP = {
+			add_modifier = tosa_domain
+		}
+		s:STATE_KANSAI.region_state:JAP = {
+			add_modifier = tokugawa_domain
+		}
+		s:STATE_CHUBU.region_state:JAP = {
+			add_modifier = tokugawa_domain
+		}
+		s:STATE_KANTO.region_state:JAP = {
+			add_modifier = tokugawa_domain
+		}
+		s:STATE_TOHOKU.region_state:JAP = {
+			add_modifier = uesugi_domain
+		}
+		#Add Hokkaido One
+	}
 }

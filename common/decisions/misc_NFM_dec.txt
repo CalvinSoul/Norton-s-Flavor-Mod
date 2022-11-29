@@ -88,82 +88,82 @@ usa_house_gag = {
 	}
 }
 
-initialize_centralization_dec = { 	##victory
-	#	activate_law = law_type:law_totalitarian
+#initialize_centralization_dec = { 	##victory
+#	#	activate_law = law_type:law_totalitarian
 	#	activate_law = law_type:law_unitary
 	#	activate_law = law_type:law_federalism
 	#	activate_law = law_type:law_regionalism
-	is_shown = {
-		NOT = { has_variable = initalized_centralization_var }
-	}
+#	is_shown = {
+#		NOT = { has_variable = initalized_centralization_var }
+#	}
 
-	possible = {
-		NOT = { has_variable = initalized_centralization_var }
-		year >= 1836.1.3
-		year >= 1836.01.02
-		year >= 4.1.1836
-		year >= 06.01.1836
-	}
+#	possible = {
+#		NOT = { has_variable = initalized_centralization_var }
+#		year >= 1836.1.3
+#		year >= 1836.01.02
+#		year >= 4.1.1836
+#		year >= 06.01.1836
+#	}
 
-	when_taken = {
-		set_variable = initalized_centralization_var
+#	when_taken = {
+#		set_variable = initalized_centralization_var
 
-			if = {
-				limit = { 
-					OR = {
-						has_law = law_type:law_chiefdom
-						ROOT = c:SWI
-						ROOT = c:JAP
-						ROOT = c:AFG
-						ROOT = c:HBC
-						ROOT = c:ORG
-						ROOT = c:PNI
-						ROOT = c:PRA
-					}
-				}
-				activate_law = law_type:law_regionalism
-			}
-			if = {
-				limit = {
-					OR = {
-						ROOT = c:BIC
-						ROOT = c:ONT
-						ROOT = c:QUE
-						ROOT = c:UCA
-						ROOT = c:ECU
-						ROOT = c:CAN
-						ROOT = c:ARG
-						ROOT = c:AST
-						ROOT = c:FSA
-						ROOT = c:GCO
-						ROOT = c:GER
-						ROOT = c:KOR
-						ROOT = c:SAF
-						ROOT = c:SCA
-						ROOT = c:DEI
-						ROOT = c:PHI
-					}
-				 }
-				activate_law = law_type:law_cooperative_federalism
-			}
-			if = {
-				limit = {
-					OR = {
-						ROOT = c:USA
-						ROOT = c:CSA
-					}
-				 }
-				activate_law = law_type:law_dual_federalism
-			}
-			else = {
-				activate_law = law_type:law_unitary
-			}
-			}
-
-	ai_chance = {
-		base = 100
-	}
-}
+#			if = {
+#				limit = { 
+#					OR = {
+#						has_law = law_type:law_chiefdom
+#						ROOT = c:SWI
+#						ROOT = c:JAP
+#						ROOT = c:AFG
+#						ROOT = c:HBC
+#						ROOT = c:ORG
+#						ROOT = c:PNI
+#						ROOT = c:PRA
+#					}
+#				}
+#				activate_law = law_type:law_regionalism
+#			}
+#			if = {
+#				limit = {
+#					OR = {
+##						ROOT = c:BIC
+#						ROOT = c:ONT
+#						ROOT = c:QUE
+#						ROOT = c:UCA
+#						ROOT = c:ECU
+#						ROOT = c:CAN
+#						ROOT = c:ARG
+#						ROOT = c:AST
+#						ROOT = c:FSA
+#						ROOT = c:GCO
+#						ROOT = c:GER
+#						ROOT = c:KOR
+#						ROOT = c:SAF
+#						ROOT = c:SCA
+#						ROOT = c:DEI
+#						ROOT = c:PHI
+#					}
+#				 }
+#				activate_law = law_type:law_cooperative_federalism
+#			}
+#			if = {
+#				limit = {
+#					OR = {
+#						ROOT = c:USA
+#						ROOT = c:CSA
+#					}
+#				 }
+#				activate_law = law_type:law_dual_federalism
+#			}
+#			else = {
+#				activate_law = law_type:law_unitary
+#			}
+#			}
+#
+#	ai_chance = {
+#		base = 100
+#	}
+#}
 
 
 usa_repeal_house_gag = {
@@ -219,6 +219,75 @@ csa_national_guard = {
 		base = 10
 	}
 }
+
+
+#Formable Memes
+canada_formation_gov_nfm = {
+
+	is_shown = {
+		exists = c:CAN
+		root = c:CAN
+		NOT = { has_variable = new_government_nfm }
+	}
+
+	possible = { 
+			exists = c:CAN
+			root = c:CAN
+			NOT = { has_variable = new_government }
+		}
+
+	when_taken = {
+		set_variable = new_government_nfm
+		c:CAN = {activate_law = law_type:law_cooperative_federalism}
+	}
+
+	ai_chance = {
+		base = 10
+	}
+}
+
+germany_formation_gov_nfm = {
+
+	is_shown = {
+		OR = {
+			AND = {
+				exists = c:NGF
+				root = c:NGF
+			}
+			AND = {
+				exists = c:GER
+				root = c:GER
+			}
+		}
+		
+		NOT = { has_variable = new_government_nfm }
+	}
+
+	is_shown = {
+		OR = {
+			AND = {
+				exists = c:NGF
+				root = c:NGF
+			}
+			AND = {
+				exists = c:GER
+				root = c:GER
+			}
+		}
+		
+		NOT = { has_variable = new_government_nfm }
+	}
+
+	when_taken = {
+		set_variable = new_government_nfm
+		c:CAN = {activate_law = law_type:law_cooperative_federalism}
+	}
+
+	ai_chance = {
+		base = 10
+	}
+}
+
 
 
 

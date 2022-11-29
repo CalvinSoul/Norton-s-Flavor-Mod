@@ -3,28 +3,20 @@
 
 # enable = {} trigger for whether laws in this group should be possible at all
 lawgroup_centralization = {
+	base_enactment_days = 180
+	law_group_category = power_structure
+	enactment_approval_mult = 2
+	
+	progressive_movement_chance = 5
+	regressive_movement_chance = 5
+}
+
+lawgroup_officers = {
+	base_enactment_days = 90
 	law_group_category = power_structure
 	
 	progressive_movement_chance = 0
 	regressive_movement_chance = 0
 }
 
-
-lawgroup_slavery = {
-	law_group_category = human_rights
-	enactment_approval_mult = 1.5
-	
-	progressive_movement_chance = 10
-	regressive_movement_chance = 0.1
-	
-	change_allowed_trigger = {
-		NOT = {
-			has_modifier = forced_slavery_ban
-		}
-		OR = {
-			NOT = {c:USA = ROOT}
-			ruler = {has_ideology = ideology_abolitionist}
-		}
-	}	
-}
 

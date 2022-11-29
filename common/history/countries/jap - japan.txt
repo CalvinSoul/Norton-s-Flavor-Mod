@@ -35,7 +35,7 @@
 		}
 
 		ig:ig_devout = {
-			set_interest_group_name = ig_buddhist_monks
+			set_interest_group_name = ig_jap_buddhist_monks
 			remove_ideology = ideology_moralist
 			add_ideology = ideology_buddhist_moralist
 		}
@@ -46,7 +46,20 @@
 		}
 
 		ig:ig_rural_folk = {
-			set_interest_group_name = ig_peasants
+			set_interest_group_name = ig_japanese_peasants
+		}
+
+		ig:ig_industrialists = {
+			set_interest_group_name = ig_japanese_industrialists
+		}
+
+		ig:ig_petty_bourgeoisie = {
+			set_interest_group_name = ig_japanese_middle_class
+		}
+
+		ig:ig_intelligentsia = {
+			set_interest_group_name = ig_japanese_intelligensia
+
 		}
 	}
 }

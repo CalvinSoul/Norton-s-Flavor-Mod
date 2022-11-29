@@ -454,8 +454,124 @@ party_liberty:0 "Liberty Party"
 
 reconstruction_mod:0 "Reconstruction"
 
-
 acw_modded.4.t:0 "Southern Panic"
 acw_modded.4.d:0 "The recent election of President [ROOT.GetCountry.GetRuler.GetFullName] has caused mass panic throughout the South, as fears of abolition and the restriction of slavery throughout the United States and her territories are abound."
 acw_modded.4.f:0 "A house divided cannot stand.-Abraham Lincoln"
 acw_modded.4.a:0 "God damn them!"
+
+lawgroup_officers:0 "Officer Commissions"
+law_noble_officers:0 "Aristocratic Commissions"
+law_purchased_officers:0 "Purchased Commissions"
+law_professional_officers:0 "Professional Commissions "
+law_popular_officers:0 "Elected Commissions"
+law_political_bureaucrats:0 "Political Bureaucrats" 
+law_state_atheism:0 "State Atheism"
+
+ig_shogunate:0 "Fudai Daimyō"
+ig_jap_buddhist_monks:0 "Imperial Court"
+ig_japanese_peasants:0 "Nōmin and Rōnin"
+ig_japanese_industrialists:0 "Tozama Daimyō"
+ig_japanese_middle_class:0 "Chōnin"
+ig_japanese_intelligensia:0 "Rangaku Scholars"
+ig_samurai:0 "Kamon Daimyō"
+ig_samurai_desc:0 "Test Test"
+
+
+NFM_dcn_uk_default:0 "United Kingdom"
+NFM_dcn_uk_default_scoxit:0 "United Kingdom of Britian and Ireland"
+NFM_dcn_uk_default_ira_lets_go:0 "United Kingdom of Great Britian"
+NFM_dcn_uk_default_england:0 "Kingdom of England"
+NFM_dcn_default_crown_colony:0 "Colony of [COUNTRY.GetDefinition.GetName]"
+NFM_dcn_default_crown_colony_canada:0 "Province of [COUNTRY.GetDefinition.GetName]"
+#[GetPlayer.GetGovernment.GetName]
+#NFM_dcn_default_republic:0 "[COUNTRY.GetGovernment.GetName] Republic"
+NFM_dcn_middle_eastern_monarchy:0 "[COUNTRY.GetRuler.GetLastName] [COUNTRY.GetGovernment.GetName]"
+NFM_dcn_middle_eastern_monarchy_adj:0 "[COUNTRY.GetRuler.GetLastName]"
+NFM_dcn_middle_eastern_monarchy_modern:0 "[COUNTRY.GetGovernment.GetName] of [COUNTRY.GetDefinition.GetName]"
+NFM_dcn_middle_eastern_monarchy_modern_adj:0 "[COUNTRY.GetDefinition.GetAdjective]"
+
+NFM_dcn_default_monarchy:0 "[COUNTRY.GetRuler.GetLastName] Monarchy"
+NFM_dcn_default_monarchy_adj:0 "[COUNTRY.GetDefinition.GetAdjective]"
+NFM_dcn_default_republic:0 "Republic of [COUNTRY.GetDefinition.GetName]"
+NFM_dcn_default_republic_adj:0 "[COUNTRY.GetDefinition.GetAdjective]"
+NFM_dcn_default_theocracy:0 "[COUNTRY.GetStateReligion.GetName] State of [COUNTRY.GetDefinition.GetName]"
+NFM_dcn_default_theocracy_desc:0 "[COUNTRY.GetDefinition.GetName]"
+NFM_dcn_default_council_republic:0 "People's Republic of [COUNTRY.GetDefinition.GetName]"
+
+NFM_dcn_default_republic_united_states:0 "United States of [COUNTRY.GetDefinition.GetName]"
+NFM_dcn_default_republic_federal:0 "Federal Republic of [COUNTRY.GetDefinition.GetName]"
+NFM_dcn_default_republic_confederation:0 "[COUNTRY.GetDefinition.GetAdjective] Confederation"
+
+NFM_dcn_default_monarchy_empire:0 "[COUNTRY.GetDefinition.GetAdjective] Empire"
+NFM_dcn_default_monarchy_kingdom:0 "Kingdom of [COUNTRY.GetDefinition.GetName]"
+
+NFM_dcn_default_monarchy_principality:0 "Principality of [COUNTRY.GetDefinition.GetName]"
+
+NFM_dcn_default_monarchy_grand_duchy:0 "Grand Duchy of [COUNTRY.GetDefinition.GetName]"
+NFM_dcn_default_monarchy_duchy:0 "Duchy of [COUNTRY.GetDefinition.GetName]"
+
+#Dynamic Country Names
+NFM_shogunate:0 "[COUNTRY.GetRuler.GetLastName] Shogunate"
+NFM_dcn_shogunate:0 "[COUNTRY.GetRuler.GetLastName] Shogunate"
+NFM_dcn_shogunate_adj:0 "[COUNTRY.GetRuler.GetLastName]"
+NFM_dcn_korea_monarchy:0 "Kingdom of Great Joseon"
+NFM_dcn_korea_monarchy_adj:0 "Joseon"
+NFM_dcn_china_monarchy:0 "Empire of Great Qing"
+NFM_dcn_china_monarchy_adj:0 "Qing"
+NFM_dcn_korea_empire:0 "Great Korean Empire"
+NFM_dcn_korea_empire_adj:0 "Korean"
+
+NFM_dcn_empire_america:0 "Empire of Columbia"
+NFM_dcn_empire_america_adj:0 "Columbian"
+NFM_dcn_america_unitary:0 "Republic of Columbia"
+NFM_dcn_america_unitary_adj:0 "Columbian"
+
+NFM_dcn_spanish_philippines:0 "Captaincy General of the Philippines"
+
+NFM_dyn_c_lower_canada:0 "Province of Lower Canada"
+NFM_dyn_c_upper_canada:0 "Province of Upper Canada"
+
+NFM_dcn_default_monarchy_princely_state:0 "Princely State of [COUNTRY.GetDefinition.GetName]"
+NFM_dcn_default_monarchy_empire_middle_east:0 "[COUNTRY.GetRuler.GetLastName] Empire"
+
+BIC:0 "East India"
+BIC_ADJ:0 "East Indian"
+NFM_dcn_east_india_company:0 "[COUNTRY.GetDefinition.GetName] Company"
+
+NFM_dcn_cambodia_vietnamese:0 "Tây Thành Province"
+
+NFM_dcn_burmese_empire:0 "[COUNTRY.GetRuler.GetLastName] Empire"
+NFM_dcn_burmese_empire_adj:0 "[COUNTRY.GetRuler.GetLastName]"
+
+NFM_dcn_netherlands_united_monarchy:0 "United Kingdom of the Netherlands"
+NFM_dcn_united_netherlands_monarchy:0 "Kingdom of the Netherlands"
+NFM_dcn_united_provinces:0 "United Provinces"
+NFM_dcn_batavian_republic:0 "Batavian Republic"
+NFM_dcn_batavian_republic_adj:0 "Batavian"
+
+NFM_dcn_austria_hungary_unitary:0 "Dual Monarchy"
+NFM_dcn_austria_hungary_federal:0 "Austro-Hungarian Empire"
+NFM_dcn_austria_hungary_regionalism:0 "Danubian Confederation"
+
+NFM_dcn_portugal_united_kingdom:0 "United Kingdom of Portugal and Brazil"
+NFM_dcn_portugal_united_kingdom_adj:0 "Portuguese"
+NFM_dcn_portugal_united_kingdom_empire:0 "Empire of Lusitania"
+NFM_dcn_portugal_united_kingdom_empire_adj:0 "Lusitanian"
+
+NFM_dcn_default_republic_puppet_colony:0 "Colony of [COUNTRY.GetDefinition.GetName]"
+NFM_dcn_default_dominion:0 "Dominion of [COUNTRY.GetDefinition.GetName]"
+NFM_dcn_default_republic_puppet:0 "Province of [COUNTRY.GetDefinition.GetName]"
+#NFM_dcn_iberia_union:0 "Kingdom of Iberia"
+NFM_dcn_iberia_union:0 "Iberian Union"
+NFM_dcn_iberia_union:0 "Empire of Iberia"
+NFM_dcn_iberia_union_adj:0 "Iberian"
+
+NFM_indian_territory:0 "Indian Territory"
+NFM_indian_territory_adj:0 "Indian"
+
+NFM_sequoyah_nation:0 "[COUNTRY.GetDefinition.GetName] Nation"
+
+PER:0 "Iran"
+PER_ADJ:0 "Iranian"
+SEQ:0 "Sequoyah"
+SEQ_ADJ:0 "Sequoyan"

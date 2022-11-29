@@ -113,7 +113,14 @@ ideology_individualist = {
 
 ideology_stratocratic = {
 	icon = "gfx/interface/icons/ideology_icons/stratocratic.dds"
-	
+
+	lawgroup_officers = {
+		law_noble_officers = approve
+		law_purchased_officers = neutral
+		law_professional_officers = neutral
+		law_popular_officers = disapprove
+	}
+
 	lawgroup_army_model = {
 		law_peasant_levies = approve
 		law_professional_army = neutral
@@ -205,6 +212,13 @@ ideology_particularist = {
 		law_mass_conscription = disapprove
 		law_peasant_levies = disapprove
 	}
+
+	lawgroup_officers = { #NFM
+		law_noble_officers = neutral
+		law_purchased_officers = neutral
+		law_professional_officers = neutral
+		law_popular_officers = approve
+	}
 	
 	lawgroup_labor_rights = {
 		law_serfdom = disapprove
@@ -294,7 +308,14 @@ ideology_meritocratic = {
 		law_consumption_based_taxation = neutral
 		law_graduated_taxation = disapprove
 		law_land_based_taxation = disapprove
-	}	
+	}
+	lawgroup_officers = { #NFM
+		law_noble_officers = neutral
+		law_purchased_officers = approve
+		law_professional_officers = neutral
+		law_popular_officers = neutral
+	}
+
 }
 
 ideology_patriotic = {
@@ -356,6 +377,13 @@ ideology_jingoist = {
 		law_colonial_resettlement = approve
 		law_colonial_exploitation = approve
 		law_no_colonial_affairs = neutral
+	}
+
+	lawgroup_officers = { #NFM
+		law_noble_officers = disapprove
+		law_purchased_officers = neutral
+		law_professional_officers = strongly_approve
+		law_popular_officers = disapprove
 	}
 }
 
@@ -572,6 +600,13 @@ ideology_populist = {
 		law_mass_conscription = approve
 		law_peasant_levies = neutral
 		law_professional_army = disapprove
+	}
+
+	lawgroup_officers = { #NFM
+		law_noble_officers = disapprove
+		law_purchased_officers = neutral
+		law_professional_officers = neutral
+		law_popular_officers = strongly_approve
 	}
 }
 
