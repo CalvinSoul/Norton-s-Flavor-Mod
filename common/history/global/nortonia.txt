@@ -117,6 +117,7 @@ GLOBAL = {
 	   			this = c:BIC
 	   			this = c:UCA
 	   			this = c:BRZ
+	   			this = c:CHI
 	   		}
 	   	 }
 	   activate_law = law_type:law_cooperative_federalism
@@ -127,6 +128,7 @@ GLOBAL = {
 	   		OR = {
 	   			this = c:USA
 	   			this = c:SIC
+	   			this = c:TUR
 	   		}
 	   	 }
 	   activate_law = law_type:law_dual_federalism
@@ -162,6 +164,17 @@ GLOBAL = {
 	   	 }
 	   ig:ig_landowners = {
  			set_interest_group_name = ig_hispanic_landowners
+ 			remove_ideology = ideology_nfm_federalist
+ 			add_ideology = ideology_nfm_centralist
+   		}
+   		ig:ig_intelligentsia = {
+   			remove_ideology = ideology_nfm_centralist
+ 			add_ideology = ideology_nfm_federalist
+   		}
+	}
+	c:AUS = {
+		ig:ig_landowners = {
+ 			remove_ideology = ideology_nfm_federalist
    		}
 	}
 
@@ -192,3 +205,25 @@ GLOBAL = {
 		#Add Hokkaido One
 	}
 }
+
+
+
+
+#	   ig:ig_armed_forces = {
+#		ig:ig_devout = {
+#		ig:ig_landowners = {
+#		ig:ig_rural_folk = {
+#		ig:ig_industrialists = {
+#		ig:ig_petty_bourgeoisie = {
+#		ig:ig_intelligentsia = {
+#		ig:ig_trade_unions = {
+#	   			country_is_in_europe = yes
+ # 				country_is_in_middle_east = yes
+  #				country_is_in_east_asia = yes
+  #				country_is_in_central_asia = yes
+  #				country_is_in_india = yes
+  #				country_is_in_southeast_asia = yes
+ 	#			country_is_in_africa = yes	
+ 	#			country_is_in_north_america = yes
+	#			country_is_in_central_america = yes
+	#			country_is_in_south_america = yes

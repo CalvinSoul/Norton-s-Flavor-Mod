@@ -39,11 +39,11 @@
 	}
 
 	lawgroup_centralization= { #NFM Centralization
-#		law_totalitarian = strongly_disapprove
+		law_totalitarian = strongly_disapprove
 		law_unitary = disapprove
-		law_cooperative_federalism = disapprove
-		law_dual_federalism = approve
-		law_regionalism = neutral
+		law_cooperative_federalism = neutral
+		law_dual_federalism = strongly_approve
+		law_regionalism = approve
 	}
 }
 
@@ -80,14 +80,6 @@ ideology_scholar_paternalistic = {
 		law_militarized_police = neutral
 		law_no_police = disapprove
 	}
-
-	lawgroup_centralization= { #NFM Centralization
-	#	law_totalitarian = approve
-		law_unitary = approve
-		law_cooperative_federalism = neutral
-		law_dual_federalism = disapprove
-		law_regionalism = strongly_disapprove
-	}
 }
 
 ideology_junker_paternalistic = {
@@ -122,13 +114,6 @@ ideology_junker_paternalistic = {
 		law_dedicated_police = neutral
 		law_militarized_police = neutral
 		law_no_police = disapprove
-	}
-	lawgroup_centralization= { #NFM Centralization
-#		law_totalitarian = disapprove
-		law_unitary = neutral
-		law_cooperative_federalism = approve
-		law_dual_federalism = disapprove
-		law_regionalism = strongly_disapprove
 	}
 }
 
@@ -165,14 +150,6 @@ ideology_papal_paternalistic = {
 		law_militarized_police = neutral
 		law_no_police = disapprove
 	}
-
-	lawgroup_centralization= { #NFM Centralization
-	#	law_totalitarian = disapprove
-		law_unitary = neutral
-		law_cooperative_federalism = neutral
-		law_dual_federalism = disapprove
-		law_regionalism = disapprove
-	}
 }
 
 ideology_confucian = {
@@ -181,7 +158,8 @@ ideology_confucian = {
 	lawgroup_church_and_state = {
 		law_state_religion = approve
 		law_freedom_of_conscience = approve
-		law_total_separation = disapprove
+		law_total_separation = neutral
+		law_state_atheism = disapprove
 	}
 	
 	lawgroup_governance_principles = {
@@ -197,14 +175,6 @@ ideology_confucian = {
 		law_censorship = approve
 		law_right_of_assembly = neutral
 		law_protected_speech = disapprove
-	}
-
-	lawgroup_centralization= { #NFM Centralization
-	#	law_totalitarian = approve
-		law_unitary = approve
-		law_cooperative_federalism = neutral
-		law_dual_federalism = disapprove
-		law_regionalism = strongly_disapproveo
 	}
 }
 
@@ -256,14 +226,6 @@ ideology_bakufu = { #NFM EDITS BROAD
 		law_universal_suffrage = strongly_disapprove
 		law_anarchy = strongly_disapprove
 	}
-
-	lawgroup_centralization= { #NFM Centralization
-	#	law_totalitarian = strongly_disapprove
-		law_unitary = disapprove
-		law_cooperative_federalism = disapprove
-		law_dual_federalism = disapprove
-		law_regionalism = strongly_approve
-	}
 }
 
 ideology_shinto_moralist = {
@@ -281,6 +243,7 @@ ideology_shinto_moralist = {
 		law_state_religion = strongly_approve
 		law_freedom_of_conscience = neutral
 		law_total_separation = strongly_disapprove
+		law_state_atheism = strongly_disapprove
 	}
 	
 	lawgroup_citizenship = {
@@ -335,14 +298,6 @@ ideology_caudillismo = {
 		law_militarized_police = neutral
 		law_no_police = disapprove
 	}
-
-	lawgroup_centralization= { #NFM Centralization
-#		law_totalitarian = approve
-		law_unitary = neutral
-		law_cooperative_federalism = disapprove
-		law_dual_federalism = strongly_disapprove
-		law_regionalism = strongly_disapprove
-	}
 }
 
 ideology_austrian_hegemony = {
@@ -357,10 +312,10 @@ ideology_austrian_hegemony = {
 	}
 
 	lawgroup_centralization= { #NFM Centralization
-#		law_totalitarian = neutral
-		law_unitary = approve
-		law_cooperative_federalism = disapprove
-		law_dual_federalism = strongly_disapprove
+		law_totalitarian = approve
+		law_unitary = strongly_approve
+		law_cooperative_federalism = neutral
+		law_dual_federalism = disapprove
 		law_regionalism = strongly_disapprove
 	}
 }
@@ -442,7 +397,8 @@ ideology_buddhist_moralist = {
 	lawgroup_church_and_state = {
 		law_state_religion = strongly_approve
 		law_freedom_of_conscience = neutral
-		law_total_separation = strongly_disapprove
+		law_total_separation = disapprove
+		law_state_atheism = strongly_disapprove
 	}
 
 	lawgroup_citizenship = {
@@ -469,6 +425,7 @@ ideology_hindu_moralist = {
 		law_state_religion = strongly_approve
 		law_freedom_of_conscience = neutral
 		law_total_separation = strongly_disapprove
+		law_state_atheism = strongly_disapprove
 	}
 
 	lawgroup_citizenship = {
@@ -501,6 +458,7 @@ ideology_sikh_moralist = {
 		law_state_religion = strongly_approve
 		law_freedom_of_conscience = neutral
 		law_total_separation = strongly_disapprove
+		law_state_atheism = strongly_disapprove
 	}
 
 	lawgroup_citizenship = {

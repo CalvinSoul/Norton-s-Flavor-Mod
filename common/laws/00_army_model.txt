@@ -69,9 +69,14 @@ law_national_militia = {
 	}
 	
 	ai_will_do = {
-		exists = ruler
-		ruler = {
-			has_ideology = ideology_pacifist
+		OR = {
+			AND = {
+				exists = ruler
+				ruler = {
+					has_ideology = ideology_pacifist
+				}
+			}
+			has_law = law_group:law_peasant_levies
 		}
 	}
 }
@@ -93,5 +98,9 @@ law_mass_conscription = {
 	
 	possible_political_movements = {
 		law_mass_conscription
+	}
+
+	disallowing_laws = {
+		law_regionalism
 	}
 }

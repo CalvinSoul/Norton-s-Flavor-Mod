@@ -61,5 +61,8 @@
 			set_interest_group_name = ig_japanese_intelligensia
 
 		}
+		add_modifier = {
+			name = rangaku
+		}
 	}
 }

@@ -496,7 +496,7 @@ nfm_misc.5 = { #election momentum events based on clout
 
 }
 
-nfm_misc.6 = {
+nfm_misc.6 = { #American Census
 	type = country_event
 	placement = ROOT
 
@@ -537,6 +537,14 @@ nfm_misc.6 = {
 				remove_modifier = territory_clout_adjustment_mod
 				remove_modifier = d_c_adjustment
 				remove_variable = usa_state_flag_block
+				if = { limit = { ROOT = {
+					OR = {
+						has_law = law_type:law_unitary
+						has_law = law_type:law_totalitarian
+					}}
+				}
+				}
+					else = {
 			if = {limit = {NOT = {has_variable = american_state_variable}}
 				if = {limit = {is_incorporated = yes} scope:state_clout_adjust_scope = { 
 					add_modifier = integrated_territory_clout_adjustment_mod
@@ -591,7 +599,7 @@ nfm_misc.6 = {
 			}	
 			}
 			}
-		}}}
+		}}}}
  	}
  }
  	option = {
@@ -882,8 +890,141 @@ nfm_misc.10 = {
 
 
 
+nfm_misc.11 = { #Autocrat Events
+	type = country_event
+	placement = ROOT
 
+	title = mexican_nfm.1.t
+	desc = mexican_nfm.1.d
+	flavor = mexican_nfm.1.f
 
+	duration = 1
+
+	hidden = no
+
+	trigger = { 
+		has_law = law_type:law_autocracy 
+		NOT = { ruler = {has_variable = nfm_autocrat_check}}
+		ruler = { age >= 16 }
+	}
+
+	immediate = {
+		ruler = {set_variable = nfm_autocrat_check}
+		if = {
+			limit = {
+				ruler = {
+					interest_group = {
+						is_interest_group_type = ig_intelligentsia
+					}
+				}
+			 }
+			ruler = {add_trait = nfm_intelligentsia_autocrat}
+		}
+		if = {
+			limit = {
+				ruler = {
+					interest_group = {
+						is_interest_group_type = ig_landowners
+					}
+				}
+			 }
+			ruler = {add_trait = nfm_landowners_autocrat}
+		}
+		if = {
+			limit = {
+				ruler = {
+					interest_group = {
+						is_interest_group_type = ig_industrialists
+					}
+				}
+			 }
+			ruler = {add_trait = nfm_industrialists_autocrat}
+		}
+		if = {
+			limit = {
+				ruler = {
+					interest_group = {
+						is_interest_group_type = ig_armed_forces
+					}
+				}
+			 }
+			ruler = {add_trait = nfm_armed_forces_autocrat}
+		}
+		if = {
+			limit = {
+				ruler = {
+					interest_group = {
+						is_interest_group_type = ig_devout
+					}
+				}
+			 }
+			ruler = {add_trait = nfm_devout_autocrat}
+		}
+		if = {
+			limit = {
+				ruler = {
+					interest_group = {
+						is_interest_group_type = ig_rural_folk
+					}
+				}
+			 }
+			ruler = {add_trait = nfm_rural_folk_autocrat}
+		}
+		if = {
+			limit = {
+				ruler = {
+					interest_group = {
+						is_interest_group_type = ig_petty_bourgeoisie
+					}
+				}
+			 }
+			ruler = {add_trait = nfm_middle_class_autocrat}
+		}
+		if = {
+			limit = {
+				ruler = {
+					interest_group = {
+						is_interest_group_type = ig_trade_unions
+					}
+				}
+			 }
+			ruler = {add_trait = nfm_trade_union_autocrat}
+		}
+     }
+
+     option = {
+
+     }
+ }
+ nfm_misc.12 = { #Autocrat Event Remove
+	type = country_event
+	placement = ROOT
+
+	hidden = no
+	title = mexican_nfm.1.t
+	desc = mexican_nfm.1.d
+	flavor = mexican_nfm.1.f
+
+	duration = 1
+
+	hidden = no
+
+	trigger = { 
+		NOT = { has_law = law_type:law_autocracy }
+		ruler = {has_variable = nfm_autocrat_check}
+	}
+
+	immediate = {
+		ruler = {remove_variable = nfm_autocrat_check}
+		ruler = {
+			remove_trait = nfm_intelligentsia_autocrat
+			}
+     }
+
+     option = {
+
+     }
+ }
 
 nfm_misc.4 = {#Garibaldi Death
 	type = country_event

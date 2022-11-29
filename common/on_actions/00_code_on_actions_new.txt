@@ -9,6 +9,8 @@ on_monthly_pulse_country = {
 		mexican_nfm.1
 		nfm_misc.8
 		nfm_misc.10
+		nfm_misc.11
+		nfm_misc.12
 
 		nfm_american_elections.1
 		nfm_american_elections.2

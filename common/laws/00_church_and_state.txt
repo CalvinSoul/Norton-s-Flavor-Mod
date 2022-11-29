@@ -153,6 +153,7 @@ law_state_atheism = {
 
 	disallowing_laws = {
 		law_theocracy
+		law_regionalism
 	}
 	
 	on_enact = {
@@ -170,6 +171,14 @@ law_state_atheism = {
 	}
 	
 	possible_political_movements = {
-		
+		law_state_religion
+		law_freedom_of_conscience
+		law_total_separation
+	}
+	ai_will_do = {
+		exists = ruler
+		ruler = {
+			has_ideology = ideology_atheist
+		}
 	}
 }

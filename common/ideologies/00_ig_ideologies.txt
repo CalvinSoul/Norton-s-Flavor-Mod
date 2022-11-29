@@ -115,8 +115,8 @@ ideology_stratocratic = {
 	icon = "gfx/interface/icons/ideology_icons/stratocratic.dds"
 
 	lawgroup_officers = {
-		law_noble_officers = approve
-		law_purchased_officers = neutral
+		law_noble_officers = strongly_approve
+		law_purchased_officers = approve
 		law_professional_officers = neutral
 		law_popular_officers = disapprove
 	}
@@ -233,14 +233,6 @@ ideology_particularist = {
 		law_debt_slavery = strongly_disapprove
 		law_slave_trade = neutral
 	}
-
-	lawgroup_centralization= { #NFM Centralization
-		law_totalitarian = strongly_disapprove
-		law_unitary = neutral
-		law_cooperative_federalism = neutral
-		law_dual_federalism = neutral
-		law_regionalism = approve
-	}
 }
 
 ideology_isolationist = {
@@ -282,6 +274,7 @@ ideology_moralist = {
 		law_state_religion = strongly_approve
 		law_freedom_of_conscience = neutral
 		law_total_separation = strongly_disapprove
+		law_state_atheism = strongly_disapprove
 	}
 
 	lawgroup_citizenship = {
@@ -309,13 +302,6 @@ ideology_meritocratic = {
 		law_graduated_taxation = disapprove
 		law_land_based_taxation = disapprove
 	}
-	lawgroup_officers = { #NFM
-		law_noble_officers = neutral
-		law_purchased_officers = approve
-		law_professional_officers = neutral
-		law_popular_officers = neutral
-	}
-
 }
 
 ideology_patriotic = {
@@ -342,13 +328,12 @@ ideology_patriotic = {
 		law_protected_speech = disapprove
 	}	
 
-	#lawgroup_centralization= { #NFM Centralization
-	#	law_totalitarian = approve
-	#	law_unitary = neutral
-	#	law_cooperative_federalism = neutral
-	#	law_dual_federalism = neutral
-	#	law_regionalism = disapprove
-	#}
+	lawgroup_officers = {
+		law_noble_officers = disapprove
+		law_purchased_officers = neutral
+		law_professional_officers = strongly_approve
+		law_popular_officers = disapprove
+	}
 }
 
 ideology_loyalist = {
@@ -377,13 +362,6 @@ ideology_jingoist = {
 		law_colonial_resettlement = approve
 		law_colonial_exploitation = approve
 		law_no_colonial_affairs = neutral
-	}
-
-	lawgroup_officers = { #NFM
-		law_noble_officers = disapprove
-		law_purchased_officers = neutral
-		law_professional_officers = strongly_approve
-		law_popular_officers = disapprove
 	}
 }
 
@@ -425,15 +403,6 @@ ideology_liberal = {
 		law_women_in_the_workplace = neutral
 		law_womens_suffrage = neutral
 	}
-
-	lawgroup_centralization= { #NFM Centralization
-		#law_totalitarian = strongly_disapprove
-		law_unitary = approve
-		law_cooperative_federalism = approve
-		law_dual_federalism = neutral
-		law_regionalism = disapprove
-
-	}
 }
 
 ideology_anti_clerical = {
@@ -443,6 +412,7 @@ ideology_anti_clerical = {
 		law_total_separation = strongly_approve
 		law_freedom_of_conscience = approve
 		law_state_religion = disapprove
+		law_state_atheism = approve
 	}
 	
 	lawgroup_education_system = {
@@ -714,44 +684,5 @@ ideology_pro_slavery = {
 		law_debt_slavery = approve
 		law_legacy_slavery = neutral
 		law_slavery_banned = strongly_disapprove
-	}
-}
-
-ideology_catholic_moralist = { ##Unique Ideology for Catholics
-	icon = "gfx/interface/icons/ideology_icons/catholic.dds"
-	
-	lawgroup_governance_principles = {
-		law_monarchy = strongly_approve
-		law_theocracy = strongly_approve	
-		law_presidential_republic = disapprove
-		law_parliamentary_republic = disapprove
-		law_council_republic = strongly_disapprove
-	}
-
-	lawgroup_church_and_state = {
-		law_state_religion = strongly_approve
-		law_freedom_of_conscience = neutral
-		law_total_separation = strongly_disapprove
-	}
-
-	lawgroup_citizenship = {
-		law_ethnostate = strongly_disapprove
-		law_national_supremacy = strongly_disapprove
-		law_racial_segregation = strongly_disapprove
-		law_cultural_exclusion = neutral
-		law_multicultural = approve	
-	}
-
-	lawgroup_slavery = {
-		law_slavery_banned = neutral
-		law_legacy_slavery = disapprove
-		law_debt_slavery = disapprove
-		law_slave_trade = strongly_disapprove
-	}
-
-	lawgroup_childrens_rights = {
-		law_child_labor_allowed = neutral
-		law_restricted_child_labor = approve
-		law_compulsory_primary_school = approve
 	}
 }

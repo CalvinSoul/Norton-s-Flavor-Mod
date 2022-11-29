@@ -58,6 +58,7 @@ dual_monarchy.1 = {
 		}
 		ig:ig_landowners = {
 			remove_ideology = ideology_austrian_hegemony
+			add_ideology = ideology_nfm_federalist
 			hidden_effect = {
 				set_interest_group_name = ig_landowners
 			}
@@ -73,6 +74,7 @@ dual_monarchy.1 = {
 		activate_law = law_type:law_dual_federalism #NFM ADDED
 		ig:ig_landowners = {
 			remove_ideology = ideology_austrian_hegemony
+			add_ideology = ideology_nfm_federalist
 			hidden_effect = {
 				set_interest_group_name = ig_landowners
 			}

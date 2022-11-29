@@ -76,11 +76,7 @@ DEFAULT = {
 			#	is_subject = no
 				has_law = law_type:law_monarchy	
 				OR = { 
-					AND = {
-					is_subject = yes
-					country_rank = rank_value:minor_power
-					}	
-					country_rank = rank_value:insignificant_power
+					country_tier = principality
 					has_government_type = gov_absolute_principality
 					has_government_type = gov_principality
 					has_government_type = gov_constitutional_principality
@@ -302,16 +298,13 @@ DEFAULT = {
 		name = NFM_dcn_default_republic_confederation
 	#	adjective = NFM_dcn_default_republic_adj
 		
-		priority = 1
+		priority = 10
 		
 		trigger = {
 			exists = scope:actor
 			scope:actor = {
 		#		is_subject = no
-				OR = {
-					has_law = law_type:law_presidential_republic
-					has_law = law_type:law_parliamentary_republic
-				}
+					NOT = {has_law = law_type:law_chiefdom}
 					has_law = law_type:law_regionalism
 			}
 		}
@@ -368,6 +361,25 @@ DEFAULT = {
 		}
 	}
 
+	dynamic_country_name = {
+		name = NFM_dcn_default_republic_free_city
+	#	adjective = NFM_dcn_default_republic_adj
+		
+		priority = 3
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+			#	is_subject = no
+				country_tier = city_state
+				OR = {
+					has_law = law_type:law_presidential_republic
+					has_law = law_type:law_parliamentary_republic
+				}
+				
+			}
+		}
+	}
 
 	dynamic_country_name = {
 		name = NFM_dcn_default_theocracy
@@ -445,6 +457,26 @@ DEFAULT = {
 		}
 	}
 
+	dynamic_country_name = { #NFM Ottoman Vassals
+		name = NFM_dcn_middle_eastern_monarchy_modern
+	#	adjective = NFM_dcn_default_republic_adj
+		
+		priority = 10
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				OR = {
+					has_government_type = gov_bey
+					has_government_type = gov_vilayet
+					has_government_type  = gov_sharif
+					has_government_type = gov_khedive
+				}
+				
+			}
+		}
+	}
+
 }#Default End
 
 SEQ = { # Indian Territory
@@ -456,7 +488,9 @@ SEQ = { # Indian Territory
 		priority = 10
 		
 		trigger = {
-			scope:actor = { is_subject_type = subject_type_puppet }
+			scope:actor = { 
+				is_subject = yes
+				is_subject_type = subject_type_puppet }
 		}
 	}
 	dynamic_country_name = {
@@ -466,7 +500,78 @@ SEQ = { # Indian Territory
 		priority = 10
 		
 		trigger = {
-			scope:actor = { is_subject_type = subject_type_dominion }
+			scope:actor = { 
+				is_subject = yes
+				is_subject_type = subject_type_dominion }
+		}
+	}
+}
+
+CLM = { # Colombia
+	dynamic_country_name = {
+		name = NFM_dcn_colombia_granada
+		adjective = dyn_c_new_granada_adj
+
+		is_main_tag_only = yes
+		priority = 2
+		
+		trigger = {
+			coa_def_republic_flag_trigger = yes
+			scope:actor = {
+				OR = {
+					has_law = law_type:law_legacy_slavery
+					has_law = law_type:law_slave_trade
+				}
+			}
+		}
+	}
+}
+
+PNI = { # Rio Grande Sul
+	dynamic_country_name = {
+		name = NFM_dcn_adjective_republic
+	#	adjective = dyn_c_new_granada_adj
+
+		is_main_tag_only = yes
+		priority = 2
+		
+		trigger = {
+			coa_def_republic_flag_trigger = yes
+			scope:actor = {
+			#	has_law = law_type:law_type
+			}
+		}
+	}
+}
+
+BRZ = { # Brazil
+	dynamic_country_name = {
+		name = NFM_dcn_empire_of
+	#	adjective = dyn_c_new_granada_adj
+
+		is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			scope:actor = {
+				has_law = law_type:law_monarchy
+			}
+		}
+	}
+}
+
+SER = { # Serbia Fix
+	dynamic_country_name = {
+		name = NFM_dcn_default_monarchy_principality
+		
+		is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			scope:actor = {
+				is_subject = yes
+				has_law = law_type:law_monarchy
+			}
 		}
 	}
 }
@@ -532,6 +637,20 @@ JAP = { # Japan
 				has_law = law_type:law_monarchy
 				NOT = { has_variable = meiji_var }
 			}
+		}
+	}
+}
+
+TUR = { # Turkey
+	dynamic_country_name = {
+		name = NFM_ottomans
+		adjective = dyn_c_ottoman_empire_adj
+		
+		is_main_tag_only = yes
+		priority = 5
+		
+		trigger = {
+			coa_def_monarchy_flag_trigger = yes
 		}
 	}
 }
@@ -659,6 +778,22 @@ PHI = {
 		}
 	}
 }
+HBC = {
+	dynamic_country_name = { #NFM
+		name = NFM_dcn_hudson_bay_company
+		adjective = NFM_dcn_hudson_bay_company_adj
+	#	is_main_tag_only = yes
+		priority = 20
+
+		trigger = {
+			exists = scope:actor
+			scope:actor = { 	
+				has_government_type = gov_chartered_company
+			}
+		}
+	}
+}
+
 
 BIC = { # British East India Company
 	dynamic_country_name = { #NFM
@@ -670,6 +805,7 @@ BIC = { # British East India Company
 		trigger = {
 			exists = scope:actor
 			scope:actor = { 	
+				has_law = law_type:law_presidential_republic
 				OR = {
 					has_law = law_type:law_autocracy
 					has_law = law_type:law_oligarchy
@@ -765,7 +901,7 @@ GBR = { # Great Britain of United Kingdom
 		name = NFM_dcn_uk_default #Great Britian & Ireland
 		
 		is_main_tag_only = yes
-		priority = 2
+		priority = 10
 		
 		trigger = { 
 	#		NOT = { exists = c:SCO } #Scotland
@@ -804,13 +940,13 @@ GBR = { # Great Britain of United Kingdom
 		name = NFM_dcn_uk_default_england #England
 		
 		is_main_tag_only = yes
-		priority = 3
+		priority = 11
 		
 		trigger = { 
 			 exists = c:SCO 
 		#	NOT = { exists = c:WLS } 
 			 exists = c:IRE 
-			scope:actor = { has_law = law_monarchy }
+			scope:actor = { has_law = law_type:law_monarchy }
 		}
 	}
 
@@ -1096,7 +1232,35 @@ ACE = { # Sumatra
 	}
 }
 
+PER = { # Iran Persia
+	dynamic_country_name = {
+		name = NFM_dcn_sublime_iran
+	#	adjective = dyn_c_new_granada_adj
 
+		is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			scope:actor = {
+				has_law = law_type:law_monarchy
+				has_law = law_type:law_autocracy
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = NFM_dcn_imperial_iran
+	#	adjective = dyn_c_new_granada_adj
+
+		is_main_tag_only = yes
+		priority = 9
+		
+		trigger = {
+			scope:actor = {
+				has_law = law_type:law_monarchy
+			}
+		}
+	}
+}
 
 AFS = { #African Free State
 	dynamic_country_name = {
@@ -1399,25 +1563,6 @@ CHC = { # Chechnya
 #	}
 #}#
 
-CLM = { # Colombia
-	dynamic_country_name = {
-		name = dyn_c_new_granada
-		adjective = dyn_c_new_granada_adj
-
-		is_main_tag_only = yes
-		priority = 2
-		
-		trigger = {
-			coa_def_republic_flag_trigger = yes
-			scope:actor = {
-				OR = {
-					has_law = law_type:law_legacy_slavery
-					has_law = law_type:law_slave_trade
-				}
-			}
-		}
-	}
-}
 
 COM = { # Comanche
 	dynamic_country_name = {
@@ -1556,19 +1701,7 @@ HAN = { # Hannover
 	}
 }
 
-HBC = { # Hudson Bay Company
-	dynamic_country_name = {
-		name = dyn_c_ruperts_land
-		adjective = dyn_c_ruperts_land_adj
 
-		is_main_tag_only = yes
-		priority = 2
-		
-		trigger = {
-			coa_def_independent_trigger = yes
-		}
-	}
-}
 
 HOL = { # Holstein
 	dynamic_country_name = {
@@ -1915,7 +2048,7 @@ ORG = { # Oregon
 		adjective = dyn_c_columbia_adj
 		
 		is_main_tag_only = yes
-		priority = 2
+		priority = 20
 		
 		trigger = {
 			exists = scope:actor
@@ -1950,7 +2083,7 @@ ORG = { # Oregon
 		adjective = dyn_c_columbia_adj # no need for a different adjective from the above entry
 		
 		is_main_tag_only = yes
-		priority = 2
+		priority = 20
 		
 		trigger = {
 			exists = c:GBR
@@ -2301,20 +2434,6 @@ TUN = { # Tunis
 		
 		trigger = {
 			NOT = { coa_def_monarchy_flag_trigger = yes }
-		}
-	}
-}
-
-TUR = { # Turkey
-	dynamic_country_name = {
-		name = dyn_c_ottoman_empire
-		adjective = dyn_c_ottoman_empire_adj
-		
-		is_main_tag_only = yes
-		priority = 5
-		
-		trigger = {
-			coa_def_monarchy_flag_trigger = yes
 		}
 	}
 }

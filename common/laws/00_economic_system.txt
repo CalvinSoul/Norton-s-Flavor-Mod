@@ -188,6 +188,8 @@ law_command_economy = {
 	disallowing_laws = {
 		law_serfdom
 		law_command_economy
+		law_regionalism
+		law_dual_federalism
 	}
 	
 	unlocking_technologies = {

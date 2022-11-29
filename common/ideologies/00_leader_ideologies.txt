@@ -1,4 +1,26 @@
-﻿ideology_moderate = {
+﻿#ideology_moderate
+#ideology_traditionalist
+#ideology_atheist
+#ideology_republican_leader
+#ideology_radical
+#ideology_reformer
+#ideology_feminist
+#ideology_abolitionist
+#ideology_slaver
+#ideology_pacifist
+#ideology_jingoist_leader
+#ideology_royalist
+#ideology_social_democrat
+#ideology_communist
+#ideology_vanguardist
+#ideology_fascist 
+#ideology_anarchist
+#ideology_ethno_nationalist
+#ideology_theocrat 
+#ideology_market_liberal 
+
+#Start
+ideology_moderate = {
 	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_no_ideology.dds"
 	
 	show_in_list = no
@@ -59,6 +81,7 @@ ideology_traditionalist = {
 		law_state_religion = approve
 		law_freedom_of_conscience = disapprove
 		law_total_separation = strongly_disapprove
+		law_state_atheism = strongly_disapprove
 	}
 	
 	possible = {
@@ -125,6 +148,7 @@ ideology_atheist = {
 		law_state_religion = strongly_disapprove
 		law_freedom_of_conscience = disapprove
 		law_total_separation = approve
+		law_state_atheism = strongly_approve
 	}
 	
 	possible = {
@@ -945,6 +969,14 @@ ideology_royalist = {
 		law_theocracy = disapprove
 		law_council_republic = strongly_disapprove
 	}
+
+	lawgroup_centralization= { #NFM Centralization
+		law_totalitarian = approve
+		law_unitary = strongly_approve
+		law_cooperative_federalism = neutral
+		law_dual_federalism = disapprove
+		law_regionalism = strongly_disapprove
+	}
 	
 	possible = {
 		# no monarchists in countries with strong republican tradition
@@ -1162,6 +1194,7 @@ ideology_communist = {
 		law_state_religion = strongly_disapprove
 		law_freedom_of_conscience = neutral
 		law_total_separation = approve
+		law_state_atheism = strongly_approve
 	}
 
 	lawgroup_citizenship = { #added
@@ -1171,7 +1204,6 @@ ideology_communist = {
 		law_cultural_exclusion = disapprove
 		law_multicultural = strongly_approve	
 	}
-	
 	possible = {
 		owner = { has_technology_researched = socialism }
 		scope:interest_group = {
@@ -1239,6 +1271,13 @@ ideology_vanguardist = {
 	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_vanguardist.dds"
 	
 	character_ideology = yes
+	lawgroup_centralization= { #NFM Centralization
+		law_totalitarian = strongly_approve
+		law_unitary = approve
+		law_cooperative_federalism = neutral
+		law_dual_federalism = strongly_disapprove
+		law_regionalism = strongly_disapprove
+	}
 
 	lawgroup_governance_principles = {
 		law_monarchy = strongly_disapprove
@@ -1407,6 +1446,14 @@ ideology_fascist = {
 	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_fascist.dds"
 	
 	character_ideology = yes
+
+	lawgroup_centralization= { #NFM Centralization
+		law_totalitarian = strongly_approve
+		law_unitary = approve
+		law_cooperative_federalism = neutral
+		law_dual_federalism = strongly_disapprove
+		law_regionalism = strongly_disapprove
+	}
 
 	lawgroup_distribution_of_power = {
 		law_autocracy = strongly_approve
@@ -1841,6 +1888,7 @@ ideology_theocrat = {
 		law_state_religion = approve
 		law_freedom_of_conscience = disapprove
 		law_total_separation = strongly_disapprove
+		law_state_atheism = strongly_disapprove
 	}
 
 	lawgroup_governance_principles = {

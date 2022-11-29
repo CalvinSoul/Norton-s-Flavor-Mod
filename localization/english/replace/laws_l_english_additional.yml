@@ -11,6 +11,15 @@
  ideology_nfm_federalist:0 "Federalist"
  ideology_nfm_federalist_desc:0 "#lore Federalists support a strong but federal government.#!"
 
+ ideology_nfm_totalitarian:0 "Totalitarian"
+ ideology_nfm_totalitarian_desc:0 "#lore Totalitarians want all elements of political, social, and economic life to be within the state.#!"
+
+ ideology_nfm_centralist:0 "Centralist"
+ ideology_nfm_centralist_desc:0 "#lore Centralists want a strong and unified central government.#!"
+
+ ideology_nfm_regionalist:0 "Regionalist"
+ ideology_nfm_regionalist_desc:0 "#lore Regionalists want a weak central government with ultimate authority in local governments.#!"
+
  ideology_nfm_xenophobic:0 "Xenophobic"
  ideology_nfm_xenophobic_desc:0 "#lore Xenophobes hate and fear those different from themselves, wishes for a country composed only of their percieved kin.#!"
   
@@ -467,14 +476,13 @@ law_popular_officers:0 "Elected Commissions"
 law_political_bureaucrats:0 "Political Bureaucrats" 
 law_state_atheism:0 "State Atheism"
 
-ig_shogunate:0 "Fudai Daimyō"
+ig_shogunate:0 "[concept_fudai_daimyo]"
 ig_jap_buddhist_monks:0 "Imperial Court"
-ig_japanese_peasants:0 "Nōmin and Rōnin"
-ig_japanese_industrialists:0 "Tozama Daimyō"
+ig_japanese_peasants:0 "[concept_nomin] and [concept_ronin]"
+ig_japanese_industrialists:0 "[concept_tozama_daimyo]"
 ig_japanese_middle_class:0 "Chōnin"
-ig_japanese_intelligensia:0 "Rangaku Scholars"
-ig_samurai:0 "Kamon Daimyō"
-ig_samurai_desc:0 "Test Test"
+ig_japanese_intelligensia:0 "[concept_rangaku] Scholars"
+ig_samurai:0 "[concept_kamon_daimyo]"
 
 
 NFM_dcn_uk_default:0 "United Kingdom"
@@ -510,6 +518,8 @@ NFM_dcn_default_monarchy_principality:0 "Principality of [COUNTRY.GetDefinition.
 NFM_dcn_default_monarchy_grand_duchy:0 "Grand Duchy of [COUNTRY.GetDefinition.GetName]"
 NFM_dcn_default_monarchy_duchy:0 "Duchy of [COUNTRY.GetDefinition.GetName]"
 
+NFM_dcn_adjective_republic:0 "[COUNTRY.GetDefinition.GetAdjective] Republic"
+NFM_dcn_empire_of:0 "Empire of [COUNTRY.GetDefinition.GetName]"
 #Dynamic Country Names
 NFM_shogunate:0 "[COUNTRY.GetRuler.GetLastName] Shogunate"
 NFM_dcn_shogunate:0 "[COUNTRY.GetRuler.GetLastName] Shogunate"
@@ -536,7 +546,9 @@ NFM_dcn_default_monarchy_empire_middle_east:0 "[COUNTRY.GetRuler.GetLastName] Em
 
 BIC:0 "East India"
 BIC_ADJ:0 "East Indian"
+
 NFM_dcn_east_india_company:0 "[COUNTRY.GetDefinition.GetName] Company"
+
 
 NFM_dcn_cambodia_vietnamese:0 "Tây Thành Province"
 
@@ -553,7 +565,7 @@ NFM_dcn_austria_hungary_unitary:0 "Dual Monarchy"
 NFM_dcn_austria_hungary_federal:0 "Austro-Hungarian Empire"
 NFM_dcn_austria_hungary_regionalism:0 "Danubian Confederation"
 
-NFM_dcn_portugal_united_kingdom:0 "United Kingdom of Portugal and Brazil"
+NFM_dcn_portugal_united_kingdom:0 "Reino Unido"
 NFM_dcn_portugal_united_kingdom_adj:0 "Portuguese"
 NFM_dcn_portugal_united_kingdom_empire:0 "Empire of Lusitania"
 NFM_dcn_portugal_united_kingdom_empire_adj:0 "Lusitanian"
@@ -561,6 +573,8 @@ NFM_dcn_portugal_united_kingdom_empire_adj:0 "Lusitanian"
 NFM_dcn_default_republic_puppet_colony:0 "Colony of [COUNTRY.GetDefinition.GetName]"
 NFM_dcn_default_dominion:0 "Dominion of [COUNTRY.GetDefinition.GetName]"
 NFM_dcn_default_republic_puppet:0 "Province of [COUNTRY.GetDefinition.GetName]"
+
+NFM_dcn_default_republic_free_city:0 "Free City of [COUNTRY.GetDefinition.GetName]"
 #NFM_dcn_iberia_union:0 "Kingdom of Iberia"
 NFM_dcn_iberia_union:0 "Iberian Union"
 NFM_dcn_iberia_union:0 "Empire of Iberia"
@@ -573,5 +587,65 @@ NFM_sequoyah_nation:0 "[COUNTRY.GetDefinition.GetName] Nation"
 
 PER:0 "Iran"
 PER_ADJ:0 "Iranian"
-SEQ:0 "Sequoyah"
+
+SEQ:0 "Sequoyah" #DOesnt work, wtf
 SEQ_ADJ:0 "Sequoyan"
+
+NFM_dcn_hudson_bay_company:0 "Hudson Bay Company"
+NFM_dcn_hudson_bay_company_adj:0 "Hudson Bay"
+
+NFM_dcn_colombia_granada:0 "Republic of New Granada"
+
+HBC:0 "Red River"
+HBC_ADJ:0 "Riverlander"
+
+NFM_dcn_sublime_iran:0 "Sublime State of Iran"
+NFM_dcn_imperial_iran:0 "Imperial State of Iran"
+NFM_ottomans:0 "Sublime Ottoman State"
+
+satsuma_domain:0 "Satsuma Domain ([concept_tozama_daimyo])"
+chosu_domain:0 "Chosu Domain ([concept_tozama_daimyo])"
+tosa_domain:0 "Tosa Domain ([concept_tozama_daimyo])"
+tokugawa_domain:0 "Tokugawa Domain ([concept_kamon_daimyo])"
+uesugi_domain:0 "Uesugi Domain ([concept_fudai_daimyo])"
+rangaku:0 "[concept_rangaku] Studies"
+
+
+concept_fudai_daimyo:0 "Fudai Daimyō"
+concept_fudai_daimyo_desc:3 "Blank Description [concept_samurai]""
+
+concept_kamon_daimyo:0 "Kamon Daimyō"
+concept_kamon_daimyo_desc:3 "Blank Description [concept_samurai]""
+
+concept_tozama_daimyo:0 "Tozama Daimyō"
+concept_tozama_daimyo_desc:3 "Blank Description [concept_samurai]""
+
+concept_rangaku:0 "Rangaku"
+concept_rangaku_desc:3 "Blank Description"
+
+concept_nomin:0 "Nōmin"
+concept_nomin_desc:3 "Blank Description"
+
+concept_ronin:0 "Rōnin"
+concept_ronin_desc:3 "Blank Description [concept_samurai]"
+
+concept_samurai:0 "Samurai"
+concept_samurai_desc:3 "Blank Description"
+
+PNI:0 "Rio Grande do Sul"
+PNI_ADJ:0 "Riograndense"
+
+ARG_ADJ:0 "Argentine"
+
+COM:0 "Comancheria"
+
+autocracy_tt_nfm:0 "From [GetLawType('law_autocracy').GetName] your ruler will gain +33% clout towards their interest group via a trait."
+
+nfm_intelligentsia_autocrat:0 "Scholar ([GetLawType('law_autocracy').GetName])"
+nfm_landowners_autocrat:0 "Patrician ([GetLawType('law_autocracy').GetName])"
+nfm_industrialists_autocrat:0 "Industrialist ([GetLawType('law_autocracy').GetName])"
+nfm_armed_forces_autocrat:0 "Militarist ([GetLawType('law_autocracy').GetName])"
+nfm_devout_autocrat:0 "Devoted ([GetLawType('law_autocracy').GetName])"
+nfm_rural_folk_autocrat:0 "Rustic ([GetLawType('law_autocracy').GetName])"
+nfm_middle_class_autocrat:0 "Citizen ([GetLawType('law_autocracy').GetName])"
+nfm_trade_union_autocrat:0 "Proletarian ([GetLawType('law_autocracy').GetName])"

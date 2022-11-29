@@ -14,9 +14,12 @@ law_autocracy = {
 		scripted_effect_parties_disappearence = yes
 	}
 
+	on_enact = {
+		custom_tooltip = autocracy_tt_nfm
+	}
+
 	modifier = {
 		country_legitimacy_headofstate_add = 30
-		country_aristocrats_pol_str_mult = 0.5
 		country_authority_add = 250
 		country_law_enactment_time_mult = -0.5
 		political_movement_radicalism_mult = 0.3
@@ -44,8 +47,9 @@ law_oligarchy = {
 	
 	modifier = {
 		country_legitimacy_headofstate_add = 25
-		country_aristocrats_pol_str_mult = 0.25
-		country_capitalists_pol_str_mult = 0.25
+		country_aristocrats_pol_str_mult = 0.33
+		country_capitalists_pol_str_mult = 0.33
+		country_officers_pol_str_mult = 0.33
 		country_authority_add = 200
 		country_law_enactment_time_mult = -0.25
 		political_movement_radicalism_mult = 0.2

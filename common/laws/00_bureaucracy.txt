@@ -42,11 +42,8 @@ law_political_bureaucrats = {
 	}
 	
 	possible_political_movements = {
-		
-	}
-
-	ai_will_do = { 	# AI will never return the spoils system
-		always = no
+		law_appointed_bureaucrats
+		law_elected_bureaucrats
 	}
 }
 

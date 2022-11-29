@@ -55,6 +55,7 @@
 			add_ruling_interest_group = yes
 			set_interest_group_name = ig_southern_planters
 			remove_ideology = ideology_paternalistic
+			remove_ideology = ideology_nfm_federalist
 			add_ideology = ideology_republican_paternalistic
 		}
 
@@ -71,7 +72,9 @@
 
 		ig:ig_intelligentsia = {
 			remove_ideology = ideology_liberal
+			remove_ideology = ideology_nfm_centralist
 			add_ideology = ideology_nfm_american_liberalism
+			add_ideology = ideology_nfm_federalist
 		}
 
 		ig:ig_industrialists = {

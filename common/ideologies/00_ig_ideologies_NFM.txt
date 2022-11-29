@@ -11,7 +11,8 @@
 
 	lawgroup_church_and_state = {
 		law_state_religion = strongly_approve
-		law_freedom_of_conscience = neutral
+		law_freedom_of_conscience = disapprove
+		law_total_separation = strongly_disapprove
 		law_total_separation = strongly_disapprove
 	}
 
@@ -37,17 +38,55 @@
 	}
 }
 
-ideology_nfm_federalist = { ##Unique Ideology for Catholics
-	icon = "gfx/interface/icons/ideology_icons/reformer.dds"
+ideology_nfm_totalitarian = { ## Totalitarians
+	icon = "gfx/interface/icons/ideology_icons/totalitarian.dds"
 	
 	lawgroup_centralization= { #NFM Centralization
-#		law_totalitarian = strongly_disapprove
-		law_unitary = disapprove
-		law_cooperative_federalism = approve
+		law_totalitarian = strongly_approve
+		law_unitary = approve
+		law_cooperative_federalism = neutral
+		law_dual_federalism = strongly_disapprove
+		law_regionalism = strongly_disapprove
+	}
+}
+
+
+ideology_nfm_centralist = { ## Centralists
+	icon = "gfx/interface/icons/ideology_icons/nationalism.dds"
+	
+	lawgroup_centralization= { #NFM Centralization
+		law_totalitarian = neutral
+		law_unitary = strongly_approve
+		law_cooperative_federalism = neutral
 		law_dual_federalism = disapprove
 		law_regionalism = strongly_disapprove
 	}
 }
+
+ideology_nfm_federalist = { ##Federalists
+	icon = "gfx/interface/icons/ideology_icons/federalism.dds"
+	
+	lawgroup_centralization= { #NFM Centralization
+		law_totalitarian = strongly_disapprove
+		law_unitary = disapprove
+		law_cooperative_federalism = strongly_approve
+		law_dual_federalism = approve
+		law_regionalism = disapprove
+	}
+}
+
+ideology_nfm_regionalist = { ## Regionalists
+	icon = "gfx/interface/icons/ideology_icons/regionalist.dds"
+	
+	lawgroup_centralization= { #NFM Centralization
+		law_totalitarian = strongly_disapprove
+		law_unitary = disapprove
+		law_cooperative_federalism = neutral
+		law_dual_federalism = approve
+		law_regionalism = strongly_approve
+	}
+}
+
 
 ideology_nfm_american_liberalism = {
 	icon = "gfx/interface/icons/ideology_icons/american_liberalism.dds"
@@ -110,6 +149,7 @@ ideology_nfm_xenophobic = { ##Unique Ideology for RACISTS
 		law_state_religion = approve
 		law_freedom_of_conscience = neutral
 		law_total_separation = disapprove
+		law_total_separation = law_state_atheism
 	}
 
 	lawgroup_citizenship = { #Does not exist by default
