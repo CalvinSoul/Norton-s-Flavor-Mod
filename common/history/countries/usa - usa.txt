@@ -78,6 +78,7 @@
 		}
 
 		ig:ig_industrialists = {
+			remove_ideology = ideology_nfm_centralist
 			add_ideology = ideology_nfm_federalist
 		}
 

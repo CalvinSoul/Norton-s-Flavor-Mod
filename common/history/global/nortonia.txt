@@ -73,10 +73,21 @@ GLOBAL = {
 	   limit = { 
 	   		NOT ={
 	   			this = c:USA
-	   			this = c:PRU
+	   			#this = c:PRU
 	   		} 
 	   }
 	   activate_law = law_type:law_unitary
+	   #activate_law = law_type:law_purchased_officers
+	}
+
+	every_country = {
+	   limit = { 
+	   		NOR = {
+	   			this = c:USA
+	   			this = c:PRU
+	   		} 
+	   }
+	 #  activate_law = law_type:law_unitary
 	   activate_law = law_type:law_purchased_officers
 	}
 
@@ -84,6 +95,24 @@ GLOBAL = {
 	   limit = { 
 	   		has_law = law_type:law_chiefdom
 	   	 }
+	   activate_law = law_type:law_regionalism
+	}
+
+	every_country = { #Unrecognzied Powers
+		
+	   limit = {  
+	   	is_country_type = unrecognized 
+	   	has_law = law_type:law_serfdom
+	   	NOT = {
+	   		this = c:JAP
+	   		this = c:CHI
+	   		this = c:KOR
+	   	}
+	   }
+	    ig:ig_landowners = {
+ 			remove_ideology = ideology_nfm_federalist
+ 			add_ideology = ideology_nfm_regionalist
+   		}
 	   activate_law = law_type:law_regionalism
 	}
 
@@ -145,6 +174,7 @@ GLOBAL = {
 	   activate_law = law_type:law_regionalism
 	}
 
+
 	every_country = {
 	   limit = { 
 	   		OR = {
@@ -203,6 +233,33 @@ GLOBAL = {
 			add_modifier = uesugi_domain
 		}
 		#Add Hokkaido One
+	}
+
+	c:CHI = { #Accurate tributaries
+		create_diplomatic_pact = {
+			country = c:BUR
+			type = tributary
+		}
+		create_diplomatic_pact = {
+			country = c:SIA
+			type = tributary
+		}
+		create_diplomatic_pact = {
+			country = c:DAI
+			type = tributary
+		}
+		create_diplomatic_pact = {
+			country = c:NEP
+			type = tributary
+		}
+		create_diplomatic_pact = {
+			country = c:SIK
+			type = tributary
+		}
+		create_diplomatic_pact = {
+			country = c:BHU
+			type = tributary
+		}
 	}
 }
 

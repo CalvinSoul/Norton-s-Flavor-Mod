@@ -262,7 +262,7 @@ liberal_party = {
 	}
 	join_weight = {
 		value = {
-			value = -5
+			value = 1
 			desc = "base_value"
 		}
 		if = { # liberals love liberalism
@@ -573,27 +573,8 @@ liberal_party = {
 				desc = "Politically Neutral"
 			}
 		}
-		if = { # labor union wont join by themselves
-			limit = {
-				 OR = {
-				 					 is_interest_group_type = ig_trade_unions
-				 }
-				OR = {
-					NOT = { exists = owner.py:agrarian_party }
-					AND = {
-						exists = owner.py:agrarian_party
-						owner = {
-							ig:ig_rural_folk = {
-								NOT = { is_member_of_party = owner.py:agrarian_party }
-							}
-						}
-					}
-				}
-			}
-			add = {
-				value = -20
-				desc = "Collapsing Party" 
-			}
-		}
 	}
 }
+
+
+

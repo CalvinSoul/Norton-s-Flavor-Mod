@@ -42,7 +42,7 @@ ideology_moderate = {
 	}
 	
 	leader_weight = {
-		value = 300	
+		value = 100	
 		# angry IG's more likely to have opinions
 		if = {
 			limit = {
@@ -237,6 +237,14 @@ ideology_republican_leader = {
 		law_appointed_bureaucrats = neutral
 		law_hereditary_bureaucrats = disapprove
 	}
+
+	lawgroup_centralization= { #NFM Centralization
+		law_totalitarian = strongly_disapprove
+		law_unitary = strongly_approve
+		law_cooperative_federalism = approve
+		law_dual_federalism = disapprove
+		law_regionalism = strongly_disapprove
+	}
 	
 	possible = {
 		scope:interest_group = {
@@ -259,7 +267,7 @@ ideology_republican_leader = {
 	}
 	
 	leader_weight = {
-		value = 100
+		value = 150
 		# not very relevant if issues are already addressed
 		if = {
 			limit = {
@@ -271,7 +279,7 @@ ideology_republican_leader = {
 					}
 				}
 			}
-			add = -75
+			add = -125
 		}
 		# more likely if the IG is unhappy with the monarchy
 		if = {
@@ -284,6 +292,19 @@ ideology_republican_leader = {
 				}
 			}
 			add = 75
+		}
+		if = { #NFM ADD
+			limit = {
+				owner = {
+					NOT = {	has_law = law_type:law_monarchy}
+					NOT = {	has_law = law_type:law_theocracy}
+					OR = {
+						has_law = law_type:law_dual_federalism
+						has_law = law_type:law_regionalism
+					}
+				}
+			}
+			add = 100
 		}
 	}
 }
@@ -957,7 +978,7 @@ ideology_jingoist_leader = {
 	}
 }
 
-ideology_royalist = {
+ideology_royalist = { #NFM
 	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_royalist.dds"
 	
 	character_ideology = yes
@@ -1008,7 +1029,7 @@ ideology_royalist = {
 	}
 	
 	leader_weight = {
-		value = 100
+		value = 150 	#Base 100, NFM Changes
 		# less likely in a theocracy
 		if = {
 			limit = {
@@ -1028,7 +1049,7 @@ ideology_royalist = {
 					ig_approval > 0
 				}
 			}
-			add = -100
+			add = -125
 		}
 		# more likely if IG is happy in a monarchy
 		if = {
@@ -1037,10 +1058,45 @@ ideology_royalist = {
 					has_law = law_type:law_monarchy
 				}
 				scope:interest_group = {
-					ig_approval > 5
+					ig_approval >= 5
+				}
+			}
+			add = 100
+		}
+		if = { #More likely if IG is landowners in a monarchy
+			limit = { #NFM
+				scope:interest_group = {
+					is_interest_group_type = ig_landowners
 				}
 			}
 			add = 50
+		}
+		if = { #More likely if IG is angry landowners in a not monarchy
+			limit = { #NFM
+				scope:interest_group = {
+					NOT = { has_law = law_type:law_monarchy }
+					is_interest_group_type = ig_landowners
+					ig_approval <= -5
+				}
+			}
+			add = 100
+		}
+		if = { #NFM more likely if decentralized non traditionalist state
+			limit = {
+				owner = {
+					NOT = {has_law = law_type:law_traditionalism}
+					has_law = law_type:law_monarchy
+					OR = {
+						has_law = law_type:law_cooperative_federalism
+						has_law = law_type:law_dual_federalism
+						has_law = law_type:law_regionalism
+					}
+				}
+				scope:interest_group = {
+					ig_approval >= 5
+				}
+			}
+			add = 100
 		}
 	}
 }

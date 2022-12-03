@@ -11,6 +11,13 @@ law_serfdom_banned = {
 	
 	modifier = {	
 	}
+
+	on_enact = {
+		ig:ig_landowners = { 
+			add_ideology = ideology_nfm_federalist
+			remove_ideology = ideology_nfm_centralist
+			remove_ideology = ideology_nfm_regionalist }
+	}
 	
 	possible_political_movements = {
 		law_regulatory_bodies

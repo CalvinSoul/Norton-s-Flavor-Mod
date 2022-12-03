@@ -229,16 +229,38 @@ religious_party = {
 				desc = "from_theocracy"
 			}
 		}
-		if = { # nobody will join if the devout don't join
+		if = { # nobody will join if the devout don't join #NFM Middle class too can go devout style epic sauce
 			limit = {
-				NOT = { is_interest_group_type = ig_devout }
+				NOT = { 
+					is_interest_group_type = ig_petty_bourgeoisie
+					is_interest_group_type = ig_devout }
 				OR = {
 					NOT = { exists = owner.py:religious_party }
 					AND = {
 						exists = owner.py:religious_party
 						owner = {
-							ig:ig_devout = {
-								NOT = { is_member_of_party = owner.py:religious_party }
+							OR = {
+								ig:ig_devout = {
+										NOT = { is_member_of_party = owner.py:religious_party }
+									}
+								ig_petty_bourgeoisie = {
+										NOT = { is_member_of_party = owner.py:religious_party }
+									}
+								limit = {
+								owner = {
+				leader = {
+					OR = {
+						has_ideology = ideology_theocrat
+						AND = {
+							has_ideology = ideology_royalist
+							NOT = {has_law = law_type:law_theocracy}
+							NOT = {has_law = law_type:monarchy}
+						}
+						
+					}
+				}
+			}
+
 							}
 						}
 					}
@@ -249,6 +271,22 @@ religious_party = {
 				desc = "from_no_devout_in_party" # this should probably never actually display in game because the party won't exist
 			}
 		}
+		if = { # devout are reactionary
+			limit = {
+				has_ideology = ideology_reactionary
+			}
+			add = {
+				value = 10
+				desc = "from_reactionaries"
+			}
+		}
+		leader = { #Royalist hates them fuckers
+						AND = {
+							has_ideology = ideology_royalist
+							NOT = {has_law = law_type:law_theocracy}
+							NOT = {has_law = law_type:monarchy}
+						}
+				}
 		if = { # a party for powerful religious people
 			limit = {
 				is_interest_group_type = ig_devout
@@ -256,7 +294,7 @@ religious_party = {
 			}
 			add = {
 				value = 10
-				desc = "from_powerful_devout"
+				desc = "Anti-Republican Royalist"
 			}
 		}
 		if = { # religiously inclined people might join if devout are powerful

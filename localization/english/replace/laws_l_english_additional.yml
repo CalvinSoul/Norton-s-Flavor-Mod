@@ -585,6 +585,14 @@ NFM_indian_territory_adj:0 "Indian"
 
 NFM_sequoyah_nation:0 "[COUNTRY.GetDefinition.GetName] Nation"
 
+NFM_dcn_tibet_vassal_imperial_china:0 "Imperial Commission of [COUNTRY.GetDefinition.GetName]"
+
+NFM_dcn_peru_bolivia_republic:0 "Republic of Peru-Bolivia"
+NFM_dcn_peru_bolivia_federal_republic:0 "Federal Republic of Peru-Bolivia"
+NFM_dcn_peru_bolivia_united_states:0 "United States of Peru and Bolivia"
+NFM_dcn_peru_bolivia_confederation:0 "Peru-Bolivian Confederation"
+
+
 PER:0 "Iran"
 PER_ADJ:0 "Iranian"
 
@@ -639,6 +647,7 @@ ARG_ADJ:0 "Argentine"
 
 COM:0 "Comancheria"
 
+
 autocracy_tt_nfm:0 "From [GetLawType('law_autocracy').GetName] your ruler will gain +33% clout towards their interest group via a trait."
 
 nfm_intelligentsia_autocrat:0 "Scholar ([GetLawType('law_autocracy').GetName])"
@@ -649,3 +658,7 @@ nfm_devout_autocrat:0 "Devoted ([GetLawType('law_autocracy').GetName])"
 nfm_rural_folk_autocrat:0 "Rustic ([GetLawType('law_autocracy').GetName])"
 nfm_middle_class_autocrat:0 "Citizen ([GetLawType('law_autocracy').GetName])"
 nfm_trade_union_autocrat:0 "Proletarian ([GetLawType('law_autocracy').GetName])"
+
+party_fascist:0 "[Party.GetLeader.GetLeader.GetCountry.GetDefinition.GetAdjective] Nationalist Party"
+
+party_republicans2:0 "Republican Party"

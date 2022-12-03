@@ -257,9 +257,20 @@ radical_party = {
 				}
 			}
 			triggered_desc = {
-				desc = party_radicals
+				desc = party_chartists
 				trigger = {
-					always = yes
+					exists = c:GBR
+					THIS = c:GBR
+					NOT = { has_law = law_type:law_universal_suffrage }
+				}
+			}
+			triggered_desc = {		
+				desc = party_republicans2
+				trigger = {
+					OR = {
+						has_law = law_type:law_monarchy
+						has_law = law_type:law_theocracy
+					}
 				}
 			}
 		}
@@ -301,7 +312,7 @@ radical_party = {
 	}
 	join_weight = {
 		value = {
-			value = -5
+			value = 1
 			desc = "base_value"
 		}
 		if = { # radicals love radicalism

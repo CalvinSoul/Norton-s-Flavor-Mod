@@ -25,6 +25,8 @@ law_traditionalism = {
 		
 		country_subsidies_bg_infrastructure = yes
 		country_subsidies_bg_trade = yes
+
+		state_radicals_from_sol_change_mult = -0.33
 	}
 	
 	possible_political_movements = {

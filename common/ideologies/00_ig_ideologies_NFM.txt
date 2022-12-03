@@ -68,7 +68,7 @@ ideology_nfm_federalist = { ##Federalists
 	
 	lawgroup_centralization= { #NFM Centralization
 		law_totalitarian = strongly_disapprove
-		law_unitary = disapprove
+		law_unitary = neutral
 		law_cooperative_federalism = strongly_approve
 		law_dual_federalism = approve
 		law_regionalism = disapprove

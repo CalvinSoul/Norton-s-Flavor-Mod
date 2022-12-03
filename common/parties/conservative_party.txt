@@ -208,7 +208,7 @@ conservative_party = {
 	}
 	join_weight = {
 		value = {
-			value = -5
+			value = 1
 			desc = "base_value"
 		}
 		if = { # socialists and radicals won't join conservative parties
@@ -281,6 +281,16 @@ conservative_party = {
 		if = { # landowners will join if they are even moderately powerful
 			limit = {
 				ig_clout >= 0.15
+				is_interest_group_type = ig_landowners
+			}
+			add = {
+				value = 5
+				desc = "from_powerful_conservative_ig"
+			}
+		}
+		if = { # landowners will join if they are even moderately powerful #NFM ADDED
+			limit = {
+				ig_clout >= 0.25
 				is_interest_group_type = ig_landowners
 			}
 			add = {

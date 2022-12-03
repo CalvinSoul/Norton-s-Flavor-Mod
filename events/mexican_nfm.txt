@@ -21,13 +21,15 @@ mexican_nfm.1 = {
 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
 
 	trigger = {
+		exists = c:MEX
+		c:MEX = ROOT
 		c:MEX = { has_war_with = c:USA }
-		NOT = {has_variable = bear_flag_revolt_var}
+		c:MEX = { NOT = { has_variable = bear_flag_revolt_happened}}
 		c:MEX = { owns_entire_state_region = STATE_CALIFORNIA}
 	}
 
 	immediate = {
-		set_variable = bear_flag_revolt_var
+		c:MEX = { set_variable = bear_flag_revolt_happened }
 		create_country = {
 				tag = CAL
 				origin = this
@@ -142,9 +144,9 @@ mexican_nfm.2 = {
 	trigger = {
 		exists = c:MEX
 		c:MEX = ROOT
-		year >= 1839
+		year >= 1838
 		exists = c:TEX
-		}
+		
 		NOT = {
 				OR = {
 				has_law = law_type:law_universal_suffrage
@@ -221,7 +223,7 @@ mexican_nfm.2 = {
 		
 			target_country = c:RIO
 			type = dp_annex_war
-			war = no
+			war = yes
 
 			add_war_goal = {
 				holder = c:RIO

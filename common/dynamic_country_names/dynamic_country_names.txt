@@ -68,7 +68,7 @@ DEFAULT = {
 		name = NFM_dcn_default_monarchy_principality
 	#	adjective = NFM_dcn_default_monarchy_adj
 		
-		priority = 1
+		priority = 2
 		
 		trigger = {
 			exists = scope:actor
@@ -298,12 +298,13 @@ DEFAULT = {
 		name = NFM_dcn_default_republic_confederation
 	#	adjective = NFM_dcn_default_republic_adj
 		
-		priority = 10
+		priority = 3
 		
 		trigger = {
 			exists = scope:actor
 			scope:actor = {
 		#		is_subject = no
+					NOT = { is_country_type = unrecognized }
 					NOT = {has_law = law_type:law_chiefdom}
 					has_law = law_type:law_regionalism
 			}
@@ -477,6 +478,22 @@ DEFAULT = {
 		}
 	}
 
+	dynamic_country_name = { #Tibet Puppet Names
+		name = NFM_dcn_tibet_vassal_imperial_china
+	#	adjective = NFM_dcn_default_republic_adj
+		
+		priority = 10
+		
+		trigger = {
+			c:CHI = {has_law = law_type:law_monarchy}
+			scope:actor = {
+				is_subject = yes
+				is_subject_type = subject_type_vassal
+				is_subject_of = c:CHI
+			}
+		}
+	}
+
 }#Default End
 
 SEQ = { # Indian Territory
@@ -636,6 +653,99 @@ JAP = { # Japan
 			scope:actor = { 
 				has_law = law_type:law_monarchy
 				NOT = { has_variable = meiji_var }
+			}
+		}
+	}
+}
+
+BOL = {
+	dynamic_country_name = {
+		name = dyn_c_peru_bolivia
+		adjective = dyn_c_peru_bolivia_adj
+		
+		is_main_tag_only = yes
+		priority = 3
+		
+		trigger = {
+			scope:actor = {
+				owns_entire_state_region = STATE_LA_PAZ
+				owns_entire_state_region = STATE_LIMA
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = NFM_dcn_peru_bolivia_republic
+		adjective = dyn_c_peru_bolivia_adj
+		
+		is_main_tag_only = yes
+		priority = 4
+		
+		trigger = {
+			scope:actor = {
+				OR = {
+					has_law = law_type:law_presidential_republic
+					has_law = law_type:law_parliamentary_republic
+				}
+				has_law = law_type:law_unitary
+				owns_entire_state_region = STATE_LA_PAZ
+				owns_entire_state_region = STATE_LIMA
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = NFM_dcn_peru_bolivia_federal_republic
+		adjective = dyn_c_peru_bolivia_adj
+		
+		is_main_tag_only = yes
+		priority = 5
+		
+		trigger = {
+		scope:actor = {
+				OR = {
+					has_law = law_type:law_presidential_republic
+					has_law = law_type:law_parliamentary_republic
+				}
+				has_law = law_type:law_cooperative_federalism
+				owns_entire_state_region = STATE_LA_PAZ
+				owns_entire_state_region = STATE_LIMA
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = NFM_dcn_peru_bolivia_united_states
+		adjective = dyn_c_peru_bolivia_adj
+		
+		is_main_tag_only = yes
+		priority = 5
+		
+		trigger = {
+			scope:actor = {
+				OR = {
+					has_law = law_type:law_presidential_republic
+					has_law = law_type:law_parliamentary_republic
+				}
+				has_law = law_type:law_dual_federalism
+				owns_entire_state_region = STATE_LA_PAZ
+				owns_entire_state_region = STATE_LIMA
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = NFM_dcn_peru_bolivia_confederation
+		adjective = dyn_c_peru_bolivia_adj
+		
+		is_main_tag_only = yes
+		priority = 5
+		
+		trigger = {
+			scope:actor = {
+				OR = {
+					has_law = law_type:law_presidential_republic
+					has_law = law_type:law_parliamentary_republic
+				}
+				has_law = law_type:law_regionalism
+				owns_entire_state_region = STATE_LA_PAZ
+				owns_entire_state_region = STATE_LIMA
 			}
 		}
 	}
@@ -1459,22 +1569,6 @@ BNJ = { # Banjar
 	}
 }
 
-BOL = {
-	dynamic_country_name = {
-		name = dyn_c_peru_bolivia
-		adjective = dyn_c_peru_bolivia_adj
-		
-		is_main_tag_only = yes
-		priority = 3
-		
-		trigger = {
-			scope:actor = {
-				owns_entire_state_region = STATE_LA_PAZ
-				owns_entire_state_region = STATE_LIMA
-			}
-		}
-	}
-}
 
 BRE = { # Bremen
 	dynamic_country_name = {

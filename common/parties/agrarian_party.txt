@@ -159,7 +159,8 @@ agrarian_party = {
 		owner = {
 			country_has_voting_franchise = yes
 			ig:ig_rural_folk = {
-				is_powerful = yes
+				#is_powerful = yes
+				is_marginal = no
 			}
 		}
 	}

@@ -56,8 +56,8 @@ on_half_yearly_pulse_country = {
 	}
 	# mexican_succession
 	random_events = {
-		50 = 0
-		50 = mexican_nfm.2
+		30 = 0
+		70 = mexican_nfm.2
 	}
 	random_events = { #Garibaldi Death 5% Every year
 		95 = 0
