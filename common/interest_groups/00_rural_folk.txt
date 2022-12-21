@@ -47,7 +47,7 @@
 						pop_employment_building_group = bg_plantations				
 					}
 				}
-				value = 50
+				value = 100
 			}
 		}		
 

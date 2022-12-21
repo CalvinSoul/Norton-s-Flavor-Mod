@@ -254,6 +254,9 @@ manifest_destiny_rebuked = { ##victory
    					type = dominion
    				}
 		} }
+		NOT = {
+			exists = c:CAL
+		}
 	}
 
 	when_taken = {
@@ -266,7 +269,7 @@ manifest_destiny_rebuked = { ##victory
     		}}
     		exists = c:CAL
     	}
-    		annex = c:CAL
+    	#	annex = c:CAL
     	}
 		c:USA = { set_variable = mexican_american_war_treaty_loss }
 		c:MEX = { add_modifier = {

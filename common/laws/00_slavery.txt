@@ -36,6 +36,13 @@ law_slavery_banned = {
 			}
 		}		
 	}
+	revolution_state_weight = {
+		value = 1
+		if = {
+		   limit = { is_slave_state = yes }
+		   multiply = 0.25
+		}
+	}
 }
 
 law_debt_slavery = {
@@ -64,6 +71,16 @@ law_debt_slavery = {
 	# AI should never enact debt slavery
 	ai_will_do = {
 		always = no
+	}
+	revolution_state_weight = {
+		value = 1
+		if = {
+		   limit = { is_slave_state = yes }
+		   multiply = 2
+		}
+		else = {
+		   multiply = 0.1
+		}
 	}
 }
 
@@ -121,5 +138,13 @@ law_legacy_slavery = {
 	
 	possible_political_movements = {
 		law_slavery_banned
+	}
+	
+	revolution_state_weight = {
+		value = 1
+		if = {
+		   limit = { is_slave_state = no }
+		   multiply = 0.001
+		}
 	}
 }

@@ -900,7 +900,7 @@ nfm_misc.11 = { #Autocrat Events
 
 	duration = 1
 
-	hidden = no
+	hidden = yes
 
 	trigger = { 
 		has_law = law_type:law_autocracy 
@@ -1007,7 +1007,7 @@ nfm_misc.11 = { #Autocrat Events
 
 	duration = 1
 
-	hidden = no
+	hidden = yes
 
 	trigger = { 
 		NOT = { has_law = law_type:law_autocracy }

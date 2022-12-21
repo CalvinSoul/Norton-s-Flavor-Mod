@@ -14,6 +14,10 @@ character_events.100 = {
 		random_interest_group = {
 			limit = {
 				NOT = { has_variable = memento_mori }
+				NOT = {
+					any_scope_character = {
+						is_ruler = yes
+					}}
 			}
 			save_scope_as = memento_mori_ig
 			leader = {

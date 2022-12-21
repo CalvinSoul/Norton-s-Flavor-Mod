@@ -4,6 +4,7 @@
 	lawgroup_governance_principles = {		
 		law_presidential_republic = approve
 		law_parliamentary_republic = approve
+		law_theocracy = neutral
 		law_monarchy = neutral
 		law_council_republic = disapprove
 	}
@@ -278,8 +279,8 @@ ideology_caudillismo = {
 	
 	lawgroup_distribution_of_power = {
 		law_landed_voting = strongly_approve
-		law_autocracy = strongly_approve
-		law_oligarchy = approve
+		law_autocracy = approve
+		law_oligarchy = strongly_approve
 		law_wealth_voting = neutral
 		law_census_voting = disapprove
 		law_universal_suffrage = strongly_disapprove

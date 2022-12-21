@@ -37,7 +37,7 @@
 	}
 
 	possible = {
-		has_interest_marker_in_region = region_pacific_coast
+		c:USA = ROOT #has_interest_marker_in_region = region_pacific_coast
 	}
 
 	complete = {

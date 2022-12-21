@@ -5,12 +5,15 @@
 	progressiveness = -100
 	
 	modifier = {
-		state_tax_collection_mult = 0.1
+		state_tax_collection_mult = 0.25
 		state_bureaucracy_population_base_cost_factor_mult = 0.50
- 		country_bureaucracy_investment_cost_factor_mult = 0.30
+ 		country_bureaucracy_investment_cost_factor_mult = 0.33
 		country_authority_mult = 0.50
-		country_law_enactment_time_mult = -0.5
-		interest_group_pol_str_mult = 0.25
+		country_law_enactment_time_mult = -0.33
+
+		state_tax_waste_add = 0.10
+
+		country_legitimacy_ideological_incoherence_mult = 0.33
 	}
 
 	interest_group_modifier = {
@@ -61,7 +64,7 @@ law_unitary = {
 	}
 	
 	modifier = {
-		country_law_enactment_time_mult = -0.1
+	#	country_law_enactment_time_mult = -0.1
 	}
 	
 	possible_political_movements = {
@@ -100,8 +103,14 @@ law_cooperative_federalism = {
 		state_bureaucracy_population_base_cost_factor_mult = -0.20
  		country_bureaucracy_investment_cost_factor_mult = -0.20
 		country_authority_mult = -0.20
-		state_shopkeepers_investment_pool_contribution_add = 0.05
-		state_farmers_investment_pool_contribution_add = 0.05
+
+
+		state_capitalists_investment_pool_contribution_mult = 0.10
+		state_aristocrats_investment_pool_contribution_mult = 0.10
+		state_shopkeepers_investment_pool_contribution_mult = 0.10
+		state_farmers_investment_pool_contribution_mult = 0.10
+
+		country_legitimacy_ideological_incoherence_mult = -0.10
 	}
 
 	possible_political_movements = {
@@ -143,8 +152,13 @@ law_dual_federalism = {
 		state_bureaucracy_population_base_cost_factor_mult = -0.30
  		country_bureaucracy_investment_cost_factor_mult = -0.30
 		country_authority_mult = -0.40
-		state_shopkeepers_investment_pool_contribution_add = 0.10
-		state_farmers_investment_pool_contribution_add = 0.10
+		
+		state_capitalists_investment_pool_contribution_mult = 0.25
+		state_aristocrats_investment_pool_contribution_mult = 0.25
+		state_shopkeepers_investment_pool_contribution_mult = 0.25
+		state_farmers_investment_pool_contribution_mult = 0.25
+
+		country_legitimacy_ideological_incoherence_mult = -0.25
 	}
 
 	possible_political_movements = {
@@ -189,8 +203,13 @@ law_regionalism = {
 		state_bureaucracy_population_base_cost_factor_mult = -0.50
  		country_bureaucracy_investment_cost_factor_mult = -0.50
 		country_authority_mult = -0.80
-		state_shopkeepers_investment_pool_contribution_add = 0.15
-		state_farmers_investment_pool_contribution_add = 0.15
+		
+		state_capitalists_investment_pool_contribution_mult = 0.33
+		state_aristocrats_investment_pool_contribution_mult = 0.33
+		state_shopkeepers_investment_pool_contribution_mult = 0.33
+		state_farmers_investment_pool_contribution_mult = 0.33
+
+		country_legitimacy_ideological_incoherence_mult = -0.33
 	}
 	
 	possible_political_movements = {

@@ -13,7 +13,7 @@
 		law_state_religion = strongly_approve
 		law_freedom_of_conscience = disapprove
 		law_total_separation = strongly_disapprove
-		law_total_separation = strongly_disapprove
+		law_state_atheism = strongly_disapprove
 	}
 
 	lawgroup_citizenship = {
@@ -149,7 +149,7 @@ ideology_nfm_xenophobic = { ##Unique Ideology for RACISTS
 		law_state_religion = approve
 		law_freedom_of_conscience = neutral
 		law_total_separation = disapprove
-		law_total_separation = law_state_atheism
+		law_state_atheism = strongly_disapprove
 	}
 
 	lawgroup_citizenship = { #Does not exist by default

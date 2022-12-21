@@ -476,13 +476,13 @@ law_popular_officers:0 "Elected Commissions"
 law_political_bureaucrats:0 "Political Bureaucrats" 
 law_state_atheism:0 "State Atheism"
 
-ig_shogunate:0 "[concept_fudai_daimyo]"
-ig_jap_buddhist_monks:0 "Imperial Court"
+#ig_shogunate:0 "[concept_fudai_daimyo]"
+#ig_jap_buddhist_monks:0 "Imperial Court"
 ig_japanese_peasants:0 "[concept_nomin] and [concept_ronin]"
 ig_japanese_industrialists:0 "[concept_tozama_daimyo]"
 ig_japanese_middle_class:0 "Chōnin"
 ig_japanese_intelligensia:0 "[concept_rangaku] Scholars"
-ig_samurai:0 "[concept_kamon_daimyo]"
+#ig_samurai:0 "[concept_kamon_daimyo]"
 
 
 NFM_dcn_uk_default:0 "United Kingdom"
@@ -547,6 +547,14 @@ NFM_dcn_default_monarchy_empire_middle_east:0 "[COUNTRY.GetRuler.GetLastName] Em
 BIC:0 "East India"
 BIC_ADJ:0 "East Indian"
 
+DEI:0 "East Indies"
+NFM_dcn_east_indies:0 "[Country.GetOverlord.GetDefinition.GetAdjective] East Indies"
+NFM_dcn_east_indies_adj:0 "[Country.GetOverlord.GetDefinition.GetAdjective] East Indian"
+
+NFM_dcn_raj:0 "[Country.GetOverlord.GetDefinition.GetAdjective] Raj"
+NFM_dcn_raj_adj:0 "[Country.GetOverlord.GetDefinition.GetAdjective] Indian"
+
+
 NFM_dcn_east_india_company:0 "[COUNTRY.GetDefinition.GetName] Company"
 
 
@@ -574,6 +582,15 @@ NFM_dcn_default_republic_puppet_colony:0 "Colony of [COUNTRY.GetDefinition.GetNa
 NFM_dcn_default_dominion:0 "Dominion of [COUNTRY.GetDefinition.GetName]"
 NFM_dcn_default_republic_puppet:0 "Province of [COUNTRY.GetDefinition.GetName]"
 
+CSA:0 "Dixieland"
+CSA_adj:0 "Dixie"
+NFM_dcn_csa_default:0 "Confederate States of America"
+NFM_dcn_csa_monarchy:0 "Empire of the Golden Circle"
+NFM_dcn_csa_monarchy_adj:0 "Knightly"
+
+FSA:0 "Columbia"
+FSA_adj:0 "Columbian"
+
 NFM_dcn_default_republic_free_city:0 "Free City of [COUNTRY.GetDefinition.GetName]"
 #NFM_dcn_iberia_union:0 "Kingdom of Iberia"
 NFM_dcn_iberia_union:0 "Iberian Union"
@@ -595,6 +612,26 @@ NFM_dcn_peru_bolivia_confederation:0 "Peru-Bolivian Confederation"
 
 PER:0 "Iran"
 PER_ADJ:0 "Iranian"
+
+NGF:0 "Northern Germany"
+NGF_ADJ:0 "North German"
+
+NFM_dcn_ngf_unitary:0 "Kingdom of Northern Germany"
+NFM_dcn_ngf_federal:0 "North German Federation"
+NFM_dcn_ngf_confederation:0 "North German Confederation"
+
+NFM_dcn_sgf_unitary:0 "Kingdom of Southern Germany"
+NFM_dcn_sgf_federal:0 "South German Federation"
+NFM_dcn_sgf_confederation:0 "South German Confederation"
+
+NFM_dcn_ger_totalitarian:0 "German Reich"
+NFM_dcn_ger_hre:0 "Holy Roman Empire"
+NFM_dcn_ger_confederation:0 "German Confederation"
+
+NFM_dcn_sokoto_caliphate:0 "Sokoto Caliphate"
+
+SGF:0 "Southern Germany"
+SGF_ADJ:0 "South German"
 
 SEQ:0 "Sequoyah" #DOesnt work, wtf
 SEQ_ADJ:0 "Sequoyan"
@@ -661,4 +698,25 @@ nfm_trade_union_autocrat:0 "Proletarian ([GetLawType('law_autocracy').GetName])"
 
 party_fascist:0 "[Party.GetLeader.GetLeader.GetCountry.GetDefinition.GetAdjective] Nationalist Party"
 
-party_republicans2:0 "Republican Party"
+party_republicans2:0 "Radical Republican Party"
+
+nfm_new_caudillo_mod:0 "New Caudillo"
+
+je_caudillos_active:0 "New Caudillo - Instability"
+je_caudillos_active_reason:0 "If the Caudillo can maintain power for Ten Years, they will be able to secure their reign."
+
+je_caudillos_legacy:0 "Caudillo Legacy - Instability"
+je_caudillos_legacy_reason:0 "The new government may be able to overcome the legacy of Caudillismo if they can maintain democratic practices for Ten Years."
+
+nfm_established_caudillo_mod:0 "Established Caudillo"
+
+
+nfm_revolutionary_monarchy:0 "Adopt Revolutionary Constitution - Monarchy"
+nfm_revolutionary_republic:0 "Adopt Revolutionary Constitution - Presidential Republic"
+nfm_revolutionary_parliamentary_republic:0 "Adopt Revolutionary Constitution - Parliamentary Republic"
+nfm_revolutionary_communist:0 "Adopt Revolutionary Constitution - Council Republic"
+nfm_revolutionary_theocrat:0 "Adopt Revolutionary Constitution - Theocracy"
+nfm_revolutionary_centralization_unitary:0 "Amend Revolutionary Constitution - Unitary"
+nfm_revolutionary_centralization_federalist:0 "Amend Revolutionary Constitution - Cooperative Federalism"
+nfm_revolutionary_centralization_federalist_2:0 "Amend Revolutionary Constitution - Dual Federalism"
+nfm_revolutionary_centralization_regionalism:0 "Amend Revolutionary Constitution - Regionalism"

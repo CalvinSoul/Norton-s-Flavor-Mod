@@ -23,6 +23,7 @@ law_ethnostate = {
 	}
 	
 	modifier = {
+		state_loyalists_from_sol_change_accepted_culture_mult = 0.33
 		country_authority_add = 200
 	}
 	
@@ -51,6 +52,7 @@ law_national_supremacy = {
 	}
 	
 	modifier = {
+		state_loyalists_from_sol_change_accepted_culture_mult = 0.25
 		country_authority_add = 200
 	}
 	
@@ -76,6 +78,7 @@ law_racial_segregation = {
 	}
 	
 	modifier = {
+		state_loyalists_from_sol_change_accepted_culture_mult = 0.10
 		country_authority_add = 100
 	}
 	
@@ -178,6 +181,10 @@ law_multicultural = {
 	
 	on_enact = {
 		recalculate_pop_ig_support = yes
+	}
+
+	modifier = {
+		state_radicals_from_sol_change_accepted_culture_mult = 0.33
 	}
 
 	cultural_acceptance_rule = {

@@ -27,6 +27,7 @@ law_traditionalism = {
 		country_subsidies_bg_trade = yes
 
 		state_radicals_from_sol_change_mult = -0.33
+		state_aristocrats_investment_pool_contribution_add = 0.1
 	}
 	
 	possible_political_movements = {
@@ -34,6 +35,12 @@ law_traditionalism = {
 		law_command_economy
 		law_agrarianism
 		law_laissez_faire
+	}
+
+	build_from_investment_pool = {
+		bg_agriculture
+		bg_plantations
+		bg_ranching
 	}
 	
 	# AI should never switch back to traditionalism
@@ -61,9 +68,11 @@ law_interventionism = {
 	}
 	
 	modifier = {
-		state_aristocrats_investment_pool_contribution_add = 0.05
+		state_aristocrats_investment_pool_contribution_add = 0.1
 		state_capitalists_investment_pool_contribution_add = 0.25
-			
+		state_shopkeepers_investment_pool_contribution_add = 0.05
+		state_farmers_investment_pool_contribution_add = 0.05
+		
 		country_subsidies_all = yes
 	}
 
@@ -103,8 +112,11 @@ law_agrarianism = {
 	}
 	
 	modifier = {
+		state_capitalists_investment_pool_contribution_add = 0.1
 		state_aristocrats_investment_pool_contribution_add = 0.25	
-		
+		state_shopkeepers_investment_pool_contribution_add = 0.05
+		state_farmers_investment_pool_contribution_add = 0.33
+
 		country_subsidies_bg_agriculture = yes
 		country_subsidies_bg_ranching = yes
 		country_subsidies_bg_plantations = yes
@@ -117,6 +129,7 @@ law_agrarianism = {
 		bg_plantations
 		bg_ranching
 		bg_infrastructure
+		bg_logging #new
 	}
 	
 	possible_political_movements = {
@@ -156,7 +169,10 @@ law_laissez_faire = {
 	modifier = {
 		country_loan_interest_rate_mult = -0.25
 		
-		state_capitalists_investment_pool_contribution_add = 0.5	
+		state_capitalists_investment_pool_contribution_add = 0.33
+		state_aristocrats_investment_pool_contribution_add = 0.05
+		state_shopkeepers_investment_pool_contribution_add = 0.1
+		state_farmers_investment_pool_contribution_add = 0.1
 		
 		country_subsidies_bg_infrastructure = yes
 		country_subsidies_bg_trade = yes

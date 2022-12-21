@@ -560,7 +560,18 @@ conservative_party = {
 			}
 			add = {
 				value = 40
-				desc = "Second Party System"
+				desc = "Second Party Democrat"
+			}
+		}
+
+		if = { # a party for powerful farmers
+			limit = {
+				has_ideology = ideology_isolationist_expansionism
+				year <=1848
+			}
+			add = {
+				value = 10
+				desc = "Manifest Destiny"
 			}
 		}
 		if = { #NFM

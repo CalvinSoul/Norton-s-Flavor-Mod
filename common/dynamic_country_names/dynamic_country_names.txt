@@ -658,6 +658,179 @@ JAP = { # Japan
 	}
 }
 
+NGF = { # North German Federation
+	dynamic_country_name = {
+		name = NFM_dcn_ngf_unitary
+		#adjective = NFM_dcn_shogunate_adj
+
+		is_main_tag_only = yes
+		priority = 20
+
+		trigger = {
+			exists = scope:actor
+			scope:actor = { 
+				has_law = law_type:law_monarchy
+				OR = {
+					has_law = law_type:law_unitary
+					has_law = law_type:law_totalitarian
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = NFM_dcn_ngf_federal
+		#adjective = NFM_dcn_shogunate_adj
+
+		is_main_tag_only = yes
+		priority = 20
+
+		trigger = {
+			exists = scope:actor
+			scope:actor = { 
+				has_law = law_type:law_monarchy
+				OR = {
+					has_law = law_type:law_cooperative_federalism
+					has_law = law_type:law_dual_federalism
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = NFM_dcn_ngf_confederation
+		#adjective = NFM_dcn_shogunate_adj
+
+		is_main_tag_only = yes
+		priority = 20
+
+		trigger = {
+			exists = scope:actor
+			scope:actor = { 
+				has_law = law_type:law_monarchy
+				has_law = law_type:law_regionalism
+			}
+		}
+	}
+}
+
+GER = { # North German Federation
+	dynamic_country_name = {
+		name = NFM_dcn_ger_totalitarian
+		#adjective = NFM_dcn_shogunate_adj
+
+		is_main_tag_only = yes
+		priority = 20
+
+		trigger = {
+			exists = scope:actor
+			scope:actor = { 
+					has_law = law_type:law_totalitarian
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = NFM_dcn_ger_hre
+		#adjective = NFM_dcn_shogunate_adj
+
+		is_main_tag_only = yes
+		priority = 20
+
+		trigger = {
+			exists = scope:actor
+			scope:actor = { 
+				has_law = law_type:law_monarchy
+				has_law = law_type:law_regionalism
+				has_law = law_type:law_traditionalism
+				}
+			}
+		}
+	dynamic_country_name = {
+		name = NFM_dcn_ger_confederation
+		#adjective = NFM_dcn_shogunate_adj
+
+		is_main_tag_only = yes
+		priority = 19
+
+		trigger = {
+			exists = scope:actor
+			scope:actor = { 
+				has_law = law_type:law_monarchy
+				has_law = law_type:law_regionalism
+			}
+		}
+	}
+}
+
+SOK = {
+	dynamic_country_name = {
+		name = NFM_dcn_sokoto_caliphate
+		#adjective = NFM_dcn_shogunate_adj
+
+	#	is_main_tag_only = yes
+		priority = 20
+
+		trigger = {
+			exists = scope:actor
+			scope:actor = { 
+				has_government_type = gov_caliphate
+			}
+		}
+	}
+}
+
+SGF = { # North German Federation
+	dynamic_country_name = {
+		name = NFM_dcn_sgf_unitary
+		#adjective = NFM_dcn_shogunate_adj
+
+		is_main_tag_only = yes
+		priority = 20
+
+		trigger = {
+			exists = scope:actor
+			scope:actor = { 
+				has_law = law_type:law_monarchy
+				OR = {
+					has_law = law_type:law_unitary
+					has_law = law_type:law_totalitarian
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = NFM_dcn_sgf_federal
+		#adjective = NFM_dcn_shogunate_adj
+
+		is_main_tag_only = yes
+		priority = 20
+
+		trigger = {
+			exists = scope:actor
+			scope:actor = { 
+				has_law = law_type:law_monarchy
+				OR = {
+					has_law = law_type:law_cooperative_federalism
+					has_law = law_type:law_dual_federalism
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = NFM_dcn_sgf_confederation
+		#adjective = NFM_dcn_shogunate_adj
+
+		is_main_tag_only = yes
+		priority = 20
+
+		trigger = {
+			exists = scope:actor
+			scope:actor = { 
+				has_law = law_type:law_monarchy
+				has_law = law_type:law_regionalism
+			}
+		}
+	}
+}
+
 BOL = {
 	dynamic_country_name = {
 		name = dyn_c_peru_bolivia
@@ -925,20 +1098,16 @@ BIC = { # British East India Company
 	}
 
 	dynamic_country_name = {
-		name = dyn_c_british_raj
-		adjective = dyn_c_british_raj_adj
+		name = NFM_dcn_raj
+		adjective = NFM_dcn_raj_adj
 
 		is_main_tag_only = yes
 		priority = 10
 		
 		trigger = {
-			exists = c:GBR
-			c:GBR = {
-				has_diplomatic_pact = {
-					who = c:BIC
-					type = puppet
-					is_initiator = yes
-				}
+			scope:actor = {
+				is_subject = yes
+				is_subject_type = subject_type_puppet
 			}
 		}
 	}
@@ -951,6 +1120,23 @@ BIC = { # British East India Company
 		
 		trigger = {
 			coa_def_independent_trigger = yes
+		}
+	}
+}
+
+
+DEI = { #East Indies
+	dynamic_country_name = {
+		name = NFM_dcn_east_indies
+		adjective = NFM_dcn_east_indies_adj
+
+		#is_main_tag_only = yes
+		priority = 20
+		
+		trigger = {
+			scope:actor = {
+				is_subject = yes
+			}
 		}
 	}
 }
@@ -993,7 +1179,7 @@ BUR = { # Burmese Empire
 		adjective = NFM_dcn_burmese_empire_adj
 		
 		is_main_tag_only = yes
-		priority = 5
+		priority = 10
 		
 		trigger = {
 			exists = scope:actor
@@ -1302,6 +1488,43 @@ SPA = { #United Iberia
 		}
 	}
 }
+
+
+CSA = { # Confederate States of America
+	dynamic_country_name = {
+		name = NFM_dcn_csa_default
+		priority = 20
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				OR = {
+					has_law = law_type:law_presidential_republic
+					has_law = law_type:law_parliamentary_republic
+				}
+				OR = {
+					has_law = law_type:law_dual_federalism
+					has_law = law_type:law_cooperative_federalism
+					has_law = law_type:law_regionalism
+				}
+			}
+		}
+	}
+
+	dynamic_country_name = {
+		name = NFM_dcn_csa_monarchy
+		adjective = NFM_dcn_csa_monarchy_adj
+		priority = 20
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				has_law = law_type:law_monarchy
+			}
+		}
+	}
+}
+
 
 #NFM END
 
@@ -1675,56 +1898,6 @@ COM = { # Comanche
 	}
 }
 
-CSA = { # Confederate States of America
-	dynamic_country_name = {
-		name = dyn_c_confederate_state_of_america
-		priority = 2
-		
-		trigger = {
-			exists = scope:actor
-			scope:actor = { 
-				any_scope_state = {
-					count = 1
-				}
-			}
-		}
-	}
-
-	dynamic_country_name = {
-		name = dyn_c_confederated_sovereigns_of_america
-		adjective = dyn_c_confederated_sovereigns_of_america_adj
-		
-		is_main_tag_only = yes
-		priority = 2
-		
-		trigger = {
-			coa_def_monarchy_flag_trigger = yes
-		}
-	}
-
-	dynamic_country_name = {
-		name = dyn_c_communist_states_of_america
-		adjective = dyn_c_communist_states_of_america_adj
-		
-		is_main_tag_only = yes
-		priority = 2
-		
-		trigger = {
-			coa_def_communist_flag_trigger = yes
-		}
-	}	
-
-	dynamic_country_name = {
-		name = dyn_c_confederate_synods_of_america
-		
-		is_main_tag_only = yes
-		priority = 2
-		
-		trigger = {
-			coa_def_theocracy_flag_trigger = yes
-		}
-	}
-}
 
 FIN = { # Finland
 	dynamic_country_name = {
@@ -1742,20 +1915,6 @@ FIN = { # Finland
 					is_initiator = yes
 				}
 			}
-		}
-	}
-}
-
-GER = { # Germany
-	dynamic_country_name = {
-		name = dyn_c_german_empire
-		
-		is_main_tag_only = yes
-		priority = 2
-		
-		trigger = {
-			coa_def_monarchy_flag_trigger = yes
-			country_rank >= rank_value:major_power
 		}
 	}
 }
