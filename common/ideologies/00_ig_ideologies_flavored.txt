@@ -23,6 +23,7 @@
 		law_hereditary_bureaucrats = approve
 		law_appointed_bureaucrats = neutral
 		law_elected_bureaucrats = neutral
+		law_meritocratic_bureaucrats = neutral
 	}
 
 	lawgroup_policing = {
@@ -73,6 +74,7 @@ ideology_scholar_paternalistic = {
 		law_appointed_bureaucrats = approve
 		law_elected_bureaucrats = disapprove
 		law_hereditary_bureaucrats = disapprove
+		law_meritocratic_bureaucrats = strongly_approve
 	}
 
 	lawgroup_policing = {
@@ -108,6 +110,7 @@ ideology_junker_paternalistic = {
 		law_hereditary_bureaucrats = approve
 		law_appointed_bureaucrats = approve
 		law_elected_bureaucrats = disapprove
+		law_meritocratic_bureaucrats = neutral
 	}
 
 	lawgroup_policing = {
@@ -143,6 +146,7 @@ ideology_papal_paternalistic = {
 		law_hereditary_bureaucrats = approve
 		law_appointed_bureaucrats = neutral
 		law_elected_bureaucrats = disapprove
+		law_meritocratic_bureaucrats = neutral
 	}
 
 	lawgroup_policing = {
@@ -289,8 +293,9 @@ ideology_caudillismo = {
 	
 	lawgroup_bureaucracy = {
 		law_hereditary_bureaucrats = approve
-		law_appointed_bureaucrats = approve
+		law_appointed_bureaucrats = strongly_approve
 		law_elected_bureaucrats = disapprove
+		law_meritocratic_bureaucrats = neutral
 	}
 
 	lawgroup_policing = {
@@ -441,6 +446,7 @@ ideology_hindu_moralist = {
 		law_hereditary_bureaucrats = approve
 		law_appointed_bureaucrats = neutral
 		law_elected_bureaucrats = disapprove
+		law_meritocratic_bureaucrats = neutral
 	}
 }
 

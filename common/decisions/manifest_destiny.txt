@@ -4,6 +4,7 @@
 		exists = c:USA
 		root = c:USA
 		NOT = { has_variable = manifested_destiny }
+		NOT = { has_global_variable = manifest_destiny_global}
 	}  
 
 	possible = {
@@ -76,6 +77,7 @@
 		}	
 		# Add Claims
 		set_variable = manifested_destiny
+		set_global_variable = manifested_destiny_global
 	}
 
 	ai_chance = {

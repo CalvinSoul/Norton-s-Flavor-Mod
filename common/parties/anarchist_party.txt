@@ -76,7 +76,7 @@ anarchist_party = {
 	}
 	join_weight = {
 		value = {
-			value = 1
+			value = 0
 			desc = "base_value"
 		}
 		if = { # anarchists like anarchism

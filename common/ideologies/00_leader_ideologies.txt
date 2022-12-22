@@ -489,6 +489,14 @@ ideology_reformer = {
 		law_restricted_child_labor = neutral
 		law_compulsory_primary_school = approve
 	}
+
+	lawgroup_corporations = {
+		law_unregulated_corporations = disapprove
+		law_state_corporations = strongly_disapprove			
+		law_monopoly_regulation = approve
+		law_cartel_regulation = strongly_approve
+		law_banned_private_business = disapprove
+	}
 	
 	possible = {
 		owner = {
@@ -1138,6 +1146,14 @@ ideology_social_democrat = {
 		law_old_age_pension = strongly_approve
 	}
 
+	lawgroup_corporations = {
+		law_unregulated_corporations = neutral
+		law_state_corporations = disapprove			
+		law_monopoly_regulation = approve
+		law_cartel_regulation = strongly_approve
+		law_banned_private_business = disapprove
+	}
+
 	possible = {
 		owner = { has_technology_researched = socialism }
 		scope:interest_group = {
@@ -1259,6 +1275,14 @@ ideology_communist = {
 		law_racial_segregation = strongly_disapprove
 		law_cultural_exclusion = disapprove
 		law_multicultural = strongly_approve	
+	}
+
+	lawgroup_corporations = {
+		law_unregulated_corporations = disapprove
+		law_state_corporations = strongly_disapprove			
+		law_monopoly_regulation = neutral
+		law_cartel_regulation = approve
+		law_banned_private_business = strongly_approve
 	}
 	possible = {
 		owner = { has_technology_researched = socialism }
@@ -1382,6 +1406,14 @@ ideology_vanguardist = {
 		law_cooperative_federalism = neutral
 		law_dual_federalism = disapprove
 		law_regionalism = strongly_disapprove
+	}
+
+	lawgroup_corporations = {
+		law_unregulated_corporations = strongly_disapprove
+		law_state_corporations = approve			
+		law_monopoly_regulation = neutral
+		law_cartel_regulation = neutral
+		law_banned_private_business = approve
 	}
 	
 	possible = {
@@ -1558,7 +1590,13 @@ ideology_fascist = {
 		law_regionalism = strongly_disapprove
 	}
 
-
+	lawgroup_corporations = {
+		law_unregulated_corporations = neutral
+		law_state_corporations = strongly_approve			
+		law_monopoly_regulation = neutral
+		law_cartel_regulation = neutral
+		law_banned_private_business = strongly_disapprove
+	}
 	
 	possible = {
 		owner = { has_technology_researched = mass_propaganda }
@@ -1745,6 +1783,14 @@ ideology_anarchist = {
 		law_cooperative_federalism = disapprove
 		law_dual_federalism = neutral
 		law_regionalism = strongly_approve
+	}
+
+	lawgroup_corporations = {
+		law_unregulated_corporations = disapprove
+		law_state_corporations = strongly_disapprove			
+		law_monopoly_regulation = neutral
+		law_cartel_regulation = approve
+		law_banned_private_business = strongly_approve
 	}
 	
 	possible = {
@@ -2060,7 +2106,15 @@ ideology_market_liberal = {
 		law_mercantilism = disapprove
 		law_protectionism = disapprove		
 		law_isolationism = strongly_disapprove
-	}			
+	}	
+
+	lawgroup_corporations = {
+		law_unregulated_corporations = strongly_approve
+		law_state_corporations = approve			
+		law_monopoly_regulation = disapprove
+		law_cartel_regulation = strongly_disapprove
+		law_banned_private_business = strongly_disapprove
+	}		
 
 	possible = {
 		owner = {

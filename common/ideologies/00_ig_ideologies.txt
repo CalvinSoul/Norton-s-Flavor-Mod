@@ -22,6 +22,7 @@
 	lawgroup_bureaucracy = {
 		law_hereditary_bureaucrats = approve
 		law_appointed_bureaucrats = neutral
+		law_meritocratic_bureaucrats = neutral
 		law_elected_bureaucrats = disapprove
 	}
 
@@ -77,6 +78,14 @@ ideology_laissez_faire = {
 		law_serfdom = disapprove
 		law_regulatory_bodies = disapprove
 		law_worker_protections = strongly_disapprove
+	}
+
+	lawgroup_corporations = {
+		law_unregulated_corporations = strongly_approve
+		law_state_corporations = strongly_approve			
+		law_monopoly_regulation = neutral
+		law_cartel_regulation = disapprove
+		law_banned_private_business = strongly_disapprove
 	}
 }
 
@@ -293,6 +302,7 @@ ideology_meritocratic = {
 		law_elected_bureaucrats = approve
 		law_appointed_bureaucrats = neutral		
 		law_hereditary_bureaucrats = disapprove
+		law_meritocratic_bureaucrats = strongly_approve
 	}	
 	
 	lawgroup_taxation = {
@@ -301,6 +311,14 @@ ideology_meritocratic = {
 		law_consumption_based_taxation = neutral
 		law_graduated_taxation = disapprove
 		law_land_based_taxation = disapprove
+	}
+
+	lawgroup_corporations = {
+		law_unregulated_corporations = neutral
+		law_state_corporations = disapprove			
+		law_monopoly_regulation = approve
+		law_cartel_regulation = strongly_approve
+		law_banned_private_business = strongly_disapprove
 	}
 }
 
@@ -345,6 +363,14 @@ ideology_loyalist = {
 		law_graduated_taxation = approve
 		law_land_based_taxation = neutral
 		law_consumption_based_taxation = disapprove
+	}
+
+	lawgroup_corporations = {
+		law_unregulated_corporations = neutral
+		law_state_corporations = approve			
+		law_monopoly_regulation = neutral
+		law_cartel_regulation = neutral
+		law_banned_private_business = neutral
 	}
 }
 
@@ -423,9 +449,10 @@ ideology_anti_clerical = {
 	}
 
 	lawgroup_bureaucracy = {
-		law_appointed_bureaucrats = approve
+		law_appointed_bureaucrats = neutral
 		law_elected_bureaucrats = neutral	
 		law_hereditary_bureaucrats = disapprove
+		law_meritocratic_bureaucrats = approve
 	}
 }
 
@@ -496,6 +523,14 @@ ideology_proletarian = {
 		law_private_schools = neutral
 		law_religious_schools = neutral	
 		law_no_schools = disapprove	
+	}
+
+	lawgroup_corporations = {
+		law_unregulated_corporations = neutral
+		law_state_corporations = disapprove			
+		law_monopoly_regulation = approve
+		law_cartel_regulation = strongly_approve
+		law_banned_private_business = neutral
 	}
 }
 
@@ -586,7 +621,7 @@ ideology_reactionary = {
 	lawgroup_governance_principles = {
 		law_monarchy = approve
 		law_theocracy = approve		
-		law_presidential_republic = neutral
+		law_presidential_republic = approve
 		law_parliamentary_republic = neutral
 		law_council_republic = disapprove
 	}

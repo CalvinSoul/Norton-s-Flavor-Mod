@@ -67,7 +67,7 @@ lawgroup_army_model = {
 }
 
 lawgroup_internal_security = {
-	law_group_category = power_structure
+	law_group_category = human_rights
 	base_enactment_days = 90
 	
 	progressive_movement_chance = 2

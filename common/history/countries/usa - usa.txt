@@ -25,7 +25,7 @@
 		activate_law = law_type:law_dual_federalism
 		activate_law = law_type:law_universal_suffrage
 
-		activate_law = law_type:law_political_bureaucrats
+		activate_law = law_type:law_appointed_bureaucrats
 		activate_law = law_type:law_professional_officers
 
 		

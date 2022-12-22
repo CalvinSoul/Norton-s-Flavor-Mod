@@ -90,6 +90,12 @@ GLOBAL = {
 	c:PRG = {
 		activate_law = law_type:law_colonial_resettlement
 	}
+	c:EIC = {
+		activate_law = law_type:law_state_corporations
+	}
+	c:DEI = {
+		activate_law = law_type:law_state_corporations
+	}
 	every_country = {
 	   limit = { 
 	   		NOT ={

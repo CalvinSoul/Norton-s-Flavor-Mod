@@ -208,7 +208,7 @@ conservative_party = {
 	}
 	join_weight = {
 		value = {
-			value = 1
+			value = 0
 			desc = "base_value"
 		}
 		if = { # socialists and radicals won't join conservative parties

@@ -104,7 +104,7 @@ military_party = {
 	}
 	join_weight = {
 		value = {
-			value = -5
+			value = 0
 			desc = "base_value"
 		}
 		if = { # nobody will join if the armed forces don't join

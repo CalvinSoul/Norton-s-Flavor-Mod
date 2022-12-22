@@ -24,6 +24,10 @@ nfm_latin_america.1 = { # New Caudillo
 	trigger = {
 		NOT = { ruler = { has_modifier = nfm_new_caudillo_mod }}
 		NOT = { ruler = { has_variable = nfm_new_caudillo_var }}
+
+		any_interest_group = {
+			has_ideology = ideology_caudillismo
+		}
 	}
 
 	immediate = {
@@ -137,7 +141,8 @@ nfm_latin_america.3 = { # Establsihed Caudillo
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
 	trigger = {
-		NOT = { ruler = { has_modifier = nfm_new_caudillo_timer }}
+		NOT = { ruler = { has_modifier = nfm_new_caudillo_mod }}
+		NOT = { ruler = { has_variable = nfm_new_caudillo_timer }}
 		ruler = { has_variable = nfm_new_caudillo_var }
 	}
 

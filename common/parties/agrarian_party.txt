@@ -166,8 +166,19 @@ agrarian_party = {
 	}
 	join_weight = {
 		value = {
-			value = -5
+			value = 0
 			desc = "base_value"
+		}
+		if = { # a party for with no strong farmers
+			limit = {
+				ig:ig_rural_folk = {
+				is_powerful = no
+				}
+			}
+			add = {
+				value = -3
+				desc = "from_peasants"
+			}
 		}
 		if = { # a party for powerful farmers
 			limit = {

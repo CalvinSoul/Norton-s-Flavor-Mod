@@ -18,14 +18,14 @@ nfm_revolutionary_monarchy= { ##victory
 				OR = {
 					AND = {
 						has_ideology = ideology_paternalistic
+						has_ideology = ideology_moralist
+						has_ideology = ideology_nfm_catholic_moralist
 						NOR = { 
 							country_is_in_north_america = yes
 							country_is_in_south_america = yes
 							country_is_in_central_america = yes
 						 }
 					}
-					has_ideology = ideology_moralist
-					has_ideology = ideology_nfm_catholic_moralist
 					leader = {has_ideology = ideology_royalist}
 				}
        		}
@@ -65,6 +65,18 @@ nfm_revolutionary_republic= { ##victory
 					has_ideology = ideology_republican
 					leader = {has_ideology = ideology_republican}
 				}
+       		}
+       		AND = {
+       			any_interest_group = {
+				is_powerful = no 
+       			}
+       			any_interest_group = {
+				OR = {
+					has_ideology = ideology_populist
+					has_ideology = ideology_republican
+					leader = {has_ideology = ideology_republican}
+				}
+       		}
        		}
 		}	
 	}

@@ -111,7 +111,7 @@ free_trade_party = {
 	}
 	join_weight = {
 		value = {
-			value = -5
+			value = 0
 			desc = "base_value"
 		}
 		if = { # capitalists like capitalism

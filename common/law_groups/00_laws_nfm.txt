@@ -20,3 +20,10 @@ lawgroup_officers = {
 }
 
 
+lawgroup_corporations = {
+	base_enactment_days = 90
+	law_group_category = economy
+	
+	progressive_movement_chance = 2
+	regressive_movement_chance = 0.5
+}
