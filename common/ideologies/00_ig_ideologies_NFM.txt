@@ -166,3 +166,93 @@ ideology_nfm_xenophobic = { ##Unique Ideology for RACISTS
 		law_no_migration_controls = disapprove
 	}
 }
+
+ideology_nfm_sakoku = { ##Unique Ideology for RACISTS
+	icon = "gfx/interface/icons/ideology_icons/xenophobic.dds"
+	
+	lawgroup_migration = {
+		law_migration_controls = neutral		
+		law_closed_borders = approve
+		law_no_migration_controls = strongly_disapprove
+	}
+	lawgroup_trade_policy = {		
+		law_isolationism = strongly_approve
+		law_mercantilism = approve
+		law_protectionism = approve
+		law_free_trade = strongly_disapprove
+	}	
+	
+}
+
+
+ideology_nfm_kokugaku = { ##Unique Ideology for RACISTS
+	icon = "gfx/interface/icons/ideology_icons/shinto_moralist.dds"
+
+	lawgroup_distribution_of_power = {
+		law_autocracy = neutral
+		law_landed_voting = approve
+		law_oligarchy = strongly_approve
+		law_wealth_voting = strongly_approve
+		law_census_voting = approve
+		law_universal_suffrage = neutral
+		law_anarchy = strongly_disapprove
+	}
+
+	lawgroup_governance_principles = {
+		law_monarchy = approve
+		law_theocracy = strongly_approve			
+		law_presidential_republic = neutral
+		law_parliamentary_republic = neutral
+		law_council_republic = strongly_disapprove
+	}
+
+	lawgroup_bureaucracy = {
+		law_hereditary_bureaucrats = disapprove
+		law_appointed_bureaucrats = neutral
+		law_meritocratic_bureaucrats = strongly_approve
+		law_elected_bureaucrats = disapprove
+	}
+
+	lawgroup_citizenship = { ### Does not exist by default
+		law_ethnostate = strongly_approve
+		law_national_supremacy = approve
+		law_racial_segregation = neutral
+		law_cultural_exclusion = neutral
+		law_multicultural = strongly_disapprove	
+	}
+}
+
+ideology_nfm_rangaku = { ##Unique Ideology for RACISTS
+	icon = "gfx/interface/icons/ideology_icons/science.dds"
+	lawgroup_education_system = {
+		law_private_schools = approve
+		law_public_schools = strongly_approve
+		law_religious_schools = approve
+		law_no_schools = disapprove
+	}
+	lawgroup_labor_rights = {
+		law_serfdom = disapprove
+		law_serfdom_banned = approve
+		law_regulatory_bodies = disapprove
+		law_worker_protections = strongly_disapprove
+	}
+	lawgroup_corporations = {
+		law_unregulated_corporations = neutral
+		law_state_corporations = strongly_approve	
+		law_monopoly_regulation = disapprove
+		law_cartel_regulation = strongly_disapprove
+		law_banned_private_business = strongly_disapprove
+	}
+	lawgroup_economic_system = {	
+		law_command_economy = neutral
+		law_interventionism = strongly_approve
+		law_agrarianism = neutral
+		law_traditionalism = disapprove		
+		law_laissez_faire = neutral		
+	}
+	lawgroup_childrens_rights = {
+		law_compulsory_primary_school = approve
+		law_restricted_child_labor = neutral	
+		law_child_labor_allowed = neutral
+	}
+}

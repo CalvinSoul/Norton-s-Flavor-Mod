@@ -240,53 +240,88 @@ GLOBAL = {
 		annex = c:AIN
 		set_capital = STATE_KANTO
 		s:STATE_KYUSHU.region_state:JAP = {
-	#		add_modifier = satsuma_domain
+			add_modifier = satsuma_domain
 		}
 		s:STATE_CHUGOKU.region_state:JAP = {
-	#		add_modifier = chosu_domain
+			add_modifier = chosu_domain
 		}
 		s:STATE_SHIKOKU.region_state:JAP = {
-	#		add_modifier = tosa_domain
+			add_modifier = tosa_domain
 		}
 		s:STATE_KANSAI.region_state:JAP = {
-	#		add_modifier = tokugawa_domain
+			add_modifier = tokugawa_domain
 		}
 		s:STATE_CHUBU.region_state:JAP = {
-	#		add_modifier = tokugawa_domain
+			add_modifier = tokugawa_domain
 		}
 		s:STATE_KANTO.region_state:JAP = {
-	#		add_modifier = tokugawa_domain
+			add_modifier = tokugawa_domain
 		}
 		s:STATE_TOHOKU.region_state:JAP = {
-	#		add_modifier = uesugi_domain
+			add_modifier = uesugi_domain
 		}
 		#Add Hokkaido One
 	}
 
 	c:CHI = { #Accurate tributaries
+	#	create_diplomatic_pact = {
+	#		country = c:BUR
+	#		type = tributary
+	#	}
+	#	create_diplomatic_pact = {
+	#		country = c:SIA
+	#		type = tributary
+	#	}
+	#	create_diplomatic_pact = {
+	#		country = c:DAI
+	#		type = tributary
+	#	}
+	#	create_diplomatic_pact = {
+	#		country = c:NEP
+	#		type = tributary
+	#	}
+	#	create_diplomatic_pact = {
+	#		country = c:SIK
+	#		type = tributary
+	#	}
+	#	create_diplomatic_pact = {
+	#		country = c:BHU
+	#		type = tributary
+	#	}
+	}
+
+	c:NET = {
 		create_diplomatic_pact = {
-			country = c:BUR
-			type = tributary
+			country = c:DEI
+			type = puppet
 		}
 		create_diplomatic_pact = {
-			country = c:SIA
-			type = tributary
+			country = c:YOG
+			type = puppet
 		}
 		create_diplomatic_pact = {
-			country = c:DAI
-			type = tributary
+			country = c:SRK
+			type = puppet
 		}
 		create_diplomatic_pact = {
-			country = c:NEP
-			type = tributary
+			country = c:JMB
+			type = puppet
+		}	
+		create_diplomatic_pact = {
+			country = c:SMB
+			type = puppet
 		}
 		create_diplomatic_pact = {
-			country = c:SIK
-			type = tributary
+			country = c:PON
+			type = puppet
 		}
 		create_diplomatic_pact = {
-			country = c:BHU
-			type = tributary
+			country = c:BNJ
+			type = puppet
+		}
+		create_diplomatic_pact = {
+			country = c:TID
+			type = puppet
 		}
 	}
 

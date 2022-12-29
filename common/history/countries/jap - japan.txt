@@ -20,7 +20,7 @@
 		activate_law = law_type:law_land_based_taxation		
 		activate_law = law_type:law_censorship
 		activate_law = law_type:law_closed_borders	
-		#activate_law = law_type:law_regionalism
+		activate_law = law_type:law_regionalism
 
 		set_institution_investment_level = {
 			institution = institution_police
@@ -30,14 +30,18 @@
 		ig:ig_armed_forces = {
 			add_ideology = ideology_bakufu
 			remove_ideology = ideology_patriotic
+			remove_ideology = ideology_nfm_centralist
+			add_ideology = ideology_nfm_federalist
+			add_ideology = ideology_nfm_sakoku
 			set_interest_group_name = ig_samurai
 			add_ruling_interest_group = yes
 		}
 
 		ig:ig_devout = {
-		#	set_interest_group_name = ig_jap_buddhist_monks
+			set_interest_group_name = ig_jap_buddhist_monks
 			remove_ideology = ideology_moralist
 			add_ideology = ideology_buddhist_moralist
+			add_ideology = ideology_nfm_sakoku
 		}
 
 		ig:ig_landowners = {
@@ -45,26 +49,35 @@
 			add_ruling_interest_group = yes
 			remove_ideology = ideology_nfm_federalist
 			add_ideology = ideology_nfm_regionalist
+			add_ideology = ideology_nfm_sakoku
 		}
 
 		ig:ig_rural_folk = {
-		#	set_interest_group_name = ig_japanese_peasants
+			set_interest_group_name = ig_japanese_peasants
 		}
 
 		ig:ig_industrialists = {
-		#	set_interest_group_name = ig_japanese_industrialists
+			set_interest_group_name = ig_japanese_industrialists
+			remove_ideology = ideology_plutocratic
+			remove_ideology = ideology_laissez_faire
+			remove_ideology = ideology_individualist
+			add_ideology = ideology_nfm_sakoku
+			add_ideology = ideology_nfm_kokugaku
+			add_ideology = ideology_nfm_rangaku
 		}
 
 		ig:ig_petty_bourgeoisie = {
-		#	set_interest_group_name = ig_japanese_middle_class
+			set_interest_group_name = ig_japanese_middle_class
 		}
 
 		ig:ig_intelligentsia = {
-		#	set_interest_group_name = ig_japanese_intelligensia
-
+			set_interest_group_name = ig_japanese_intelligensia
+			remove_ideology = ideology_republican
+			remove_ideology = ideology_anti_clerical
+			add_ideology = ideology_nfm_rangaku
 		}
-	#	add_modifier = {
-	#		name = rangaku
-	#	}
+		add_modifier = {
+			name = rangaku
+		}
 	}
 }

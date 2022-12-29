@@ -32,6 +32,40 @@ stroke_char_trait = {
 	replace = {																
 	}
 }
+sickly_trait = {
+	type = condition
+	texture = "gfx/interface/icons/character_trait_icons/psychological_affliction.dds"
+	
+	character_modifier = {
+		character_health_add = -0.5
+		character_popularity_add = -25
+	}
+
+	command_modifier = {
+		unit_morale_loss_mult = 0.1
+	}
+	
+	country_modifier = {
+		country_authority_mult = -0.1
+	}
+	
+	interest_group_modifier = {
+		interest_group_pol_str_mult = -0.1
+	}
+	
+	possible = {
+		age > define:NPortrait|GRACEFUL_AGING_START
+	}
+	
+	weight = {
+		value = age
+		subtract = 40
+		divide = 2
+	}
+	
+	replace = {																
+	}
+}
 work_done_trait = {
 	type = condition
 	texture = "gfx/interface/icons/character_trait_icons/senile.dds"

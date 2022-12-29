@@ -485,13 +485,13 @@ law_meritocratic_bureaucrats_desc:0 "The bureaucracy recruits meritocratically t
 
 law_state_atheism:0 "State Atheism"
 
-#ig_shogunate:0 "[concept_fudai_daimyo]"
-#ig_jap_buddhist_monks:0 "Imperial Court"
+ig_shogunate:0 "[concept_fudai_daimyo]"
+ig_jap_buddhist_monks:0 "Imperial Court"
 ig_japanese_peasants:0 "[concept_nomin] and [concept_ronin]"
 ig_japanese_industrialists:0 "[concept_tozama_daimyo]"
 ig_japanese_middle_class:0 "Chōnin"
 ig_japanese_intelligensia:0 "[concept_rangaku] Scholars"
-#ig_samurai:0 "[concept_kamon_daimyo]"
+ig_samurai:0 "[concept_bakufu]"
 
 
 NFM_dcn_uk_default:0 "United Kingdom"
@@ -668,8 +668,8 @@ rangaku:0 "[concept_rangaku] Studies"
 concept_fudai_daimyo:0 "Fudai Daimyō"
 concept_fudai_daimyo_desc:3 "Blank Description [concept_samurai]""
 
-concept_kamon_daimyo:0 "Kamon Daimyō"
-concept_kamon_daimyo_desc:3 "Blank Description [concept_samurai]""
+concept_bakufu:0 "Bakufu"
+concept_bakufu_desc:3 "Blank Description [concept_samurai]""
 
 concept_tozama_daimyo:0 "Tozama Daimyō"
 concept_tozama_daimyo_desc:3 "Blank Description [concept_samurai]""
@@ -741,3 +741,86 @@ law_cartel_regulation:0 "Cartel Regulation"
 law_cartel_regulation_desc:0 "Corporations cannot conspire with one another to set prices and control industries, further enabling local competition."
 law_banned_private_business:0 "Illegal Private Enterprise"
 law_banned_private_business_desc:0 "All private enterprise is banned, with barter markets existing at small scales locally."
+
+nfm_intelligentsia_autocrat_mod:0 "Scholar ([GetLawType('law_autocracy').GetName])"
+nfm_landowners_autocrat_mod:0 "Patrician ([GetLawType('law_autocracy').GetName])"
+nfm_industrialists_autocrat_mod:0 "Industrialist ([GetLawType('law_autocracy').GetName])"
+nfm_armed_forces_autocrat_mod:0 "Militarist ([GetLawType('law_autocracy').GetName])"
+nfm_devout_autocrat_mod:0 "Devoted ([GetLawType('law_autocracy').GetName])"
+nfm_rural_folk_autocrat_mod:0 "Rustic ([GetLawType('law_autocracy').GetName])"
+nfm_middle_class_autocrat_mod:0 "Citizen ([GetLawType('law_autocracy').GetName])"
+nfm_trade_union_autocrat_mod:0 "Proletarian ([GetLawType('law_autocracy').GetName])"
+
+nfm_bakamatsu:0 "Bakamatsu"
+
+Iesada:0 "Iesada"
+Iemochi:0 "Iemochi"
+Yoshinobu:0 "Yoshinobu"
+
+nfm_japan.1.t:0 "Tokugawa Ienari Retires"
+nfm_japan.1.d:0 "Tokugawa Ienari has decided to step down from the seat of Shogun, leaving the government to his son's care."
+nfm_japan.1.f:0 ""Life is like unto a long journey with a heavy burden."-Tokugawa Ieyasu"
+nfm_japan.1.a:0 "A New Sun Rises"
+nfm_japan.2.t:0 "Ieyoshi Succession"
+nfm_japan.2.d:0 "The death of the Shogun has led to a debate if Ieyoshi is a suitable heir, in large part to his ailing health. Reformists have put forth Tokugawa Yoshinobu as an alternative candidate."
+nfm_japan.2.f:0 ""Give the peasants neither life nor death."-Tokugawa Ieyasu"
+nfm_japan.2.a:0 "Appoint the Conservative Candidate, Ieyoshi"
+nfm_japan.2.b:0 "Appoint the Reformist Candidate, Yoshinobu"
+nfm_japan.3.t:0 "Iemochi Succession"
+nfm_japan.3.d:0 "The death of the Shogun has once more led to a debate of succession, between Iemochi and Yoshinobu"
+nfm_japan.3.f:0 ""Patience means restraining one's inclinations.."-Tokugawa Ieyasu"
+nfm_japan.3.a:0 "Yoshinobu will must wait"
+nfm_japan.3.b:0 "Yoshinobu will be Shogun"
+
+nfm_japan.4.t:0 "Sonnō Jōi"
+nfm_japan.4.d:0 "The opening of Japan has outraged many throughout the nation, especially followers of the Kokugaku that advocates for a unique Japanese modern identity. Calls to restore the Emperor to powerful rattle the land, from the taverns of Ronin to the halls of the Imperial Court itself."
+nfm_japan.4.f:0 "Revere the Emperor, expel the barbarians"
+nfm_japan.4.a:0 "If only it were so simple!"
+
+nfm_japan.5.t:0 "Foreign Incident - Assassination"
+nfm_japan.5.d:0 "Rogue Samurai, following the call of Sonnō Jōi, have murdered an ambassador to [SCOPE.sCountry('sonno_joi_victim').GetName]. The [SCOPE.sCountry('sonno_joi_victim').GetAdjective] embassy has demanded they be handed over for trial. Doing so would be very unpopular, but refusing to do so risks war."
+nfm_japan.5.f:0 "Revere the Emperor, expel the barbarians"
+nfm_japan.5.a:0 "Our hand is forced."
+nfm_japan.5.b:0 "Damn the [SCOPE.sCountry('sonno_joi_victim').GetAdjective]!"
+
+nfm_japan.6.t:0 "Foreign Incident - Embassy Attacked"
+nfm_japan.6.d:0 "Rogue Samurai, following the call of Sonnō Jōi, have attacked and destroyed the embassy of [SCOPE.sCountry('sonno_joi_victim').GetName]. The [SCOPE.sCountry('sonno_joi_victim').GetAdjective] embassy has demanded they be handed over for trial. Doing so would be very unpopular, but refusing to do so risks war."
+nfm_japan.6.f:0 "Revere the Emperor, expel the barbarians"
+nfm_japan.6.a:0 "Our hand is forced."
+nfm_japan.6.b:0 "Damn the [SCOPE.sCountry('sonno_joi_victim').GetAdjective]!"
+
+nfm_japan.7.t:0 "Foreign Incident - Massacre"
+nfm_japan.7.d:0 "A scuffle between foreign traders of [SCOPE.sCountry('sonno_joi_victim').GetName] and angry locals has resulted in the foreigners opening fire on an angry crowd, killing over twenty people. The [SCOPE.sCountry('sonno_joi_victim').GetAdjective] embassy has demanded the immunity of their people. Doing so would be very unpopular, but refusing to do so risks war."
+nfm_japan.7.f:0 "Revere the Emperor, expel the barbarians"
+nfm_japan.7.a:0 "Our hand is forced."
+nfm_japan.7.b:0 "Damn the [SCOPE.sCountry('sonno_joi_victim').GetAdjective]!"
+
+nfm_japan.8.t:0 "Foreign Incident - Japan"
+nfm_japan.8.d:0 "Japan has refused extraterritoriality to our citizens after a local incident. If we let this stand, our international prestige will be harmed."
+nfm_japan.8.f:0 ""Every empire, however, tells itself and the world that it is unlike all other empires, that its mission is not to plunder and control but to educate and liberate."-Edward W. Said"
+nfm_japan.8.a:0 "A few men aren't worth our blood"
+nfm_japan.8.b:0 "We'll show them before our tea is cool!"
+
+open_japan_dec:0 "Force the Opening of Japan"
+open_japan_dec_desc:0 "Japan has long been a desired target for Western trade, and with our military might, we can force them to heel and make them bow to our demands."
+
+ideology_nfm_sakoku:0 "Sakoku"
+ideology_nfm_kokugaku:0 "Kokugaku"
+ideology_nfm_rangaku:0 "Rangaku"
+
+nfm_sonno_joi:0 "Sonnō Jōi"
+
+nfm_pro_foreign_government:0 "Caved to Barbarians"
+
+nfm_anti_foreign_government:0 "Stood up to Barbarians"
+
+nfm_ignored_foreign_incident:0 "Caved to Japan"
+
+meiji_restoration_complete:0 "Meiji Restoration"
+kobu_gattai_complete:0 "Kobu Gattai"
+bakufu_victory_complete:0 "Bakufu Victory"
+samurai_republic_complete:0 "Samurai Republic"
+alternative_japan_reform_complete:0 "A New Path"
+
+je_nfm_bakamatsu:0 "The Bakamatsu"
+je_nfm_bakamatsu_desc:0 "The Bakamatsu, or "The End of the Bakafu", refers to our current national crisis. The opening of Japan has opened new political rifts and shaken the Shogunate- trying times lie ahead, but with skilled leadership, Japan may emerge from them as the true Rising Sun of the East."

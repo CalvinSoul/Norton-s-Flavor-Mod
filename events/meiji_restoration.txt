@@ -1489,6 +1489,7 @@ meiji.12 = {
 	}
 }
 
+#NFM EDITS EVENT
 meiji.13 = {
 	type = country_event
 	placement = root
@@ -1517,7 +1518,7 @@ meiji.13 = {
 	}
 
 	immediate = {
-		ig:ig_landowners = {
+		ig:ig_armed_forces = {
 			save_scope_as = shogunate_ig
 		}
 		ruler = {
@@ -1528,6 +1529,10 @@ meiji.13 = {
 	option = {
 		name = meiji.13.a
 		set_variable = japan_forced_to_open_market # affects AI strategy
+			add_modifier = {
+				name = nfm_bakamatsu
+				months = very_long_modifier_time
+			}
 		scope:shogunate_ig = {
 			add_modifier = {
 				name = shogun_ig_forced_to_open_market

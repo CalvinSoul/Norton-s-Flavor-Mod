@@ -83,14 +83,14 @@
 					is_pop_type = aristocrats
 					state = {
 						OR = {
-							state_region = s:STATE_KYUSHU
-							state_region = s:STATE_CHUGOKU
-							state_region = s:STATE_SHIKOKU
+							has_modifier = satsuma_domain
+							has_modifier = chosu_domain
+							has_modifier = tosa_domain
 							}
 						}
 					NOT = { has_variable = meiji_restoration_complete }
 				}
-				value = 500
+				value = 600
 			}
 		}
 		

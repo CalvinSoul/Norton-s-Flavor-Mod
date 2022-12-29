@@ -37,6 +37,10 @@ on_monthly_pulse_country = {
 		nfm_american_elections_result.10
 
 		acw_modded.4
+
+		nfm_japan.1
+		nfm_japan.2
+		nfm_japan.3
 	}
 	random_events = {
 		

@@ -909,6 +909,14 @@ nfm_misc.11 = { #Autocrat Events
 	}
 
 	immediate = {
+		remove_modifier = nfm_intelligentsia_autocrat_mod
+		remove_modifier = nfm_armed_forces_autocrat_mod
+		remove_modifier = nfm_landowners_autocrat_mod
+		remove_modifier = nfm_devout_autocrat_mod
+		remove_modifier = nfm_middle_class_autocrat_mod
+		remove_modifier = nfm_trade_union_autocrat_mod
+		remove_modifier = nfm_rural_folk_autocrat_mod
+		remove_modifier = nfm_industrialists_autocrat_mod
 		ruler = {set_variable = nfm_autocrat_check}
 		if = {
 			limit = {
@@ -919,6 +927,7 @@ nfm_misc.11 = { #Autocrat Events
 				}
 			 }
 			ruler = {add_trait = nfm_intelligentsia_autocrat}
+			add_modifier = nfm_intelligentsia_autocrat_mod
 		}
 		if = {
 			limit = {
@@ -929,6 +938,7 @@ nfm_misc.11 = { #Autocrat Events
 				}
 			 }
 			ruler = {add_trait = nfm_landowners_autocrat}
+			add_modifier = nfm_landowners_autocrat_mod
 		}
 		if = {
 			limit = {
@@ -939,6 +949,7 @@ nfm_misc.11 = { #Autocrat Events
 				}
 			 }
 			ruler = {add_trait = nfm_industrialists_autocrat}
+			add_modifier = nfm_industrialists_autocrat_mod
 		}
 		if = {
 			limit = {
@@ -949,6 +960,7 @@ nfm_misc.11 = { #Autocrat Events
 				}
 			 }
 			ruler = {add_trait = nfm_armed_forces_autocrat}
+			add_modifier = nfm_armed_forces_autocrat_mod
 		}
 		if = {
 			limit = {
@@ -959,6 +971,7 @@ nfm_misc.11 = { #Autocrat Events
 				}
 			 }
 			ruler = {add_trait = nfm_devout_autocrat}
+			add_modifier = nfm_devout_autocrat_mod
 		}
 		if = {
 			limit = {
@@ -969,6 +982,7 @@ nfm_misc.11 = { #Autocrat Events
 				}
 			 }
 			ruler = {add_trait = nfm_rural_folk_autocrat}
+			add_modifier = nfm_rural_folk_autocrat_mod
 		}
 		if = {
 			limit = {
@@ -979,6 +993,7 @@ nfm_misc.11 = { #Autocrat Events
 				}
 			 }
 			ruler = {add_trait = nfm_middle_class_autocrat}
+			add_modifier = nfm_middle_class_autocrat_mod
 		}
 		if = {
 			limit = {
@@ -989,6 +1004,7 @@ nfm_misc.11 = { #Autocrat Events
 				}
 			 }
 			ruler = {add_trait = nfm_trade_union_autocrat}
+			add_modifier = nfm_trade_union_autocrat_mod
 		}
      }
 
@@ -1018,7 +1034,22 @@ nfm_misc.11 = { #Autocrat Events
 		ruler = {remove_variable = nfm_autocrat_check}
 		ruler = {
 			remove_trait = nfm_intelligentsia_autocrat
+			remove_trait = nfm_armed_forces_autocrat
+			remove_trait = nfm_landowners_autocrat
+			remove_trait = nfm_devout_autocrat
+			remove_trait = nfm_middle_class_autocrat
+			remove_trait = nfm_trade_union_autocrat
+			remove_trait = nfm_rural_folk_autocrat
+			remove_trait = nfm_industrialists_autocrat
 			}
+		remove_modifier = nfm_intelligentsia_autocrat_mod
+		remove_modifier = nfm_armed_forces_autocrat_mod
+		remove_modifier = nfm_landowners_autocrat_mod
+		remove_modifier = nfm_devout_autocrat_mod
+		remove_modifier = nfm_middle_class_autocrat_mod
+		remove_modifier = nfm_trade_union_autocrat_mod
+		remove_modifier = nfm_rural_folk_autocrat_mod
+		remove_modifier = nfm_industrialists_autocrat_mod
      }
 
      option = {

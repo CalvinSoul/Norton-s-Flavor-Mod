@@ -74,7 +74,23 @@
 				value = 200
 			}
 		}
-					
+			
+		add = { #NFM
+			desc = "Tokugawa Domain"
+			if = {
+				limit = { 
+					is_pop_type = aristocrats
+					state = {
+						OR = {
+							has_modifier = tokugawa_domain
+							}
+						}
+					NOT = { has_variable = meiji_restoration_complete }
+				}
+				value = 400
+			}
+		}
+				
 		multiply = {
 			desc = "LEADER_POPULARITY"
 			scope:interest_group = {

@@ -1,6 +1,6 @@
 ﻿concept_fudai_daimyo = {}
 
-concept_kamon_daimyo = {}
+concept_bakufu = {}
 
 concept_tozama_daimyo = {}
 

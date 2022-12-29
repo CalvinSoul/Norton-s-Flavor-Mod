@@ -37,6 +37,6 @@ ig_trait_old_ways = {
 	
 	modifier = {
 		country_tech_spread_mult = -0.1
-		state_bureaucracy_population_base_cost_factor_mult = 0.25
+		state_bureaucracy_population_base_cost_factor_mult = 0.15
 	}
 }

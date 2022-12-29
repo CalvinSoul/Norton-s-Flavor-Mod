@@ -1,0 +1,588 @@
+﻿namespace = nfm_japan
+
+# Ieyoshi Retires
+nfm_japan.1 = {
+	type = country_event
+	placement = root
+	title = nfm_japan.1.t
+	desc = nfm_japan.1.d
+	flavor = nfm_japan.1.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_ruler_speaking_to_people.bk2"
+	}
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/leader_speaking_to_a_group_of_people"
+
+	trigger = {
+		year >= 1837
+		ruler = {
+			has_variable = ienari_var
+		}
+	}
+
+	immediate = {
+		create_character = {
+			ruler = yes
+			first_name = Ieyoshi
+			last_name = Tokugawa
+			birth_date = 1793.6.22
+			interest_group = ig_armed_forces
+			ideology = ideology_traditionalist
+			traits = {
+				meticulous
+				pious
+			}
+			on_created = {				
+				set_variable = {
+					name = ieyoshi_var
+				}
+			}
+		}
+		ruler = {
+			save_scope_as = shogun_scope
+		}
+		create_character = {
+				heir = yes
+				first_name = Iesada
+				last_name = Tokugawa
+				birth_date = 1824.5.6
+		#		dna = dna_ninko
+				interest_group = ig_landowners # beholden to the Shogun
+				ideology = ideology_traditionalist
+				traits = {
+					reserved # not very active in affairs of state
+					sickly_trait
+				}
+				on_created = {				
+					set_variable = {
+						name = iesada_var
+					}
+				}
+			}
+	}
+
+	option = { 
+		name = nfm_japan.1.a
+	}
+}
+nfm_japan.2 = { #Ieyoshi Succession
+	type = country_event
+	placement = root
+	title = nfm_japan.2.t
+	desc = nfm_japan.2.d
+	flavor = nfm_japan.2.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_ruler_speaking_to_people.bk2"
+	}
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/leader_speaking_to_a_group_of_people"
+
+	trigger = {
+		ruler = {has_variable = iesada_var}
+	}
+
+	immediate = {
+		
+	}
+	option = { 
+		default = yes
+		name = nfm_japan.2.a
+		create_character = {
+			heir = yes
+			first_name = Iemochi
+			last_name = Tokugawa
+			birth_date = 1846.7.17
+			interest_group = ig_armed_forces
+			ideology = ideology_moderate
+			traits = {
+				tactful
+				pious
+			}
+			on_created = {				
+					set_variable = {
+						name = iemochi_var
+					}
+			}
+		}
+		ai_chance = {
+			base = 90
+		}
+	}
+
+	option = { 
+		name = nfm_japan.2.b
+		trigger = { ROOT = c:JAP}
+		create_character = {
+			ruler = yes
+			first_name = Yoshinobu
+			last_name = Tokugawa
+			birth_date = 1837.8.18
+			interest_group = ig_armed_forces
+			ideology = ideology_royalist
+			traits = {
+				innovative
+				ambitious
+			}
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+nfm_japan.3 = { #Iemochi Succession
+	type = country_event
+	placement = root
+	title = nfm_japan.3.t
+	desc = nfm_japan.3.d
+	flavor = nfm_japan.3.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_ruler_speaking_to_people.bk2"
+	}
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/leader_speaking_to_a_group_of_people"
+
+	trigger = {
+		ruler = {has_variable = iemochi_var}
+	}
+
+	immediate = {
+		
+	}
+
+	option = { 
+		default = yes
+		name = nfm_japan.3.a
+		create_character = {
+			ruler = yes
+			first_name = Yoshinobu
+			last_name = Tokugawa
+			birth_date = 1837.8.18
+			interest_group = ig_armed_forces
+			ideology = ideology_royalist
+			traits = {
+				innovative
+				ambitious
+			}
+		}
+		ai_chance = {
+			base = 40
+		}
+	}
+
+	option = { 
+		name = nfm_japan.3.b
+		create_character = {
+			heir = yes
+			first_name = Yoshinobu
+			last_name = Tokugawa
+			birth_date = 1837.8.18
+			interest_group = ig_armed_forces
+			ideology = ideology_royalist
+			traits = {
+				innovative
+				ambitious
+			}
+		}
+		ai_chance = {
+			base = 60
+		}
+	}
+}
+nfm_japan.4 = { #Sonno Joi
+	type = country_event
+	placement = root
+	title = nfm_japan.4.t
+	desc = nfm_japan.4.d
+	flavor = nfm_japan.4.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/asia_confucianism_shinto.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/political_extremism"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	trigger = {
+		NOT = {has_variable = sonno_joi_var}
+	}
+
+	immediate = {
+		set_variable = {
+			name = sonno_joi_var
+		}
+	}
+
+	option = { 
+		default = yes
+		name = nfm_japan.4.a
+
+		add_modifier = nfm_sonno_joi
+	}
+
+}
+
+nfm_japan.5 = { #Foreign Incident #Foreign Minister Murdered
+	type = country_event
+	placement = root
+	title = nfm_japan.5.t
+	desc = nfm_japan.5.d
+	flavor = nfm_japan.5.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/asia_westerners_arriving.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/political_extremism"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	trigger = {
+		any_country = {
+			limit = {
+				country_rank >= rank_value:great_power
+				has_interest_marker_in_region = region_japan
+			}
+		}
+		NOT = {has_variable = foreign_incident_cooldown_var}
+		has_variable = sonno_joi_var
+	}
+
+	immediate = {
+		random_country = {
+			limit = {
+				country_rank >= rank_value:great_power
+				has_interest_marker_in_region = region_japan
+			}
+			save_scope_as = sonno_joi_victim
+		}
+		set_variable = {
+			name = foreign_incident_cooldown_var
+			months = 12
+		}
+	}
+
+	option = { 
+		default = yes
+		name = nfm_japan.5.a
+
+		every_interest_group = {
+			limit = {
+				is_in_government = yes
+			}
+			add_modifier = {
+				name = nfm_pro_foreign_government
+				months = 60
+				is_decaying = yes
+			}
+		}
+		ai_chance = {
+			base = 95
+		}
+	}
+		
+
+	option = { 
+		name = nfm_japan.5.b
+
+		every_interest_group = {
+			limit = {
+				is_in_government = yes
+			}
+			add_modifier = {
+				name = nfm_anti_foreign_government
+				months = 60
+				is_decaying = yes
+			}
+		}
+
+	scope:jingoist_officer_victim = { trigger_event = {id = nfm_japan.8}}
+		ai_chance = {
+			base = 5
+		}
+	}
+}
+
+nfm_japan.6 = { #Foreign Incident #Foreign Minister Murdered
+	type = country_event
+	placement = root
+	title = nfm_japan.6.t
+	desc = nfm_japan.6.d
+	flavor = nfm_japan.6.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/asia_westerners_arriving.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/political_extremism"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	trigger = {
+		any_country = {
+			limit = {
+				country_rank >= rank_value:great_power
+				has_interest_marker_in_region = region_japan
+			}
+		}
+		NOT = {has_variable = foreign_incident_cooldown_var}
+		has_variable = sonno_joi_var
+	}
+
+	immediate = {
+		random_country = {
+			limit = {
+				country_rank >= rank_value:great_power
+				has_interest_marker_in_region = region_japan
+			}
+			save_scope_as = sonno_joi_victim
+		}
+		set_variable = {
+			name = foreign_incident_cooldown_var
+			months = 12
+		}
+	}
+
+	option = { 
+		default = yes
+		name = nfm_japan.6.a
+
+		every_interest_group = {
+			limit = {
+				is_in_government = yes
+			}
+			add_modifier = {
+				name = nfm_pro_foreign_government
+				months = 60
+				is_decaying = yes
+			}
+		}
+
+		ai_chance = {
+			base = 95
+		}
+	}
+		
+
+	option = { 
+		name = nfm_japan.6.b
+
+		every_interest_group = {
+			limit = {
+				is_in_government = yes
+			}
+			add_modifier = {
+				name = nfm_anti_foreign_government
+				months = 60
+				is_decaying = yes
+			}
+		}
+
+		scope:jingoist_officer_victim = { trigger_event = {id = nfm_japan.8}}
+
+		ai_chance = {
+			base = 5
+		}
+		
+	}
+}
+
+nfm_japan.7 = { #Foreign Incident #Foreign Minister Murdered
+	type = country_event
+	placement = root
+	title = nfm_japan.7.t
+	desc = nfm_japan.7.d
+	flavor = nfm_japan.7.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/asia_westerners_arriving.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/political_extremism"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	trigger = {
+		any_country = {
+			limit = {
+				country_rank >= rank_value:great_power
+				has_interest_marker_in_region = region_japan
+			}
+		}
+		NOT = {has_variable = foreign_incident_cooldown_var}
+		has_variable = sonno_joi_var
+	}
+
+	immediate = {
+		random_country = {
+			limit = {
+				country_rank >= rank_value:great_power
+				has_interest_marker_in_region = region_japan
+			}
+			save_scope_as = sonno_joi_victim
+		}
+		set_variable = {
+			name = foreign_incident_cooldown_var
+			months = 12
+		}
+	}
+
+	option = { 
+		default = yes
+		name = nfm_japan.7.a
+
+		every_interest_group = {
+			limit = {
+				is_in_government = yes
+			}
+			add_modifier = {
+				name = nfm_pro_foreign_government
+				months = 60
+				is_decaying = yes
+			}
+		}
+		ai_chance = {
+			base = 95
+		}
+	}
+		
+
+	option = { 
+		name = nfm_japan.7.b
+
+		every_interest_group = {
+			limit = {
+				is_in_government = yes
+			}
+			add_modifier = {
+				name = nfm_anti_foreign_government
+				months = 60
+				is_decaying = yes
+			}
+		}
+
+		 scope:jingoist_officer_victim = { trigger_event = {id = nfm_japan.8}}
+		ai_chance = {
+			base = 5
+		}
+	}
+}
+
+nfm_japan.8 = { #Foreign Response
+	type = country_event
+	placement = root
+	title = nfm_japan.8.t
+	desc = nfm_japan.8.d
+	flavor = nfm_japan.8.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/asia_westerners_arriving.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/political_extremism"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	trigger = {
+		
+	}
+
+	immediate = {
+			
+	}
+
+	option = { 
+		
+		name = nfm_japan.8.a
+
+		add_modifier = {
+				name = nfm_ignored_foreign_incident
+				months = 120
+				is_decaying = yes
+		}
+
+		ai_chance = {
+			base = 5
+		}
+	}
+
+	option = { 
+		default = yes
+		name = nfm_japan.8.b
+
+		create_diplomatic_play = {
+				type = dp_humiliation
+
+				target_country = c:JAP
+			}
+		ai_chance = {
+			base = 95
+		}
+	}
+}
+
+nfm_japan.10 = { #kil character for testing
+	type = country_event
+	placement = root
+	title = meiji.1.t
+	desc = meiji.1.d
+	flavor = meiji.1.f
+
+	duration = 3
+
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	gui_window = event_window_1char_tabloid
+
+	left_icon = scope:shogun_scope
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	trigger = {
+		
+	}
+
+	immediate = {
+		ruler = {
+			kill_character = yes
+		}
+	}
+
+	option = { 
+		
+	}
+}
