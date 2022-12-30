@@ -327,12 +327,6 @@ uesugi_domain = {
 	interest_group_ig_industrialists_pol_str_mult = -0.33
 	state_loyalists_from_sol_change_mult = 0.25	
 }
-rangaku = {
-	icon = gfx/interface/icons/timed_modifier_icons/clerks_positive.dds
-	country_tech_spread_mult = 0.30
-	interest_group_ig_intelligentsia_pop_attraction_mult = 0.50
-	country_legitimacy_base_add = -10
-}
 
 nfm_new_caudillo_mod = {
 	icon = gfx/interface/icons/timed_modifier_icons/autocracy_neutral.dds
@@ -378,18 +372,55 @@ nfm_ignored_foreign_incident = {
 }
 
 nfm_tempo_reforms = {
-	icon = gfx/interface/icons/timed_modifier_icons/clerks_positive.dds
+	icon = gfx/interface/icons/timed_modifier_icons/centralization_positive.dds
+	state_pop_qualifications_mult = -0.5
+	interest_group_ig_armed_forces_pol_str_mult = 0.25
+	country_legitimacy_headofstate_add = 10
+	state_tax_collection_mult = 0.10
+	country_legitimacy_ideological_incoherence_mult = 0.33
+	country_opposition_ig_approval_add = -3
+}
+
+nfm_tempo_reforms_deepened = {
+	icon = gfx/interface/icons/timed_modifier_icons/centralization_positive.dds
+	state_pop_qualifications_mult = -0.5
+	interest_group_ig_armed_forces_pol_str_mult = 0.33
+	country_legitimacy_headofstate_add = 10
+	state_tax_collection_mult = 0.25
+	country_legitimacy_ideological_incoherence_mult = 0.50
+	country_opposition_ig_approval_add = -5
+}
+
+nfm_tempo_reforms_legacy = {
+	icon = gfx/interface/icons/timed_modifier_icons/centralization_positive.dds
 	state_pop_qualifications_mult = -0.25
 	interest_group_ig_armed_forces_pol_str_mult = 0.25
-	country_legitimacy_base_add = 10
-	state_loyalists_from_sol_change_mult = 0.33
+	state_tax_collection_mult = 0.10
+}
+
+nfm_tempo_daimyo_protest = {
+	icon = gfx/interface/icons/timed_modifier_icons/landed_voting_negative.dds
+	interest_group_ig_landowners_approval_add = -10
+	country_legitimacy_ideological_incoherence_mult = 0.50
+}
+
+nfm_bakafu_power_vacuum = {
+	icon = gfx/interface/icons/timed_modifier_icons/armed_forces_negative.dds
+	country_legitimacy_base_add = -10
+	interest_group_ig_armed_forces_pol_str_mult = -0.33
+}
+
+rangaku = {
+	icon = gfx/interface/icons/timed_modifier_icons/clerks_positive.dds
+	country_tech_spread_mult = 0.30
+	interest_group_ig_intelligentsia_pop_attraction_mult = 0.50
+	country_legitimacy_base_add = -10
 }
 
 nfm_rangaku_restricted = {
 	icon = gfx/interface/icons/timed_modifier_icons/clerks_positive.dds
 	country_tech_spread_mult = 0.10
 	interest_group_ig_intelligentsia_pop_attraction_mult = 0.25
-	country_legitimacy_base_add = -5
 }
 
 nfm_rangaku_encouraged = {
@@ -399,6 +430,35 @@ nfm_rangaku_encouraged = {
 	interest_group_ig_intelligentsia_pop_attraction_mult = 0.50
 	interest_group_ig_intelligentsia_pol_str_mult = 0.25
 	country_legitimacy_base_add = -15
+}
+
+nfm_tenpo_famine_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/soil_negative.dds
+	state_mortality_mult = 0.1
+	country_legitimacy_base_add = -10
+}
+
+nfm_oshio_rebellion_moderate_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/peasants_positive.dds
+	state_tax_collection_mult = -0.25
+	interest_group_ig_rural_folk_approval_add = 10
+	country_legitimacy_base_add = -10
+}
+
+nfm_oshio_rebellion_crushed_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/peasants_negative.dds
+	country_legitimacy_headofstate_add = 10
+	interest_group_ig_rural_folk_pol_str_mult = -0.33
+}
+
+nfm_bakafu_allowed_criticism = {
+	icon = gfx/interface/icons/timed_modifier_icons/reactionary_neutral.dds
+	country_authority_mult = -0.25
+	country_legitimacy_ideological_incoherence_mult = -0.10
+}
+
+historical_character_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/bureaucracy_icon.dds
 }
 
 #Modifiers Autocrat
@@ -441,6 +501,7 @@ nfm_industrialists_autocrat_mod = {
 	icon = gfx/interface/icons/timed_modifier_icons/autocracy_neutral.dds
 	interest_group_ig_industrialists_pol_str_mult = 0.5
 }
+
 
 ###TAX STUFF
 tax_modifier_very_low = {

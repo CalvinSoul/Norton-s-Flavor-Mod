@@ -469,13 +469,13 @@ ideology_reformer = {
 	
 	character_ideology = yes
 	
-	lawgroup_citizenship = { #changed up a lil
-		law_ethnostate = disapprove
-		law_national_supremacy = neutral
-		law_racial_segregation = disapprove
-		law_cultural_exclusion = approve
-		law_multicultural = neutral	
-	}
+	#lawgroup_citizenship = { #changed up a lil
+	#	law_ethnostate = disapprove
+	#	law_national_supremacy = neutral
+	#	law_racial_segregation = disapprove
+	#	law_cultural_exclusion = approve
+	#	law_multicultural = neutral	
+	#}
 	
 	lawgroup_rights_of_women = {
 		law_no_womens_rights = neutral
@@ -490,12 +490,26 @@ ideology_reformer = {
 		law_compulsory_primary_school = approve
 	}
 
-	lawgroup_corporations = {
+	lawgroup_corporations = {#New NFM
 		law_unregulated_corporations = disapprove
 		law_state_corporations = strongly_disapprove			
 		law_monopoly_regulation = approve
 		law_cartel_regulation = strongly_approve
 		law_banned_private_business = disapprove
+	}
+
+	lawgroup_bureaucracy = {#New NFM
+		law_hereditary_bureaucrats = disapprove
+		law_appointed_bureaucrats = neutral
+		law_meritocratic_bureaucrats = strongly_approve
+		law_elected_bureaucrats = neutral
+	}
+
+	lawgroup_education_system = { #New NFM
+		law_private_schools = approve
+		law_public_schools = strongly_approve
+		law_religious_schools = neutral
+		law_no_schools = disapprove
 	}
 	
 	possible = {

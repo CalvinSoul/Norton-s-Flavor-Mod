@@ -238,7 +238,8 @@ NFM_usa_stephen_douglas_character_template = {
     on_created = {
         set_variable = {
          name = stephen_douglas_var
-    }                            
+     }   
+    }                         
 }
 
 ecchi_usa_jefferson_davis_character_template = {
@@ -434,7 +435,7 @@ ecchi_usa_fillmore_template = {
                 is_interest_group_type = ig_landowners
             }
         }   
-        earliest_usage_date = 1836.1.1
+        earliest_usage_date = 1836.1.2
         latest_usage_date = 1874.3.8
         chance = 75
     }   
@@ -460,7 +461,7 @@ ecchi_usa_pierce_character_template = {
             is_marginal = no
             is_interest_group_type = ig_rural_folk
         }   
-        earliest_usage_date = 1836.1.1
+        earliest_usage_date = 1836.1.2
         latest_usage_date = 1869.10.8
         chance = 75
     }   
@@ -486,7 +487,7 @@ ecchi_usa_buchanan_character_template = {
             is_marginal = no
             is_interest_group_type = ig_rural_folk
         }   
-        earliest_usage_date = 1836.1.1
+        earliest_usage_date = 1836.1.2
         latest_usage_date = 1868.6.1
         chance = 75
     }   

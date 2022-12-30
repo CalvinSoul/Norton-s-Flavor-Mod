@@ -79,5 +79,11 @@
 		add_modifier = {
 			name = rangaku
 		}
+
+		add_modifier = {
+			name = nfm_tenpo_famine_mod
+			months = 30
+			is_decaying = yes
+		}
 	}
 }

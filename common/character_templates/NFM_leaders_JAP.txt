@@ -1,0 +1,1016 @@
+﻿#Japan
+#Devout / Imperial Court
+
+nfm_nakayama_tadayasu_template = { #Nakayama Tadayasu
+    first_name = Tadayasu
+    last_name = Nakayama  
+    culture = cu:japanese              
+    female = no  
+    ideology =  ideology_theocrat
+    interest_group = ig_devout                 
+    birth_date = 1809.12.17
+    traits = {
+        reckless
+    }  
+    on_created = {
+        add_modifier = {
+            name = historical_character_mod
+        }   
+     }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:JAP
+            this = c:JAP
+        }
+        interest_group_trigger = {
+          #  is_marginal = no
+            OR = {
+                is_interest_group_type = ig_devout
+            }
+        }
+        earliest_usage_date = 1849.1.1
+        latest_usage_date = 1880.1.1
+        chance = 75
+    }    
+}
+
+nfm_iwakura_tomomi_template = { #Iwakura Tomomi
+    first_name = Tomomi
+    last_name = Iwakura
+    culture = cu:japanese              
+    female = no  
+    ideology =  ideology_reformer
+    interest_group = ig_devout
+    birth_date = 1825.10.26
+    traits = {
+        innovative
+        persistent
+        basic_diplomat
+    }   
+    on_created = {
+        add_modifier = {
+            name = historical_character_mod
+        }   
+     }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:JAP
+            this = c:JAP
+        }
+        interest_group_trigger = {
+          #  is_marginal = no
+            OR = {
+                is_interest_group_type = ig_devout
+            }
+        }
+        earliest_usage_date = 1850.1.1
+        latest_usage_date = 1880.1.1
+        chance = 75
+    }   
+}
+
+#Armed Forces / Bakafu
+
+nfm_matsudaira_naritami_template = { #Matsudaira Naritami, member of the Tokugawa
+    first_name = Naritami
+    last_name = Matsudaira
+    culture = cu:japanese              
+    female = no  
+    ideology =  ideology_moderate
+    interest_group = ig_armed_forces
+    birth_date = 1814.9.12
+    traits = {
+        experienced_political_operator
+        tactful
+        reserved
+    }   
+    on_created = {
+        add_modifier = {
+            name = historical_character_mod
+        }   
+     }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:JAP
+            this = c:JAP
+        }
+        interest_group_trigger = {
+          #  is_marginal = no
+            OR = {
+                is_interest_group_type = ig_armed_forces
+            }
+        }
+        earliest_usage_date = 1837.1.1
+        latest_usage_date = 1870.1.1
+        chance = 25 #Never rose to central prominance
+    }   
+}
+
+
+nfm_matusdaira_yoshinaga_template = { #Matsudaira Yoshinaga
+    first_name = Yoshinaga
+    last_name = Matsudaira
+    culture = cu:japanese              
+    female = no  
+    ideology =  ideology_reformer
+    interest_group = ig_armed_forces
+    birth_date = 1828.10.10
+    traits = {
+        innovative
+        meticulous
+    }   
+    on_created = {
+        add_modifier = {
+            name = historical_character_mod
+        }   
+     }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:JAP
+            this = c:JAP
+        }
+        interest_group_trigger = {
+          #  is_marginal = no
+            OR = {
+                is_interest_group_type = ig_armed_forces
+            }
+        }
+        earliest_usage_date = 1845.1.1
+        latest_usage_date = 1880.1.1
+        chance = 50
+    }   
+}
+
+
+nfm_abe_masahiro_template = { #Abe Masahiro
+    first_name = Masahiro
+    last_name = Abe
+    culture = cu:japanese              
+    female = no  
+    ideology =  ideology_moderate
+    interest_group = ig_armed_forces
+    birth_date = 1819.12.3
+    traits = {
+        cautious
+        tactful
+    }   
+    on_created = {
+        add_modifier = {
+            name = historical_character_mod
+        }   
+     }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:JAP
+            this = c:JAP
+        }
+        interest_group_trigger = {
+          #  is_marginal = no
+            OR = {
+                is_interest_group_type = ig_armed_forces
+            }
+        }
+        earliest_usage_date = 1840.1.1
+        latest_usage_date = 1850.1.1
+        chance = 100
+    }   
+}
+
+
+nfm_hotta_masayoshi_template = { #Hotta Masayoshi
+    first_name = Masayoshi
+    last_name = Hotta
+    culture = cu:japanese              
+    female = no  
+    ideology =  ideology_market_liberal
+    interest_group = ig_armed_forces
+    birth_date = 1810.9.30
+    traits = {
+        basic_diplomat
+        reserved
+        cautious
+    }   
+    on_created = {
+        add_modifier = {
+            name = historical_character_mod
+        }   
+     }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:JAP
+            this = c:JAP
+        }
+        interest_group_trigger = {
+          #  is_marginal = no
+            OR = {
+                is_interest_group_type = ig_armed_forces
+            }
+        }
+        earliest_usage_date = 1841.1.1
+        latest_usage_date = 1860.1.1
+        chance = 75
+    }   
+}
+
+
+nfm_naito_nobuchikai_template = { #Naito Nobuchika, Kobu Gattai Supporter
+    first_name = Nobuchika
+    last_name = Naitō
+    culture = cu:japanese              
+    female = no  
+    ideology =  ideology_theocrat
+    interest_group = ig_armed_forces
+    birth_date = 1813.1.24
+    traits = {
+        ambitious
+        persistent
+        basic_political_operator
+    }   
+    on_created = {
+        add_modifier = {
+            name = historical_character_mod
+        }   
+     }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:JAP
+            this = c:JAP
+        }
+        interest_group_trigger = {
+          #  is_marginal = no
+            OR = {
+                is_interest_group_type = ig_armed_forces
+            }
+        }
+        earliest_usage_date = 1851.1.1
+        latest_usage_date = 1870.1.1
+        chance = 75
+    }   
+}
+
+nfm_katamori_matsudaira_template = { #Matsudaira Katamori - founded Shinsengumi
+    first_name = Matsudaira
+    last_name = Katamori
+    culture = cu:japanese              
+    female = no  
+    ideology =  ideology_royalist
+    interest_group = ig_armed_forces
+    birth_date = 1836.2.15
+    traits = {
+       direct
+       brave
+    }   
+    on_created = {
+        add_modifier = {
+            name = historical_character_mod
+        }   
+     }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:JAP
+            this = c:JAP
+        }
+        interest_group_trigger = {
+          #  is_marginal = no
+            OR = {
+                is_interest_group_type = ig_armed_forces
+            }
+        }
+        earliest_usage_date = 1852.1.1
+        latest_usage_date = 1880.1.1
+        chance = 50
+    }   
+}
+
+#Landowners / Fudai Daimyo
+nfm_li_naosuke_template = { #Li Naosuke
+    first_name = Naosuke
+    last_name = Ii
+    culture = cu:japanese              
+    female = no  
+    ideology =  ideology_traditionalist
+    interest_group = ig_landowners
+    birth_date = 1815.11.29
+    traits = {
+        ambitious
+        expert_political_operator
+        wrathful
+    }   
+    on_created = {
+        add_modifier = {
+            name = historical_character_mod
+        }   
+     }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:JAP
+            this = c:JAP
+        }
+        interest_group_trigger = {
+          #  is_marginal = no
+            OR = {
+                is_interest_group_type = ig_landowners
+            }
+        }
+        earliest_usage_date = 1850.1.1
+        latest_usage_date = 1870.1.1
+        chance = 75
+    }   
+}
+
+nfm_uesugi_narinori_template = { #Uesugi Narinori
+    first_name = Narinori
+    last_name = Uesugi
+    culture = cu:japanese              
+    female = no  
+    ideology =  ideology_jingoist
+    interest_group = ig_landowners
+    birth_date = 1820.6.20
+    traits = {
+        innovative
+        brave
+    }   
+    on_created = {
+        add_modifier = {
+            name = historical_character_mod
+        }   
+     }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:JAP
+            this = c:JAP
+        }
+        interest_group_trigger = {
+          #  is_marginal = no
+            OR = {
+                is_interest_group_type = ig_landowners
+            }
+        }
+        earliest_usage_date = 1839.1.1
+        latest_usage_date = 1880.1.1
+        chance = 50
+    }   
+}
+
+nfm_nagatomi_niwa_template = { #Niwa Nagatomi
+    first_name = Nagatomi
+    last_name = Niwa
+    culture = cu:japanese              
+    female = no  
+    ideology =  ideology_moderate
+    interest_group = ig_landowners
+    birth_date = 1803.10.12
+    traits = {
+        innovative
+        romantic
+    }   
+    on_created = {
+        add_modifier = {
+            name = historical_character_mod
+        }   
+     }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:JAP
+            this = c:JAP
+        }
+        interest_group_trigger = {
+          #  is_marginal = no
+            OR = {
+                is_interest_group_type = ig_landowners
+            }
+        }
+        earliest_usage_date = 1836.1.2
+        latest_usage_date = 1860.1.1
+        chance = 50
+    }   
+}
+
+nfm_date_yoshikuni_template = { #Date Yoshikuni
+    first_name = Yoshikuni
+    last_name = Date
+    culture = cu:japanese              
+    female = no  
+    ideology =  ideology_moderate
+    interest_group = ig_landowners
+    birth_date = 1825.10.17
+    traits = {
+        reserved
+        cautious
+    }   
+    on_created = {
+        add_modifier = {
+            name = historical_character_mod
+        }   
+     }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:JAP
+            this = c:JAP
+        }
+        interest_group_trigger = {
+          #  is_marginal = no
+            OR = {
+                is_interest_group_type = ig_landowners
+            }
+        }
+        earliest_usage_date = 1841.1.1
+        latest_usage_date = 1870.1.1
+        chance = 25
+    }   
+}
+
+nfm_sakai_tadashige_template = { #Sakai Tadashige
+    first_name = Tadashige
+    last_name = Sakai
+    culture = cu:japanese              
+    female = no  
+    ideology =  ideology_royalist
+    interest_group = ig_landowners
+    birth_date = 1827.7.12
+    traits = {
+        reserved
+        cautious
+    }   
+    on_created = {
+        add_modifier = {
+            name = historical_character_mod
+        }   
+     }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:JAP
+            this = c:JAP
+        }
+        interest_group_trigger = {
+          #  is_marginal = no
+            OR = {
+                is_interest_group_type = ig_landowners
+            }
+        }
+        earliest_usage_date = 1855.1.1
+        latest_usage_date = 1870.1.1
+        chance = 75
+    }   
+}
+
+#Industrialists / Tozama Daimyo
+nfm_date_muneari_template = { #Date Muneari
+    first_name = Muneari
+    last_name = Date
+    culture = cu:japanese              
+    female = no  
+    ideology =  ideology_moderate
+    interest_group = ig_industrialists
+    birth_date = 1818.9.1
+    traits = {
+        meticulous
+    }   
+    on_created = {
+        add_modifier = {
+            name = historical_character_mod
+        }   
+     }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:JAP
+            this = c:JAP
+        }
+        interest_group_trigger = {
+          #  is_marginal = no
+            OR = {
+                is_interest_group_type = ig_industrialists
+            }
+        }
+        earliest_usage_date = 1844.1.1
+        latest_usage_date = 1860.1.1
+        chance = 25
+    }   
+}
+
+nfm_yamamuchi_toyoshige_template = { ##Yamauchi Toyoshige
+    first_name = Yodo
+    last_name = Yamauchi
+    culture = cu:japanese              
+    female = no  
+    ideology =  ideology_moderate
+    interest_group = ig_industrialists
+    birth_date = 1827.1.1 #Unknwon
+    traits = {
+        tactful
+    }   
+    on_created = {
+        add_modifier = {
+            name = historical_character_mod
+        }   
+     }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:JAP
+            this = c:JAP
+        }
+        interest_group_trigger = {
+          #  is_marginal = no
+            OR = {
+                is_interest_group_type = ig_industrialists
+            }
+        }
+        earliest_usage_date = 1848.1.1
+        latest_usage_date = 1870.1.1
+        chance = 50
+    }   
+}
+
+nfm_shimazu_nariakira_template = { #Shimazu Nariakira
+    first_name = Nariakira
+    last_name = Shimazu
+    culture = cu:japanese              
+    female = no  
+    ideology =  ideology_reformer
+    interest_group = ig_industrialists
+    birth_date = 1827.7.12
+    traits = {
+        innovative
+        charismatic
+        pious
+        experienced_political_operator
+    }   
+    on_created = {
+        add_modifier = {
+            name = historical_character_mod
+        }   
+     }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:JAP
+            this = c:JAP
+        }
+        interest_group_trigger = {
+          #  is_marginal = no
+            OR = {
+                is_interest_group_type = ig_industrialists
+            }
+        }
+        earliest_usage_date = 1846.1.1 #Not when he became Daimyo, but he got influence thenish
+        latest_usage_date = 1870.1.1
+        chance = 90
+    }   
+}
+
+nfm_okubu_toshimichi_template = { #Okubu Toshimichi
+    first_name = Toshimichi
+    last_name = Okubo
+    culture = cu:japanese              
+    female = no  
+    ideology =  ideology_ethno_nationalist
+    interest_group = ig_industrialists
+    birth_date = 1830.8.26
+    traits = {
+        expert_political_operator
+        ambitious
+        arrogant
+        imperious
+    }   
+    on_created = {
+        add_modifier = {
+            name = historical_character_mod
+        }   
+     }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:JAP
+            this = c:JAP
+        }
+        interest_group_trigger = {
+          #  is_marginal = no
+            OR = {
+                is_interest_group_type = ig_industrialists
+            }
+        }
+        earliest_usage_date = 1858.1.1
+        latest_usage_date = 1880.1.1
+        chance = 100
+    }   
+}
+
+nfm_shimazu_hisamtisu_template = { #Shimazu Hisamitsu
+    first_name = Hisamitsu
+    last_name = Shimazu
+    culture = cu:japanese              
+    female = no  
+    ideology =  ideology_reformer
+    interest_group = ig_industrialists
+    birth_date = 1817.11.28
+    traits = {
+        pious
+        brave
+        basic_diplomat
+    }   
+    on_created = {
+        add_modifier = {
+            name = historical_character_mod
+        }   
+     }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:JAP
+            this = c:JAP
+        }
+        interest_group_trigger = {
+          #  is_marginal = no
+            OR = {
+                is_interest_group_type = ig_industrialists
+            }
+        }
+        earliest_usage_date = 1861.1.1
+        latest_usage_date = 1870.1.1
+        chance = 50
+    }   
+}
+
+##Rural Folk
+
+nfm_takeda_kounsai_template = { #Takeda Kounsai
+    first_name = Kounsai
+    last_name = Takeda
+    culture = cu:japanese              
+    female = no  
+    ideology =  ideology_traditionalist
+    interest_group = ig_rural_folk
+    birth_date = 1803.1.1 #Unknown
+    traits = {
+       reckless
+       brave
+    }   
+    on_created = {
+        add_modifier = {
+            name = historical_character_mod
+        }   
+     }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:JAP
+            this = c:JAP
+        }
+        interest_group_trigger = {
+          #  is_marginal = no
+            OR = {
+                is_interest_group_type = ig_rural_folk
+            }
+        }
+        earliest_usage_date = 1840.1.1
+        latest_usage_date = 1865.1.1
+        chance = 50
+    }   
+}
+
+nfm_saigo_takamori_template = { #Saigo Takamori
+    first_name = Takamori
+    last_name = Saigo
+    culture = cu:japanese              
+    female = no  
+    ideology =  ideology_traditionalist
+    interest_group = ig_rural_folk
+    birth_date = 1828.1.23
+    traits = {
+        brave
+        charismatic
+        reckless
+        popular_commander
+        expert_defensive_strategist
+    }   
+    on_created = {
+        add_modifier = {
+            name = historical_character_mod
+        }   
+     }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:JAP
+            this = c:JAP
+        }
+        interest_group_trigger = {
+          #  is_marginal = no
+            OR = {
+                is_interest_group_type = ig_rural_folk
+            }
+        }
+        earliest_usage_date = 1854.1.1
+        latest_usage_date = 1875.1.1
+        chance = 100
+    }   
+}
+
+nfm_takechi_hanpeita_template = { #Takechi Hanpeita
+    first_name = Hanpeita
+    last_name = Takechi
+    culture = cu:japanese              
+    female = no  
+    ideology =  ideology_theocrat
+    interest_group = ig_rural_folk
+    birth_date = 1829.10.24
+    traits = {
+        brave
+        reckless
+    }   
+    on_created = {
+        add_modifier = {
+            name = historical_character_mod
+        }   
+     }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:JAP
+            this = c:JAP
+        }
+        interest_group_trigger = {
+          #  is_marginal = no
+            OR = {
+                is_interest_group_type = ig_rural_folk
+            }
+        }
+        earliest_usage_date = 1860.1.1
+        latest_usage_date = 1870.1.1
+        chance = 50
+    }   
+}
+
+nfm_takasugi_shinsaku_template = { #Takasugi Shinsaku
+    first_name = Shinsaku
+    last_name = Takasugi
+    culture = cu:japanese              
+    female = no  
+    ideology =  ideology_ethno_nationalist
+    interest_group = ig_rural_folk
+    birth_date = 1839.9.27
+    traits = {
+        brave
+        meticulous
+    }   
+    on_created = {
+        add_modifier = {
+            name = historical_character_mod
+        }   
+     }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:JAP
+            this = c:JAP
+        }
+        interest_group_trigger = {
+          #  is_marginal = no
+            OR = {
+                is_interest_group_type = ig_rural_folk
+            }
+        }
+        earliest_usage_date = 1858.1.1
+        latest_usage_date = 1870.1.1
+        chance = 50
+    }   
+}
+
+nfm_shusaku_chiba_template = { #Shūsaku Narimasa Chiba
+    first_name = Shusaku
+    last_name = Chiba
+    culture = cu:japanese              
+    female = no  
+    ideology =  ideology_moderate
+    interest_group = ig_rural_folk
+    birth_date = 1792.1.1 #unnknown
+    traits = {
+       brave
+       pious
+    }   
+    on_created = {
+        add_modifier = {
+            name = historical_character_mod
+        }   
+     }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:JAP
+            this = c:JAP
+        }
+        interest_group_trigger = {
+          #  is_marginal = no
+            OR = {
+                is_interest_group_type = ig_rural_folk
+            }
+        }
+        earliest_usage_date = 1836.1.2
+        latest_usage_date = 1850.1.1
+        chance = 90
+    }   
+}
+
+
+#Middle Class
+nfm_kido_takayoshi_template = { #Kido Takayoshi
+    first_name = Takayoshi
+    last_name = Kido
+    culture = cu:japanese              
+    female = no  
+    ideology =  ideology_reformer
+    interest_group = ig_petty_bourgeoisie
+    birth_date = 1833.8.11
+    traits = {
+        meticulous
+        tactful
+        experienced_diplomat
+    }   
+    on_created = {
+        add_modifier = {
+            name = historical_character_mod
+        }   
+     }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:JAP
+            this = c:JAP
+        }
+        interest_group_trigger = {
+          #  is_marginal = no
+            OR = {
+                is_interest_group_type = ig_petty_bourgeoisie
+            }
+        }
+        earliest_usage_date = 1852.1.1
+        latest_usage_date = 1875.1.1
+        chance = 100
+    }   
+}
+
+#Intellectuals
+
+nfm_sakuma_shozan_template = { #Sakuma Shozan
+    first_name = Shozan
+    last_name = Sakuma
+    culture = cu:japanese              
+    female = no  
+    ideology =  ideology_moderate
+    interest_group = ig_intelligentsia
+    birth_date = 1811.4.22
+    traits = {
+        reckless
+        romantic
+    }   
+    on_created = {
+        add_modifier = {
+            name = historical_character_mod
+        }   
+     }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:JAP
+            this = c:JAP
+        }
+        interest_group_trigger = {
+          #  is_marginal = no
+            OR = {
+                is_interest_group_type = ig_intelligentsia
+            }
+        }
+        earliest_usage_date = 1844.1.1
+        latest_usage_date = 1865.1.1
+        chance = 50
+    }   
+}
+
+nfm_tanaka_higashige_template = { #Tanka Hisashige
+    first_name = Hisashige
+    last_name = Tanaka
+    culture = cu:japanese              
+    female = no  
+    ideology =  ideology_moderate
+    interest_group = ig_intelligentsia
+    birth_date = 1799.10.16
+    traits = {
+        meticulous
+        innovative
+    }   
+    on_created = {
+        add_modifier = {
+            name = historical_character_mod
+        }   
+     }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:JAP
+            this = c:JAP
+        }
+        interest_group_trigger = {
+          #  is_marginal = no
+            OR = {
+                is_interest_group_type = ig_intelligentsia
+            }
+        }
+        earliest_usage_date = 1836.1.2
+        latest_usage_date = 1875.1.1
+        chance = 50
+    }   
+}
+
+nfm_takashima_suhan_template = { #Takashima Shuhan
+    first_name = Shuhan
+    last_name = Takashima
+    culture = cu:japanese              
+    female = no  
+    ideology =  ideology_jingoist
+    interest_group = ig_intelligentsia
+    birth_date = 1798.9.24
+    traits = {
+        innovative
+        persistent
+    }   
+    on_created = {
+        add_modifier = {
+            name = historical_character_mod
+        }   
+     }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:JAP
+            this = c:JAP
+        }
+        interest_group_trigger = {
+          #  is_marginal = no
+            OR = {
+                is_interest_group_type = ig_intelligentsia
+            }
+        }
+        earliest_usage_date = 1836.1.2
+        latest_usage_date = 1860.1.1
+        chance = 50
+    }   
+}
+
+
+nfm_yoshida_shoin_template = { #Yoshida Shoin
+    first_name = Shoin
+    last_name = Yoshida
+    culture = cu:japanese              
+    female = no  
+    ideology =  ideology_ethno_nationalist
+    interest_group = ig_intelligentsia
+    birth_date = 1830.9.20
+    traits = {
+        charismatic
+        brave
+    }   
+    on_created = {
+        add_modifier = {
+            name = historical_character_mod
+        }   
+     }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:JAP
+            this = c:JAP
+        }
+        interest_group_trigger = {
+          #  is_marginal = no
+            OR = {
+                is_interest_group_type = ig_intelligentsia
+            }
+        }
+        earliest_usage_date = 1852.1.1
+        latest_usage_date = 1859.1.1
+        chance = 75
+    }   
+}
+
+nfm_sakamoto_ryoma_template = { #Sakamoto Ryoma
+    first_name = Ryoma
+    last_name = Sakamoto
+    culture = cu:japanese              
+    female = no  
+    ideology =  ideology_radical
+    interest_group = ig_intelligentsia
+    birth_date = 1836.1.3
+    traits = {
+        charismatic 
+        brave   
+        firebrand
+    }   
+    on_created = {
+        add_modifier = {
+            name = historical_character_mod
+        }   
+     }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:JAP
+            this = c:JAP
+        }
+        interest_group_trigger = {
+          #  is_marginal = no
+            OR = {
+                is_interest_group_type = ig_intelligentsia
+            }
+        }
+        earliest_usage_date = 1855.1.1
+        latest_usage_date = 1870.1.1
+        chance = 100
+    }   
+}
+

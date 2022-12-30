@@ -554,7 +554,366 @@ nfm_japan.8 = { #Foreign Response
 	}
 }
 
-nfm_japan.10 = { #kil character for testing
+
+nfm_japan.9 = { #Oshio Rebellion
+	type = country_event
+	placement = root
+	title = nfm_japan.9.t
+	desc = nfm_japan.9.d
+	flavor = nfm_japan.9.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_fire.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/political_extremism"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	trigger = {
+		exists = c:JAP
+		THIS = c:JAP
+		year >= 1836
+		NOT = { has_variable = oshio_rebel_var}
+	}
+
+	immediate = {
+		set_variable = oshio_rebel_var
+		random_interest_group = {
+			limit = {is_interest_group_type = ig_rural_folk}
+        	leader = {
+        		save_scope_as = oshio_rebel_scope
+        	}
+        }
+	}
+
+	option = { 
+		name = nfm_japan.9.a
+
+		add_modifier = {
+			name = nfm_oshio_rebellion_moderate_mod
+			months = 70
+			is_decaying = yes
+		}
+
+		s:STATE_KANSAI = {
+			add_devastation = 10
+		}
+		
+
+		scope:oshio_rebel_scope = {
+			kill_character = yes
+		}
+	}
+
+	option = { 
+		default = yes
+		name = nfm_japan.9.b
+
+		add_modifier = {
+			name = nfm_oshio_rebellion_crushed_mod
+			months = 70
+			is_decaying = yes
+		}
+
+		s:STATE_KANSAI = {
+			add_devastation = 30
+		}
+
+		scope:oshio_rebel_scope = {
+			kill_character = yes
+		}
+	}
+}
+
+
+nfm_japan.10 = { #Morrison Incident
+	type = country_event
+	placement = root
+	title = nfm_japan.10.t
+	desc = nfm_japan.10.d
+	flavor = nfm_japan.10.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_whaling.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/political_extremism"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	trigger = {
+		exists = c:JAP
+		THIS = c:JAP
+		NOT = { has_variable = morrison_incident_var}
+	}
+
+	immediate = {
+		set_variable = morrison_incident_var
+		random_interest_group = {
+			limit = {is_interest_group_type = ig_intelligentsia }
+        	leader = {
+        		save_scope_as = rangaku_scholar_scope
+        	}
+        }
+	}
+
+	option = { 
+		name = nfm_japan.10.a
+
+		add_modifier = {
+			name = nfm_bakafu_allowed_criticism
+			months = 65
+			is_decaying = yes
+		}
+	}
+
+	option = { 
+		default = yes
+		name = nfm_japan.10.b
+
+		remove_modifier = rangaku
+		add_modifier = nfm_rangaku_restricted
+
+		scope:rangaku_scholar_scope = {
+			kill_character = yes
+		}
+	}
+}
+
+
+nfm_japan.11 = { #Tempo Reforms
+	type = country_event
+	placement = root
+	title = nfm_japan.11.t
+	desc = nfm_japan.11.d
+	flavor = nfm_japan.11.f
+
+	duration = 3
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/before_the_battle"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+  	
+  	gui_window = event_window_1char_tabloid
+    left_icon = scope:tenpo_reformer_scope
+
+	trigger = {
+		exists = c:JAP
+		THIS = c:JAP
+		NOT = { has_variable = tenpo_reforms_event_var}
+		year <= 1845
+
+		any_scope_character = {
+			has_role = politician
+			has_ideology = ideology_traditionalist
+			interest_group = {
+				is_interest_group_type = ig_armed_forces
+			}
+		}
+	}
+
+	immediate = {
+		set_variable = tenpo_reforms_event_var
+		set_variable = {
+			name = tenpo_reforms_timedown_var
+			months = 36
+		}
+		random_interest_group = {
+			limit = {is_interest_group_type = ig_armed_forces }
+        	leader = {
+        		save_scope_as = tenpo_reformer_scope
+        		set_variable = tenpo_reformer_var
+        	}
+        }
+	}
+
+	option = { #Initiate the Tempo Reforms
+		name = nfm_japan.11.a
+
+		set_variable = tenpo_reforms_begun_var
+
+		add_modifier = {
+			name = nfm_tempo_reforms
+		}
+	}
+
+	option = { #Oust 
+		default = yes
+		name = nfm_japan.11.b
+
+		scope:tenpo_reformer_scope = {
+			kill_character = yes
+		}
+
+		add_modifier = {
+			name = nfm_bakafu_power_vacuum
+			months = 30
+			is_decaying = yes
+		}
+	}
+}
+
+nfm_japan.12 = { #Tempo Reform Resistance
+	type = country_event
+	placement = root
+	title = nfm_japan.12.t
+	desc = nfm_japan.12.d
+	flavor = nfm_japan.12.f
+
+	duration = 3
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/before_the_battle"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+  	
+  	gui_window = event_window_1char_tabloid
+    left_icon = scope:tenpo_reformer_scope
+
+	trigger = {
+		exists = c:JAP
+		THIS = c:JAP
+		NOT = { has_variable = tenpo_reforms_resistance_var }
+		has_variable = tenpo_reforms_begun_var
+
+		any_scope_character = {
+			has_variable = tenpo_reformer_var
+		}
+	}
+
+	immediate = {
+		set_variable = tenpo_reforms_resistance_var
+		set_variable = {
+			name = tenpo_reforms_timedown_var
+			months = 36
+		}
+		random_interest_group = {
+			limit = {is_interest_group_type = ig_armed_forces }
+        	leader = {
+        		save_scope_as = tenpo_reformer_scope
+        	}
+        }
+	}
+
+	option = { #End the Tenpo Reforms
+		name = nfm_japan.12.a
+
+		scope:tenpo_reformer_scope = {
+			kill_character = yes
+		}
+		add_modifier = {
+			name = nfm_bakafu_power_vacuum
+			months = 30
+			is_decaying = yes
+		}
+		remove_modifier = nfm_tempo_reforms
+	}
+
+	option = { #Depen the Tenpo Reforms
+		default = yes
+		name = nfm_japan.12.b
+
+		add_modifier = {
+			name = nfm_tempo_daimyo_protest
+			months = 65
+			is_decaying = yes
+		}
+
+		remove_modifier = nfm_tempo_reforms
+		add_modifier = nfm_tempo_reforms_deepened
+	}
+}
+
+
+nfm_japan.13 = { #Death of Tenpo Reformer
+	type = country_event
+	placement = root
+	title = nfm_japan.13.t
+	desc = nfm_japan.13.d
+	flavor = nfm_japan.13.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/asia_confucianism_shinto.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/before_the_battle"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	trigger = {
+		exists = c:JAP
+		THIS = c:JAP
+		has_modifier = nfm_tempo_reforms
+
+		NOT = {
+			any_scope_character = {
+				has_variable = tenpo_reformer_var
+			}
+		}
+	}
+
+	immediate = {
+		remove_modifier = nfm_tempo_reforms
+	}
+
+	option = { #End the Tenpo Reforms
+		name = nfm_japan.13.a
+
+	}
+}
+nfm_japan.14 = { #Death of Successful Tenpo Reformer
+	type = country_event
+	placement = root
+	title = nfm_japan.13.t
+	desc = nfm_japan.13.d
+	flavor = nfm_japan.13.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/asia_confucianism_shinto.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/before_the_battle"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	trigger = {
+		exists = c:JAP
+		THIS = c:JAP
+		has_modifier = nfm_tempo_reforms_deepened
+
+		NOT = {
+			any_scope_character = {
+				has_variable = tenpo_reformer_var
+			}
+		}
+	}
+
+	immediate = {
+		remove_modifier = nfm_tempo_reforms_deepened
+		add_modifier = nfm_tempo_reforms_legacy
+	}
+
+	option = { #End the Tenpo Reforms
+		name = nfm_japan.13.a
+
+	}
+}
+
+nfm_japan.20 = { #kil character for testing
 	type = country_event
 	placement = root
 	title = meiji.1.t
