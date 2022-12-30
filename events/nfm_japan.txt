@@ -724,7 +724,7 @@ nfm_japan.11 = { #Tempo Reforms
 		set_variable = tenpo_reforms_event_var
 		set_variable = {
 			name = tenpo_reforms_timedown_var
-			months = 36
+			months = 20
 		}
 		random_interest_group = {
 			limit = {is_interest_group_type = ig_armed_forces }
@@ -787,14 +787,11 @@ nfm_japan.12 = { #Tempo Reform Resistance
 		any_scope_character = {
 			has_variable = tenpo_reformer_var
 		}
+		NOT = {has_variable = tenpo_reforms_timedown_var}
 	}
 
 	immediate = {
 		set_variable = tenpo_reforms_resistance_var
-		set_variable = {
-			name = tenpo_reforms_timedown_var
-			months = 36
-		}
 		random_interest_group = {
 			limit = {is_interest_group_type = ig_armed_forces }
         	leader = {
