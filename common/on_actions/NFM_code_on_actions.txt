@@ -41,11 +41,15 @@ on_monthly_pulse_country = {
 		nfm_japan.1
 		nfm_japan.2
 		nfm_japan.3
+		nfm_japan.13
+		nfm_japan.14
 	}
 	random_events = { #Japan Starting
-		80 = 0
+		60 = 0
 		10 = nfm_japan.9
 		10 = nfm_japan.10
+		10 = nfm_japan.11
+		10 = nfm_japan.12
 	}
 }
 
