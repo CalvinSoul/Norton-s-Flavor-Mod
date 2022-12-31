@@ -693,8 +693,8 @@ ai_strategy_default = {
 			if = {
 				limit = {
 					exists = c:JAP
-					c:JAP = { has_law = law_type:law_isolationism }
-					NOT = { country_rank = rank_value:great_power }
+					#c:JAP = { has_law = law_type:law_isolationism }
+				#	NOT = { country_rank = rank_value:great_power }
 					OR = {
 						ROOT = c:GBR
 						ROOT = c:USA
@@ -704,7 +704,7 @@ ai_strategy_default = {
 						ROOT = c:RUS
 					}
 				}
-				add = 100
+				add = 250
 			}				
 		}				
 		region_nile_basin = {

@@ -1,0 +1,345 @@
+﻿nfm_revoke_daimyo_regionalism = {
+	is_shown = {
+		any_state = {
+				owner = ROOT
+				OR = {
+					has_modifier = satsuma_domain
+					has_modifier = chosu_domain
+					has_modifier = tosa_domain
+					has_modifier = tokugawa_domain
+					has_modifier = uesugi_domain
+				}
+			}
+	}
+
+	possible = {
+		OR = {
+			NOT = {has_law = law_type:law_regionalism}
+			NOT = {ROOT = c:JAP}
+		}
+	}
+
+	when_taken = {
+		#custom_tooltip = expand_east_indies_tt
+			every_scope_state = {
+				if = {
+					limit = { 
+						has_modifier = satsuma_domain
+					}
+					remove_modifier = satsuma_domain
+				}
+				if = {
+					limit = { 
+						has_modifier = chosu_domain
+					}
+					remove_modifier = chosu_domain
+				}
+				if = {
+					limit = { 
+						has_modifier = tosa_domain
+					}
+					remove_modifier = tosa_domain
+				}
+				if = {
+					limit = { 
+						has_modifier = tokugawa_domain
+					}
+					remove_modifier = tokugawa_domain
+				}
+				if = {
+					limit = { 
+						has_modifier = uesugi_domain
+					}
+					remove_modifier = uesugi_domain
+				}
+			}
+		}
+	ai_chance = {
+		base = 100
+	}
+}
+nfm_meiji_restoration = {
+	is_shown = {
+		ROOT = c:JAP
+	}
+
+	possible = {
+		government_legitimacy >= 75
+    	has_technology_researched = nationalism
+
+    	ig:ig_industrialists = {
+   			is_in_government = yes
+   			is_powerful = yes
+    	} 
+    	ig:ig_devout = {
+    		is_in_government = yes
+    	}
+    	OR = {
+    		ig:ig_devout = {
+    			is_powerful = yes
+    		}
+    		ig:ig_industrialists = {
+   				ig_clout >= 0.40
+    		} 
+    	}
+		ig:ig_landowners = {
+   			is_powerful = no
+    	} 
+    	ig:ig_armed_forces = {
+   			is_powerful = no
+    	}
+ 
+	}
+
+	when_taken = {
+		trigger_event = meiji.1
+		activate_law = law_type:law_unitary
+		activate_law = law_type:law_theocracy
+		activate_law = law_type:law_wealth_voting
+		activate_law = law_type:law_interventionism
+
+		hidden_effect = {
+			remove_modifier = nfm_tempo_reforms_legacy 
+			remove_modifier = rangaku
+			remove_modifier = nfm_rangaku_restricted
+			remove_modifier = nfm_rangaku_encouraged
+		}
+	}
+
+	ai_chance = {
+		base = 100
+	}
+}
+
+nfm_kobu_gattai = {
+	is_shown = {
+		ROOT = c:JAP
+	}
+
+	possible = {
+		government_legitimacy >= 75
+    	has_technology_researched = nationalism
+
+    	ig:ig_armed_forces = {
+   			is_powerful = yes
+   			is_in_government = yes
+    	} 
+    	OR = {
+    		ig:ig_armed_forces = {
+	   			ig_clout >= 0.4
+    		} 
+    		ig:ig_devout = {
+   				is_powerful = yes
+    		} 
+    	}
+    	ig:ig_devout = {
+   			is_in_government = yes
+   			ig_approval >= 10
+    	} 
+    	OR = {
+    		ig:ig_landowners = {
+   				is_powerful = yes
+   				ig_approval >= 10
+    		} 
+    		ig:ig_landowners = {
+   				is_powerful = no
+   				ig_approval >= 5
+    		}
+    		ig:ig_landowners = {
+   				ig_clout <= 0.1
+    		}
+    	}
+    	OR = {
+    		ig:ig_industrialists = {
+   				is_powerful = yes
+   				ig_approval >= 10
+    		} 
+    		ig:ig_industrialists = {
+   				is_powerful = no
+   				ig_approval >= 5
+    		}
+    		ig:ig_industrialists = {
+   				ig_clout <= 0.1
+    		}
+    	}
+	}
+
+	when_taken = {
+		activate_law = law_type:law_cooperative_federalism
+		activate_law = law_type:law_theocracy
+		activate_law = law_type:law_landed_voting
+		activate_law = law_type:law_interventionism
+
+		hidden_effect = {
+			remove_modifier = nfm_tempo_reforms_legacy 
+			remove_modifier = rangaku
+			remove_modifier = nfm_rangaku_restricted
+			remove_modifier = nfm_rangaku_encouraged
+		}
+	}
+		
+	ai_chance = {
+		base = 100
+	}
+}
+
+nfm_samurai_republic = {
+	is_shown = {
+		ROOT = c:JAP
+	}
+
+	possible = {
+		government_legitimacy >= 75
+    	has_technology_researched = nationalism
+
+    	ig:ig_landowners = {
+   			is_powerful = yes
+   			is_in_government = yes
+    	} 
+    	OR = {
+    		ig:ig_landowners = {
+   				ig_clout>= 0.4
+    		} 
+    		ig:ig_rural_folk = {
+   				is_powerful = yes
+   				is_in_government = yes
+    		} 
+    	}
+    	ig:ig_devout = {
+	   		is_powerful = no
+    	} 
+    	ig:ig_armed_forces = {
+	   		is_powerful = no
+    	} 
+    	OR = {
+    		ig:ig_industrialists = {
+   				is_in_government = yes
+   				ig_approval >= 5
+    		} 
+    		ig:ig_industrialists = {
+   				ig_clout <= 0.1
+    		}
+    	}
+	}
+
+	when_taken = {
+		activate_law = law_type:law_dual_federalism
+		activate_law = law_type:law_presidential_republic
+		activate_law = law_type:law_landed_voting
+		activate_law = law_type:law_agrarianism
+
+		hidden_effect = {
+			remove_modifier = nfm_tempo_reforms_legacy 
+			remove_modifier = rangaku
+			remove_modifier = nfm_rangaku_restricted
+			remove_modifier = nfm_rangaku_encouraged
+		}
+	}
+		
+	ai_chance = {
+		base = 100
+	}
+}
+
+nfm_new_bakuhan = {
+	is_shown = {
+		ROOT = c:JAP
+	}
+
+	possible = {
+		government_legitimacy >= 75
+    	has_technology_researched = nationalism
+
+    	ig:ig_armed_forces = {
+    		is_in_government = yes
+   			ig_clout >= 0.5
+    	} 
+    	OR = {
+    		ig:ig_landowners = {
+   				is_in_government = yes
+   				ig_approval >= 5
+    		} 
+    		ig:ig_landowners = {
+   				ig_clout <= 0.1
+    		}
+    	}
+    	OR = {
+    		ig:ig_devout = {
+   				is_in_government = yes
+   				ig_approval >= 5
+    		} 
+    		ig:ig_devout = {
+   				ig_clout <= 0.1
+    		}
+    	}
+    	OR = {
+    		ig:ig_industrialists = {
+   				is_in_government = yes
+   				ig_approval >= 5
+    		} 
+    		ig:ig_industrialists = {
+   				ig_clout <= 0.1
+    		}
+    	}
+	}
+
+	when_taken = {
+		activate_law = law_type:law_unitary
+		activate_law = law_type:law_interventionism
+		activate_law = law_type:law_appointed_bureaucrats
+
+		hidden_effect = {
+			remove_modifier = nfm_tempo_reforms_legacy 
+			remove_modifier = rangaku
+			remove_modifier = nfm_rangaku_restricted
+			remove_modifier = nfm_rangaku_encouraged
+		}
+	}
+		
+	ai_chance = {
+		base = 100
+	}
+}
+
+open_japan_dec = { #Open Japan
+	is_shown = {
+		NOT = { has_variable = open_japan_decision_taken }
+		country_rank = rank_value:great_power
+		has_interest_marker_in_region = region_japan
+	}
+
+	possible = {
+		is_diplomatic_play_committed_participant = no
+		c:JAP = {has_law = law_type:law_isolationism}
+		country_rank = rank_value:great_power
+		has_interest_marker_in_region = region_japan
+		has_technology_researched = power_of_the_purse
+		has_technology_researched = screw_frigate
+	}
+
+	when_taken = {
+		set_variable = open_japan_decision_taken
+		create_diplomatic_play = {
+			target_country = c:JAP
+			type = dp_open_market
+		}
+	}
+
+	ai_chance = {
+		base = -1
+
+		modifier = {
+			trigger = { year >= 1854 }
+			add = 5
+		}
+		modifier = {
+			trigger = { 
+					AND = {
+						this = c:USA 
+						>= 1850
+					}
+				}
+			add = 5
+		}
+	}
+}
