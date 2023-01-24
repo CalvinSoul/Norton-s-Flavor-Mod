@@ -5,6 +5,7 @@
 	progressiveness = -50
 	
 	modifier = {
+		unit_morale_loss_mult = 0.1
 		country_military_wages_mult = -0.10
 		interest_group_ig_landowners_pol_str_mult = 0.1
 		country_military_tech_cost_mult = 0.1
@@ -69,13 +70,13 @@ law_professional_officers = {
 	
 	modifier = {
 		interest_group_ig_armed_forces_pol_str_mult = 0.1
-		unit_advancement_speed_mult = 0.1
+		unit_advancement_speed_mult = 0.25
 		unit_morale_protection_mult = 0.1
-		country_officers_pol_str_mult = 0.25
+		country_officers_pol_str_mult = 0.30
 	}
 
 	unlocking_technologies = {
-		
+		general_staff
 	}
 
 	disallowing_laws = {
@@ -95,10 +96,7 @@ law_popular_officers = {
 	progressiveness = 200
 	
 	modifier = {
-		battle_defense_owned_province_mult = 0.25
-		battle_offense_owned_province_mult = 0.1
 		unit_morale_recovery_mult = 0.1
-		unit_morale_protection_mult = -0.25
 		unit_advancement_speed_mult = -0.25
 		country_soldiers_pol_str_mult = 0.25
 		country_laborers_pol_str_mult = 0.05
@@ -106,7 +104,7 @@ law_popular_officers = {
 	}
 
 	unlocking_technologies = {
-		
+		egalitarianism
 	}
 
 	disallowing_laws = {

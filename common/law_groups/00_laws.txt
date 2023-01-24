@@ -76,7 +76,7 @@ lawgroup_internal_security = {
 
 lawgroup_economic_system = {
 	law_group_category = economy	
-	base_enactment_days = 90
+	base_enactment_days = 180
 	
 	progressive_movement_chance = 3
 	regressive_movement_chance = 0.075

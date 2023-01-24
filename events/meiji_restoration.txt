@@ -1537,12 +1537,14 @@ meiji.13 = {
 			add_modifier = {
 				name = shogun_ig_forced_to_open_market
 				months = very_long_modifier_time
+				is_decaying = yes
 			}
 		}
 		scope:shogun_scope = {
 			add_modifier = {
 				name = shogun_forced_to_open_market
 				months = very_long_modifier_time
+				is_decaying = yes
 			}
 		}
 	}

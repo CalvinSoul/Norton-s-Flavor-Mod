@@ -343,7 +343,7 @@ nfm_established_caudillo_mod = {
 
 nfm_bakamatsu = {
 	icon = gfx/interface/icons/timed_modifier_icons/divided_negative.dds
-	country_legitimacy_base_add = -30
+	country_legitimacy_base_add = -25
 
 }
 
@@ -379,6 +379,7 @@ nfm_tempo_reforms = {
 	state_tax_collection_mult = 0.10
 	country_legitimacy_ideological_incoherence_mult = 0.33
 	country_opposition_ig_approval_add = -3
+	country_promotion_ig_attraction_mult = 0.20
 }
 
 nfm_tempo_reforms_deepened = {
@@ -389,6 +390,7 @@ nfm_tempo_reforms_deepened = {
 	state_tax_collection_mult = 0.25
 	country_legitimacy_ideological_incoherence_mult = 0.50
 	country_opposition_ig_approval_add = -5
+	country_promotion_ig_attraction_mult = 0.4
 }
 
 nfm_tempo_reforms_legacy = {
@@ -396,6 +398,7 @@ nfm_tempo_reforms_legacy = {
 	state_pop_qualifications_mult = -0.25
 	interest_group_ig_armed_forces_pol_str_mult = 0.25
 	state_tax_collection_mult = 0.10
+	country_promotion_ig_attraction_mult = 0.10
 }
 
 nfm_tempo_daimyo_protest = {
@@ -420,7 +423,20 @@ rangaku = {
 nfm_rangaku_restricted = {
 	icon = gfx/interface/icons/timed_modifier_icons/clerks_positive.dds
 	country_tech_spread_mult = 0.10
+	country_suppression_ig_attraction_mult = 0.30
 	interest_group_ig_intelligentsia_pop_attraction_mult = 0.25
+}
+
+nfm_bakuhan = {
+	icon = gfx/interface/icons/timed_modifier_icons/edo_castle.dds
+	country_authority_mult = 0.20
+}
+
+nfm_shinsengumi = {
+	icon = gfx/interface/icons/timed_modifier_icons/shinsengumi.dds
+	country_opposition_ig_approval_add = -3
+	country_suppression_ig_attraction_mult = 0.5
+	country_authority_mult = 0.25
 }
 
 nfm_rangaku_encouraged = {
@@ -430,6 +446,7 @@ nfm_rangaku_encouraged = {
 	interest_group_ig_intelligentsia_pop_attraction_mult = 0.50
 	interest_group_ig_intelligentsia_pol_str_mult = 0.25
 	country_legitimacy_base_add = -15
+	country_suppression_ig_attraction_mult = -0.3
 }
 
 nfm_tenpo_famine_mod = {
@@ -449,6 +466,7 @@ nfm_oshio_rebellion_crushed_mod = {
 	icon = gfx/interface/icons/timed_modifier_icons/peasants_negative.dds
 	country_legitimacy_headofstate_add = 10
 	interest_group_ig_rural_folk_pol_str_mult = -0.33
+	country_suppression_ig_attraction_mult = 0.25
 }
 
 nfm_bakafu_allowed_criticism = {
@@ -502,6 +520,10 @@ nfm_industrialists_autocrat_mod = {
 	interest_group_ig_industrialists_pol_str_mult = 0.5
 }
 
+#DISCRIMINATION OVERRIDE
+discrimination = {
+#	state_political_strength_from_discrimination_mult = -0.9
+}
 
 ###TAX STUFF
 tax_modifier_very_low = {

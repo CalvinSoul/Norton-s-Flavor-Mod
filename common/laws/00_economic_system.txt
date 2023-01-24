@@ -64,7 +64,8 @@ law_interventionism = {
 	}
 	
 	unlocking_technologies = {
-		manufacturies
+		banking
+
 	}
 	
 	modifier = {
@@ -105,7 +106,7 @@ law_agrarianism = {
 	progressiveness = 0
 	
 	unlocking_technologies = {
-		romanticism
+		centralization
 	}
 	
 	on_activate = {
@@ -160,7 +161,8 @@ law_laissez_faire = {
 	}
 	
 	unlocking_technologies = {
-		international_trade
+		stock_exchange
+
 	}
 	
 	on_activate = {

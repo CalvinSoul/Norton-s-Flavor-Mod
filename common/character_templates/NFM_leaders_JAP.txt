@@ -88,6 +88,9 @@ nfm_matsudaira_naritami_template = { #Matsudaira Naritami, member of the Tokugaw
         add_modifier = {
             name = historical_character_mod
         }   
+        set_variable = {
+                    name = matsudaira_naritami_var
+         }
      }
     interest_group_leader_usage = {
         country_trigger = {

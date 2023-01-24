@@ -1,0 +1,11 @@
+﻿
+institution_civil_rights = {
+	icon = "gfx/interface/icons/institution_icons/civil_rights.dds"
+	background_texture = "gfx/interface/illustrations/institutions/civil_rights.dds"
+	modifier = {
+		state_political_strength_from_discrimination_mult = 0.05
+		state_radicals_from_discrimination_mult = -0.1
+		state_assimilation_mult = 0.25
+	}    
+}
+

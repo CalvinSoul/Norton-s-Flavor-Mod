@@ -46,7 +46,7 @@ law_state_corporations = {
 	}
 
 	unlocking_technologies = {
-		stock_exchange
+		central_banking
 	}
 
 	disallowing_laws = {
@@ -84,7 +84,7 @@ law_monopoly_regulation = {
 
 	
 	unlocking_technologies = {
-		stock_exchange
+		central_archives
 	}
 
 	disallowing_laws = {

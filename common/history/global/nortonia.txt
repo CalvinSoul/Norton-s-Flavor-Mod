@@ -335,6 +335,28 @@ GLOBAL = {
 	  	add_modifier = age_of_caudillos_modifier
 	}
 
+	every_country = {
+	   limit = { 
+	   		AND = {
+	   			NOT = { has_law = law_type:law_traditionalism }
+	   			NOT = { has_law = law_type:law_serfdom }
+	   			NOT = { 
+	   				OR = {
+	   					this = c:MEX 
+	   					this = c:UCA
+	   					this = c:CLM
+	   					this = c:VNZ
+	   					this = c:ECU
+	   					this = c:PEU
+	   					this = c:BOL
+	   					this = c:PRG
+	   				}
+	   			}
+	   		}
+	   	 }
+	   activate_law = law_type:law_village_private
+	}
+
 }
 
 

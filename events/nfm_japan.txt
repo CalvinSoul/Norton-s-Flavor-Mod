@@ -42,6 +42,9 @@ nfm_japan.1 = {
 				set_variable = {
 					name = ieyoshi_var
 				}
+				 add_modifier = {
+            		name = historical_character_mod
+     			  } 
 			}
 		}
 		ruler = {
@@ -63,6 +66,9 @@ nfm_japan.1 = {
 					set_variable = {
 						name = iesada_var
 					}
+					add_modifier = {
+            			name = historical_character_mod
+     			 	 } 
 				}
 			}
 	}
@@ -114,6 +120,9 @@ nfm_japan.2 = { #Ieyoshi Succession
 					set_variable = {
 						name = iemochi_var
 					}
+					add_modifier = {
+            			name = historical_character_mod
+     			 	 } 
 			}
 		}
 		ai_chance = {
@@ -135,11 +144,26 @@ nfm_japan.2 = { #Ieyoshi Succession
 				innovative
 				ambitious
 			}
+			on_created = {				
+					add_modifier = {
+            			name = historical_character_mod
+     			 	 } 
+			}
 		}
 		ai_chance = {
 			base = 10
+			modifier = { #Naritami Matsudaira
+				trigger = { 
+					any_interest_group = {
+						leader =  {
+							has_varialbe = matsudaira_naritami_var
+						}
+					}		
+			}
+			add = 1000
 		}
 	}
+}
 }
 nfm_japan.3 = { #Iemochi Succession
 	type = country_event
@@ -181,11 +205,25 @@ nfm_japan.3 = { #Iemochi Succession
 				innovative
 				ambitious
 			}
+			on_created = {				
+					add_modifier = {
+            			name = historical_character_mod
+     			 	 } 
+			}
 		}
 		ai_chance = {
 			base = 40
+			modifier = { #Naritami Matsudaira
+				trigger = { 
+					any_interest_group = {
+						leader =  {
+							has_variable = matsudaira_naritami_var
+						}
+					}
+				add = 1000
+			}}
 		}
-	}
+		}
 
 	option = { 
 		name = nfm_japan.3.b
@@ -199,6 +237,11 @@ nfm_japan.3 = { #Iemochi Succession
 			traits = {
 				innovative
 				ambitious
+			}
+			on_created = {				
+					add_modifier = {
+            			name = historical_character_mod
+     			 	 } 
 			}
 		}
 		ai_chance = {
@@ -239,6 +282,12 @@ nfm_japan.4 = { #Sonno Joi
 		name = nfm_japan.4.a
 
 		add_modifier = nfm_sonno_joi
+
+		custom_tooltip = bakamatsu_tension_increase_20_tt
+		change_variable = {
+    			name = bakamatsu_tension_var
+   				add = 20
+   		}
 	}
 
 }
@@ -300,6 +349,13 @@ nfm_japan.5 = { #Foreign Incident #Foreign Minister Murdered
 				is_decaying = yes
 			}
 		}
+
+		custom_tooltip = bakamatsu_tension_increase_5_tt
+		change_variable = {
+    			name = bakamatsu_tension_var
+   				add = 5
+   		}
+
 		ai_chance = {
 			base = 95
 		}
@@ -384,6 +440,12 @@ nfm_japan.6 = { #Foreign Incident #Foreign Minister Murdered
 				is_decaying = yes
 			}
 		}
+
+		custom_tooltip = bakamatsu_tension_increase_5_tt
+		change_variable = {
+    			name = bakamatsu_tension_var
+   				add = 5
+   		}
 
 		ai_chance = {
 			base = 95
@@ -474,6 +536,11 @@ nfm_japan.7 = { #Foreign Incident #Foreign Minister Murdered
 		ai_chance = {
 			base = 95
 		}
+		custom_tooltip = bakamatsu_tension_increase_5_tt
+		change_variable = {
+    			name = bakamatsu_tension_var
+   				add = 5
+   		}
 	}
 		
 
@@ -607,6 +674,9 @@ nfm_japan.9 = { #Oshio Rebellion
 		scope:oshio_rebel_scope = {
 			kill_character = yes
 		}
+		ai_chance = {
+			base = 90
+		}
 	}
 
 	option = { 
@@ -625,6 +695,9 @@ nfm_japan.9 = { #Oshio Rebellion
 
 		scope:oshio_rebel_scope = {
 			kill_character = yes
+		}
+		ai_chance = {
+			base = 10
 		}
 	}
 }
@@ -662,6 +735,23 @@ nfm_japan.10 = { #Morrison Incident
         		save_scope_as = rangaku_scholar_scope
         	}
         }
+
+        c:USA = {
+        	add_declared_interest = region_japan
+        }
+        c:GBR = {
+        	add_declared_interest = region_japan
+        }
+        c:RUS = {
+        	add_declared_interest = region_japan
+        }
+        c:FRA = {
+        	add_declared_interest = region_japan
+        }
+        c:NET = {
+        	add_declared_interest = region_japan
+        }
+
 	}
 
 	option = { 
@@ -671,6 +761,9 @@ nfm_japan.10 = { #Morrison Incident
 			name = nfm_bakafu_allowed_criticism
 			months = 65
 			is_decaying = yes
+		}
+		ai_chance = {
+			base = 10
 		}
 	}
 
@@ -683,6 +776,9 @@ nfm_japan.10 = { #Morrison Incident
 
 		scope:rangaku_scholar_scope = {
 			kill_character = yes
+		}
+		ai_chance = {
+			base = 90
 		}
 	}
 }
@@ -709,6 +805,9 @@ nfm_japan.11 = { #Tempo Reforms
 		exists = c:JAP
 		THIS = c:JAP
 		NOT = { has_variable = tenpo_reforms_event_var}
+		has_variable = morrison_incident_var
+		has_variable = oshio_rebel_var
+		NOT = { has_modifier = nfm_tenpo_famine_mod}
 		year <= 1845
 
 		any_scope_character = {
@@ -743,6 +842,9 @@ nfm_japan.11 = { #Tempo Reforms
 		add_modifier = {
 			name = nfm_tempo_reforms
 		}
+		ai_chance = {
+			base = 95
+		}
 	}
 
 	option = { #Oust 
@@ -757,6 +859,9 @@ nfm_japan.11 = { #Tempo Reforms
 			name = nfm_bakafu_power_vacuum
 			months = 30
 			is_decaying = yes
+		}
+		ai_chance = {
+			base = 5
 		}
 	}
 }
@@ -812,6 +917,9 @@ nfm_japan.12 = { #Tempo Reform Resistance
 			is_decaying = yes
 		}
 		remove_modifier = nfm_tempo_reforms
+		ai_chance = {
+			base = 70
+		}
 	}
 
 	option = { #Depen the Tenpo Reforms
@@ -826,6 +934,9 @@ nfm_japan.12 = { #Tempo Reform Resistance
 
 		remove_modifier = nfm_tempo_reforms
 		add_modifier = nfm_tempo_reforms_deepened
+		ai_chance = {
+			base = 30
+		}
 	}
 }
 
@@ -909,6 +1020,8 @@ nfm_japan.14 = { #Death of Successful Tenpo Reformer
 
 	}
 }
+
+#video = "gfx/event_pictures/asia_farmers_market.bk2" - Shinsengumi Event
 
 nfm_japan.20 = { #kil character for testing
 	type = country_event

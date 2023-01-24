@@ -30,8 +30,6 @@
 		ig:ig_armed_forces = {
 			add_ideology = ideology_bakufu
 			remove_ideology = ideology_patriotic
-			remove_ideology = ideology_nfm_centralist
-			add_ideology = ideology_nfm_federalist
 			add_ideology = ideology_nfm_sakoku
 			set_interest_group_name = ig_samurai
 			add_ruling_interest_group = yes
@@ -78,6 +76,10 @@
 		}
 		add_modifier = {
 			name = rangaku
+		}
+
+		add_modifier = {
+			name = nfm_bakuhan
 		}
 
 		add_modifier = {

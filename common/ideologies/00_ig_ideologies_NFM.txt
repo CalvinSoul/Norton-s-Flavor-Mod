@@ -231,11 +231,12 @@ ideology_nfm_rangaku = { ##Unique Ideology for RACISTS
 		law_no_schools = disapprove
 	}
 	lawgroup_labor_rights = {
-		law_serfdom = disapprove
-		law_serfdom_banned = approve
-		law_regulatory_bodies = disapprove
-		law_worker_protections = strongly_disapprove
+		law_serfdom_banned = neutral
+		law_serfdom = strongly_disapprove
+		law_village_private = approve
+		law_village_collective = neutral
 	}
+
 	lawgroup_corporations = {
 		law_unregulated_corporations = neutral
 		law_state_corporations = strongly_approve	

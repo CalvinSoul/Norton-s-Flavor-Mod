@@ -216,10 +216,10 @@ ideology_bakufu = { #NFM EDITS BROAD
 	}
 
 	lawgroup_labor_rights = {
+		law_serfdom_banned = neutral
 		law_serfdom = strongly_approve
-		law_serfdom_banned = disapprove
-		law_regulatory_bodies = strongly_disapprove
-		law_worker_protections = strongly_disapprove
+		law_village_private = neutral
+		law_village_collective = disapprove
 	}
 
 	lawgroup_distribution_of_power = {
@@ -354,11 +354,11 @@ ideology_russian_patriarch = {
 	}
 
 	lawgroup_labor_rights = {
-		law_serfdom = approve
-		law_serfdom_banned = neutral
-		law_regulatory_bodies = disapprove
-		law_worker_protections = disapprove
-	} 
+		law_serfdom_banned = approve
+		law_serfdom = strongly_approve
+		law_village_private = neutral
+		law_village_collective = disapprove
+	}
 }
 
 ideology_orthodox_patriarch = {

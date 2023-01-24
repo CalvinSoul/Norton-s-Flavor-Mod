@@ -511,6 +511,15 @@ ideology_reformer = {
 		law_religious_schools = neutral
 		law_no_schools = disapprove
 	}
+
+	lawgroup_workhours = { #NFM, borrowed from TGR
+		law_unlimited_workday = disapprove
+		law_14_hours = disapprove
+		law_12_hours = neutral
+		law_10_hours = approve
+		law_8_hours = approve
+	}
+
 	
 	possible = {
 		owner = {
@@ -675,13 +684,13 @@ ideology_abolitionist = {
 		law_slave_trade = strongly_disapprove
 	}
 
-	lawgroup_labor_rights = {		
-		law_worker_protections = neutral
-		law_regulatory_bodies = neutral
+	lawgroup_labor_rights = {
 		law_serfdom_banned = neutral
 		law_serfdom = disapprove
+		law_village_private = neutral
+		law_village_collective = neutral
 	}
-	
+
 	# Character scope
 	possible = {
 		owner = { 
@@ -1128,11 +1137,12 @@ ideology_social_democrat = {
 	
 	character_ideology = yes
 
-	lawgroup_labor_rights = {		
-		law_worker_protections = strongly_approve
-		law_regulatory_bodies = approve
-		law_serfdom_banned = neutral
-		law_serfdom = strongly_disapprove
+	lawgroup_labor_rights_urban = {
+		law_unregulated_labor = strongly_disapprove
+		law_regulatory_bodies = disapprove
+		law_construction_standards = neutral
+		law_worker_protections = approve
+		law_minimum_wage =strongly_approve
 	}
 
 	lawgroup_distribution_of_power = {
@@ -1167,6 +1177,15 @@ ideology_social_democrat = {
 		law_cartel_regulation = strongly_approve
 		law_banned_private_business = disapprove
 	}
+
+	lawgroup_workhours = { #NFM, borrowed from TGR
+		law_unlimited_workday = strongly_disapprove
+		law_14_hours = disapprove
+		law_12_hours = neutral
+		law_10_hours = approve
+		law_8_hours = strongly_approve
+	}
+
 
 	possible = {
 		owner = { has_technology_researched = socialism }
@@ -1261,11 +1280,19 @@ ideology_communist = {
 	
 	character_ideology = yes
 
-	lawgroup_labor_rights = {		
-		law_worker_protections = strongly_approve
-		law_regulatory_bodies = approve
+	lawgroup_labor_rights = {
 		law_serfdom_banned = neutral
-		law_serfdom = strongly_disapprove
+		law_serfdom = disapprove
+		law_village_private = neutral
+		law_village_collective = strongly_approve
+	}
+
+	lawgroup_labor_rights_urban = {
+		law_unregulated_labor = strongly_disapprove
+		law_regulatory_bodies = disapprove
+		law_construction_standards = neutral
+		law_worker_protections = approve
+		law_minimum_wage = strongly_approve
 	}
 
 	lawgroup_governance_principles = {
@@ -1298,6 +1325,15 @@ ideology_communist = {
 		law_cartel_regulation = approve
 		law_banned_private_business = strongly_approve
 	}
+
+	lawgroup_workhours = { #NFM, borrowed from TGR
+		law_unlimited_workday = strongly_disapprove
+		law_14_hours = disapprove
+		law_12_hours = neutral
+		law_10_hours = approve
+		law_8_hours = strongly_approve
+	}
+
 	possible = {
 		owner = { has_technology_researched = socialism }
 		scope:interest_group = {
@@ -2129,6 +2165,23 @@ ideology_market_liberal = {
 		law_cartel_regulation = strongly_disapprove
 		law_banned_private_business = strongly_disapprove
 	}		
+
+	lawgroup_workhours = { #NFM, borrowed from TGR
+		law_unlimited_workday = strongly_approve
+		law_14_hours = approve
+		law_12_hours = neutral
+		law_10_hours = disapprove
+		law_8_hours = strongly_disapprove
+	}
+
+	lawgroup_labor_rights_urban = {
+		law_unregulated_labor = strongly_approve
+		law_regulatory_bodies = neutral
+		law_construction_standards = disapprove
+		law_worker_protections = strongly_disapprove
+		law_minimum_wage =strongly_disapprove
+	}
+
 
 	possible = {
 		owner = {

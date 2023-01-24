@@ -9,6 +9,12 @@ lawgroup_centralization = {
 	
 	progressive_movement_chance = 5
 	regressive_movement_chance = 5
+
+	change_allowed_trigger = {
+		NOT = {
+			has_modifier = nfm_bakuhan
+		}
+	}	
 }
 
 lawgroup_officers = {
@@ -26,4 +32,27 @@ lawgroup_corporations = {
 	
 	progressive_movement_chance = 2
 	regressive_movement_chance = 0.5
+}
+
+
+lawgroup_minority_rights = {
+	base_enactment_days = 120
+	law_group_category = power_structure
+	
+	progressive_movement_chance = 1.5
+	regressive_movement_chance = 1.5
+}
+
+lawgroup_workhours = {
+	base_enactment_days = 90
+	law_group_category = economy
+	progressive_movement_chance = 3
+	regressive_movement_chance = 0.125
+}
+
+lawgroup_labor_rights_urban = {
+	base_enactment_days = 90
+	law_group_category = human_rights
+	progressive_movement_chance = 3
+	regressive_movement_chance = 0.125
 }

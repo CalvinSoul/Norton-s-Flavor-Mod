@@ -23,7 +23,7 @@ law_national_guard = {
 	progressiveness = 25
 
 	unlocking_technologies = {
-		law_enforcement
+		mandatory_service
 	}
 
 	institution = institution_home_affairs
@@ -80,6 +80,10 @@ law_guaranteed_liberties = {
 	unlocking_laws = {
 		law_right_of_assembly
 		law_protected_speech
+	}
+
+	unlocking_technologies = {
+		egalitarianism
 	}
 	
 	modifier = {

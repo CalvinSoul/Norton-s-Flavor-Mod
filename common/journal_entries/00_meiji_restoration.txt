@@ -247,22 +247,47 @@ je_nfm_bakamatsu = {
 	}
 
 	immediate = {
-		
+		set_variable = {
+			name = bakamatsu_tension_var
+			value = 0
+		}
+		#trigger_event = { id = nfm_japan.X days = 1000 popup = yes } #Ansei Treaties
+		#Ansei Purge >= 25 Tension ->Sakuradmon Incident
+		#Order to Expel the Barbarians >= 50 Tension
+		#Mito Rebellion >=75 Tension  -> Mito Crushed
+									# -> Mito Expedition 
+		#Kimon Incident >=75 Tension
+					#  ->Chosu Expedition
+		#Shimonoseki campaign # -> Chosu Defeated (Historical)
+							  # -> Chosu Victory
+		#Bombardment of Kagoshima -> Satsuma Crushed
+								# -> Anglo-Satsuma Treaty of Cooperation (historical)
+		#100 Tension -> A) Resignation of the Shogun - > Just Government (kōgiseitai)
+												# 	 - > End the Tokugawa (Boshin War (Play as Japan against the Northern Alliance)
+					#   B) Shogun Refuses to Step Down -> Boshin War (Play as Japan against Sacho Alliance)
+
 	}
 
 	on_monthly_pulse = {
 		random_events = {
-			70 = 0
-			10 = nfm_japan.4
-			10 = nfm_japan.5
-			10 = nfm_japan.6
+			85 = 0
+			5 = nfm_japan.5 # Foreign Incident #1
+			5 = nfm_japan.6 # Foreign Incident #2
+			5 = nfm_japan.7 # Foreign Incident #3
 		}
 	}
 	on_monthly_pulse = {
 		random_events = {
 			75 = 0
-			25 = nfm_japan.4
+			25 = nfm_japan.4 #Sonno Joi
 		}
+	}
+
+	on_yearly_pulse = {
+		change_variable = {
+    			name = bakamatsu_tension_var
+   				add = 2
+   		}
 	}
 
 	complete = {
@@ -279,6 +304,16 @@ je_nfm_bakamatsu = {
 	on_complete = {
 		
 	}
+
+	current_value = {
+		value = root.var:bakamatsu_tension_var
+	}
+
+	goal_add_value = {
+		value = 100
+	}
+
+	progressbar = yes
 
 	weight = 10000
 	should_be_pinned_by_default = yes
