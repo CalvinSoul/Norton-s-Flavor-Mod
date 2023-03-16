@@ -155,13 +155,6 @@ ideology_stratocratic = {
 	}
 	
 	lawgroup_labor_rights = {
-		law_serfdom = strongly_approve
-		law_serfdom_banned = neutral
-		law_regulatory_bodies = disapprove
-		law_worker_protections = strongly_disapprove
-	}
-
-	lawgroup_labor_rights = {
 		law_serfdom_banned = disapprove
 		law_serfdom = strongly_approve
 		law_village_private = neutral
@@ -282,14 +275,6 @@ ideology_isolationist = {
 		law_migration_controls = approve
 		law_no_migration_controls = disapprove
 	}
-
-	lawgroup_citizenship = { ### Does not exist by default
-		law_ethnostate = neutral
-		law_national_supremacy = neutral
-		law_racial_segregation = neutral
-		law_cultural_exclusion = neutral
-		law_multicultural = strongly_disapprove	
-	}
 }
 
 ideology_moralist = {
@@ -316,6 +301,14 @@ ideology_moralist = {
 		law_racial_segregation = neutral
 		law_cultural_exclusion = disapprove
 		law_multicultural = strongly_disapprove	
+	}
+
+	lawgroup_minority_rights = { #NFM
+		law_minority_repression = approve
+		law_minority_segregation = strongly_approve
+		law_legal_discrimination = approve
+		law_legal_equality = neutral
+		law_enforced_equality = disapprove
 	}
 }
 
@@ -424,6 +417,14 @@ ideology_liberal = {
 		law_racial_segregation = neutral #Normally disapprove
 		law_cultural_exclusion = approve #Normally neutral
 		law_multicultural = strongly_disapprove	#normally approve
+	}
+
+	lawgroup_minority_rights = { #NFM
+		law_minority_repression = strongly_disapprove
+		law_minority_segregation = disapprove
+		law_legal_discrimination = disapprove
+		law_legal_equality = neutral
+		law_enforced_equality = approve
 	}
 	
 	lawgroup_policing = {
@@ -604,6 +605,14 @@ ideology_egalitarian = {
 		law_cultural_exclusion = neutral
 		law_multicultural = approve	
 	}
+
+	lawgroup_minority_rights = { #NFM
+		law_minority_repression = strongly_disapprove
+		law_minority_segregation = disapprove
+		law_legal_discrimination = neutral
+		law_legal_equality = approve
+		law_enforced_equality = strongly_approve
+	}
 }
 
 ideology_populist = {
@@ -671,6 +680,14 @@ ideology_reactionary = {
 		law_closed_borders = approve
 		law_migration_controls = strongly_approve
 		law_no_migration_controls = disapprove
+	}
+
+	lawgroup_minority_rights = { #NFM
+		law_minority_repression = approve
+		law_minority_segregation = strongly_approve
+		law_legal_discrimination = neutral
+		law_legal_equality = disapprove
+		law_enforced_equality = strongly_disapprove
 	}
 }
 

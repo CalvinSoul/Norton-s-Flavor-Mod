@@ -24,6 +24,14 @@
 		law_multicultural = approve	
 	}
 
+	lawgroup_minority_rights = { #NFM
+		law_minority_repression = strongly_disapprove
+		law_minority_segregation = disapprove
+		law_legal_discrimination = disapprove
+		law_legal_equality = neutral
+		law_enforced_equality = approve
+	}
+
 	lawgroup_slavery = {
 		law_slavery_banned = neutral
 		law_legacy_slavery = disapprove
@@ -98,6 +106,14 @@ ideology_nfm_american_liberalism = {
 		law_cultural_exclusion = approve #Normally neutral
 		law_multicultural = approve	#normally approve
 	}
+
+	lawgroup_minority_rights = { #NFM
+		law_minority_repression = strongly_disapprove
+		law_minority_segregation = disapprove
+		law_legal_discrimination = neutral
+		law_legal_equality = approve
+		law_enforced_equality = strongly_approve
+	}
 	
 	lawgroup_policing = {
 		law_no_police = neutral
@@ -158,6 +174,14 @@ ideology_nfm_xenophobic = { ##Unique Ideology for RACISTS
 		law_racial_segregation = neutral
 		law_cultural_exclusion = disapprove
 		law_multicultural = strongly_disapprove	
+	}
+
+	lawgroup_minority_rights = { #NFM
+		law_minority_repression = strongly_approve
+		law_minority_segregation = approve
+		law_legal_discrimination = neutral
+		law_legal_equality = disapprove
+		law_enforced_equality = strongly_disapprove
 	}
 
 	lawgroup_migration = {

@@ -1611,6 +1611,14 @@ ideology_fascist = {
 		law_multicultural = strongly_disapprove	
 	}
 
+	lawgroup_minority_rights = { #NFM
+		law_minority_repression = strongly_approve
+		law_minority_segregation = approve
+		law_legal_discrimination = neutral
+		law_legal_equality = disapprove
+		law_enforced_equality = strongly_disapprove
+	}
+
 	lawgroup_army_model = {
 		law_mass_conscription = strongly_approve
 		law_professional_army = approve
@@ -1827,6 +1835,14 @@ ideology_anarchist = {
 		law_multicultural = strongly_approve	
 	}
 
+	lawgroup_minority_rights = { #NFM
+		law_minority_repression = strongly_disapprove
+		law_minority_segregation = disapprove
+		law_legal_discrimination = neutral
+		law_legal_equality = approve
+		law_enforced_equality = strongly_approve
+	}
+
 	lawgroup_centralization= { #NFM Centralization
 		law_totalitarian = strongly_disapprove
 		law_unitary = strongly_disapprove
@@ -1925,6 +1941,14 @@ ideology_ethno_nationalist = {
 		law_racial_segregation = approve
 		law_cultural_exclusion = disapprove
 		law_multicultural = strongly_disapprove	
+	}
+
+	lawgroup_minority_rights = { #NFM
+		law_minority_repression = strongly_approve
+		law_minority_segregation = approve
+		law_legal_discrimination = neutral
+		law_legal_equality = disapprove
+		law_enforced_equality = strongly_disapprove
 	}
 	
 	lawgroup_migration = {

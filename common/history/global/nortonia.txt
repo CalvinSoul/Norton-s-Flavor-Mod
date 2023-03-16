@@ -357,6 +357,29 @@ GLOBAL = {
 	   activate_law = law_type:law_village_private
 	}
 
+	every_country = {
+	   limit = { 
+	   		AND = {
+	   			NOT = { 
+	   				OR = {
+	   					this = c:USA
+	   				}
+	   			}
+	   		}
+	   	 }
+	   activate_law = law_type:law_legal_discrimination
+	}
+
+	every_country = {
+	   limit = { 
+	   		AND = {
+	   				OR = {
+	   					this = c:USA
+	   				}
+	   			}
+	   	 }
+	   activate_law = law_type:law_minority_segregation
+	}
 }
 
 

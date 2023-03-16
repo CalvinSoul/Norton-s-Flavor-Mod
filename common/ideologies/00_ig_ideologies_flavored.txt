@@ -40,6 +40,14 @@
 		law_multicultural = strongly_disapprove	
 	}
 
+	lawgroup_minority_rights = { #NFM
+		law_minority_repression = neutral
+		law_minority_segregation = strongly_approve
+		law_legal_discrimination = approve
+		law_legal_equality = disapprove
+		law_enforced_equality = strongly_disapprove
+	}
+
 	lawgroup_centralization= { #NFM Centralization
 		law_totalitarian = strongly_disapprove
 		law_unitary = disapprove
@@ -315,6 +323,14 @@ ideology_austrian_hegemony = {
 		law_racial_segregation = disapprove
 		law_cultural_exclusion = strongly_disapprove
 		law_multicultural = strongly_disapprove	
+	}
+
+	lawgroup_minority_rights = { #NFM
+		law_minority_repression = strongly_approve
+		law_minority_segregation = approve
+		law_legal_discrimination = neutral
+		law_legal_equality = disapprove
+		law_enforced_equality = strongly_disapprove
 	}
 
 	lawgroup_centralization= { #NFM Centralization

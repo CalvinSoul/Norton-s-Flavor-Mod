@@ -1012,3 +1012,11 @@ law_minimum_wage_desc:0 "A national minimum wage ensures all workers are ensured
 
 institution_workplace_safety:0 "Labor Regulation"
 
+lawgroup_minority_rights_desc:0 "Minority rights are how the government treats non-citizens."
+law_minority_repression_desc:0 "National minorities are a blight upon our nation and ought be repressed and kept in a servile state."
+law_minority_segregation_desc:0 "Minorities should be seperated into ghettos and refused access to the same basic services as citizens."
+law_legal_discrimination_desc:0 "Minorities should be legally disadvantaged in national proceedings."
+law_legal_equality_desc:0 "Minorities are, on paper, legally equal to accepted cultures."
+law_enforced_equality_desc:0 "The government will enact policies to actively ensure to incorporation and protection of national minorities."
+
+law_multicultural_desc:0 "People's of any shared origin will be quickly allowed legal equality, while national assimilation will be aided through a process of Naturalization open to all peoples."
